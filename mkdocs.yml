@@ -313,7 +313,7 @@ markdown_extensions:
   - tables
 
 plugins:
-  - include-markdown # pip install mkdocs-include-markdown-plugin
+  # - include-markdown # pip install mkdocs-include-markdown-plugin
   - search
 
 theme:
