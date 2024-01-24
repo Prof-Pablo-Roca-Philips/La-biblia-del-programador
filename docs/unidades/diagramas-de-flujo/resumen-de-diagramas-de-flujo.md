@@ -1,4 +1,0 @@
-## Resumen
-
-!!! warning "Completar"
-

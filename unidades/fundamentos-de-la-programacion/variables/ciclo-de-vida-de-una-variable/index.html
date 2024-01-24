@@ -1,0 +1,614 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Ciclo de vida de una variable - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ciclo-de-vida-de-una-variable-durante-la-ejecucion-de-un-programa" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ciclo de vida de una variable
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Primeros pasos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Primeros pasos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/introduccion-a-la-programacion/introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/introduccion-a-la-programacion/paradigmas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/introduccion-a-la-programacion/el-mejor-camino-para-aprender-a-programar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    El mejor camino para aprender a programar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Ciclo de vida de una variable</h1>
+
+<h2 id="ciclo-de-vida-de-una-variable-durante-la-ejecucion-de-un-programa">Ciclo de vida de una variable durante la ejecución de un programa</h2>
+<p>Durante la ejecución de un programa, el ciclo de vida de una variable consta de 3 etapas:
+* Creación
+* Utilización
+* Destrucción</p>
+<p><img alt="Alt text" src="../imagenes/ciclo-de-vida-de-una-variable.png" /></p>
+<h3 id="etapa-de-creacion-de-una-variable">Etapa de creación de una variable</h3>
+<ol>
+<li>
+<p><strong>Creación</strong>: en la etapa de creación de una variable, que <strong>se ejecuta por única vez al inicio del ciclo de vida</strong>, se realizan una serie de acciones para definir y asignar un nombre y un tipo de datos a esta, y hasta eventualmente asignarle un valor inicial:</p>
+<ul>
+<li>
+<p><strong>Declaración</strong>: la creación de una variable generalmente comienza con la declaración, donde se especifica el tipo de datos que contendrá esta. Los lenguajes de programación suelen tener diferentes tipos de datos, como enteros, flotantes, caracteres, booleanos, etc. La declaración también incluye el nombre de la variable. </p>
+<ul>
+<li><strong>Asignación de memoria</strong>: después de declarar una variable, se produce la asignación (reserva de espacio) de memoria para almacenar el valor de la variable. La cantidad de memoria asignada dependerá del tipo de datos de la variable. Por ejemplo, una variable entera (int) puede requerir 4 bytes de memoria, mientas que una variable de caracater (char) requiere 1 byte de memora. Es importante definir correctamente el tipo de dato para que la memora reservada sea correcta.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inicialización</strong>: en muchos lenguajes de programación, se puede inicializar una variable durante su creación. La inicialización implica asignar un valor inicial a la variable. Siempre que se pueda es recomendable que la creación de una variable se efectúe mediante su inicialización. </p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">¡Recuerda!</p>
+<p>Una vez creada una variable, esta existirá hasta que termine el alcance o bloque de código donde haya sido creada; hasta que sea destruida o; hasta que finalice el programa.</p>
+<p>En algunos lenguajes, es obligatorio declarar una variable antes de utilizarla. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">¡Desconocer este concepto puede hacer que tu programa se comporte de manera inesperada!</p>
+<p>Cabe aclarar que, al declarar una variable, la asignación de memoria no implica la asignación de un valor inicial. Así, al acceder a la variable antes de una primera asignación de valor, esta devolverá dependiendo del lenguaje de programación:</p>
+<ul>
+<li>valor indefinido (<em>undefined</em>), </li>
+<li>un valor predeterminado, que puede ser cero o nulo dependiendo del tipo de datos, o </li>
+<li>el valor que se encuentre en la posición reservada de memoria, previamente almacenado por otro programa.</li>
+</ul>
+</div>
+<h3 id="etapa-de-utilizacion-de-una-variable">Etapa de utilización de una variable</h3>
+<ol>
+<li>
+<p><strong>Utilización</strong>: en la etapa de utilización de una variable, después de crearla, esta puede ser usada para almacenar, manipular y recuperar datos durante la ejecución de expresiones y operaciones (declaración de control de flujo, llamada de función, etc.) durante la ejecución del programa:</p>
+<ul>
+<li>
+<p><strong>Asignación de valor</strong>: una vez creada la variable, se puede asignar un valor específico a la variable utilizando el operador de asignación simple (=) o cualquier operador de asignación compuesta. Por ejemplo, si tienes una variable llamada edad de tipo entero, puedes asignarle un valor a partir de la expresión edad = 25.</p>
+</li>
+<li>
+<p><strong>Modificación (actualización) de valor</strong>: durante la ejecución del programa, es posible modificar el valor almacenado en una variable. Esta acción se comporta de igual manera que la <strong>asignación de valor</strong>, solo que se la denomina así porque el concepto es el de reasignación de un nuevo valor. Puedes utilizar operadores aritméticos o de asignación compuestos para realizar cálculos y actualizar el valor de la variable. Por ejemplo, si tienes una variable <strong>contador</strong> y deseas incrementar su valor en uno, puedes utilizar <strong>contador = contador + 1</strong> o la forma abreviada <strong>contador += 1</strong>.</p>
+</li>
+<li>
+<p><strong>Acceso (lectura) de valor</strong>: después de asignar un valor a la variable, puedes leer su contenido para utilizarlo en el programa. Puedes utilizar el nombre de la variable para acceder a su valor y utilizarlo en expresiones y operaciones para realizar cálculos o mostrar el valor en la salida del programa, por ejemplo.</p>
+</li>
+<li>
+<p><strong>Uso en expresiones y operaciones</strong>: una variable se utiliza ampliamente en expresiones y operaciones dentro del programa. Puedes realizar operaciones matemáticas, comparaciones, asignaciones y muchas otras manipulaciones utilizando la variable en combinación con operadores y funciones definidas en el lenguaje de programación.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">¡Recuerda!</p>
+<p>Mientras la variable exista y sea accesible, todas estas acciones arriba definidas pueden ser ejecutadas tantas veces como sea necesario a lo largo de la ejecución del programa.</p>
+</div>
+<h3 id="etapa-de-destruccion-de-una-variable">Etapa de destrucción de una variable</h3>
+<ol>
+<li>
+<p><strong>Destrucción</strong>: en la etapa de destrucción de una variable, cuando la variable ya no será utilizada en el programa, se llevan a cabo las acciones para liberar los recursos asociados a ella (el espacio reservado de la memoria) y finalizar su existencia en el programa:</p>
+<ul>
+<li>
+<p><strong>Liberación de memoria</strong>: una de las acciones más comunes en la destrucción de una variable es la liberación de la memoria que se asignó para almacenar su valor. Esto ocurre especialmente en lenguajes de programación que gestionan manualmente la asignación y liberación de memoria, como C o C++. La liberación de memoria garantiza que los recursos utilizados por la variable se devuelvan al sistema y estén disponibles para otros usos.</p>
+</li>
+<li>
+<p><strong>Finalización del ámbito o alcance</strong>: en muchos lenguajes de programación, las variables tienen un ámbito definido, que es la región del programa donde la variable es válida y accesible. Cuando el ámbito de la variable llega a su fin, ya sea <strong>al finalizar una función o un bloque de código, la variable se destruye automáticamente</strong>. Esto implica que la variable ya no estará disponible para su uso y se liberarán los recursos asociados a ella.</p>
+</li>
+<li>
+<p><strong>Ejecución del recolector de basura (<em>garbage collector</em>)</strong>: es un componente que se encuentra en muchos lenguajes de programación con gestión automática de memoria, como Java o Python. Este componente es responsable de administrar automáticamente la memoria durante la ejecución de un programa ya que su función principal es <strong>identificar y liberar la memoria de los objetos que ya no se necesitan</strong>, es decir, <strong>recolectar la "basura"</strong>. Por lo tanto, realiza un seguimiento de los objetos que se han asignado en la memoria y determina cuáles de ellos aún están siendo utilizados por el programa. Los objetos que ya no son accesibles o referenciados por el programa se consideran “basura” y se pueden eliminar de forma segura. Así, <strong>la destrucción de una variable está relacionada con el proceso de recolección de basura</strong>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">¡Recuerda!</p>
+<p>Esta etapa, que solo se ejecuta una vez al final del ciclo de vida de la variable, generalmente ocurre cuando la variable ya no es necesaria o cuando el ámbito en el que se ha creado finaliza. Luego de la destrucción, la variable ya no estará disponible para su uso y se liberarán los recursos asociados a ella.</p>
+</div>
+<h3 id="por-que-el-garbage-collector-es-tan-importante">¿Por qué el <em>garbage collector</em> es tan importante?</h3>
+<p>Es un componente que se encuentra en muchos lenguajes de programación con gestión automática de memoria, como Java o Python, y en muchos entornos de ejecución. </p>
+<p>Es responsable de administrar automáticamente la memoria en un programa ya que su función principal es identificar y liberar la memoria que ya no se necesita, es decir, recolectar la "basura". </p>
+<h4 id="como-funciona">¿Cómo funciona?</h4>
+<p>Cuando se ejecuta un programa, se asigna memoria para almacenar objetos y datos utilizados por ese programa. A medida que el programa se ejecuta, puede crear y eliminar objetos en la memoria. Los objetos más generales son las variables. Sin embargo, a veces, estos objetos ya no son necesarios y pasan a ocupar espacio innecesariamente.</p>
+<p>Aquí es donde entra en juego el <em>garbage collector</em>. Su función principal es identificar y liberar la memoria de objetos que ya no se necesitan. Estos objetos que ya no son accesibles o referenciados por el programa se consideran “basura” y se pueden eliminar de forma segura.</p>
+<p>El <em>garbage collector</em> realiza esta tarea periódicamente o cuando se cumple cierta condición, como cuando la memoria disponible se está agotando. </p>
+<p>Escanea la memoria en busca de objetos basura y libera la memoria que ocupan. Esto ayuda a evitar la fragmentación de la memoria y garantiza un uso eficiente de los recursos.</p>
+<p>La presencia del <em>garbage collector</em> simplifica la administración de la memoria para los programadores, ya que no necesitan ocuparse explícitamente de la asignación y liberación de memoria. Esto reduce los errores relacionados con la gestión manual de la memoria, como fugas de memoria, corrupción de memoria y problemas de liberación prematura o tardía de objetos. También mejora la productividad del programador, ya que pueden centrarse en la lógica de la aplicación en lugar de preocuparse por la gestión de la memoria.</p>
+<h3 id="conclusiones-del-ciclo-de-vida-de-una-variable-durante-la-ejecucion-de-un-programa">Conclusiones del ciclo de vida de una variable durante la ejecución de un programa</h3>
+<p>El ciclo de vida de una variable puede variar según el lenguaje de programación utilizado y el alcance en el que se utiliza la variable. Por ejemplo, en algunos lenguajes, las variables pueden tener un alcance limitado a una función o bloque de código, mientras que en otros pueden tener un alcance global en todo el programa. Este tema lo veremos más adelante.</p>
+<p>Resumiendo, es importante destacar que los detalles específicos de la creación de variables pueden variar según el lenguaje de programación que estés utilizando. Algunos lenguajes tienen reglas y convenciones adicionales para la creación de variables, como restricciones en los nombres o requisitos de ámbito.</p>
+<p>Durante la etapa de utilización de una variable, estas se utilizan en expresiones y operaciones como asignación de valores, lectura de valores, modificación de valores y se tiene en cuenta el alcance y el tipo de datos de la variable. Esto permite utilizar las variables para almacenar y manipular datos en el programa de acuerdo con su propósito y alcance.</p>
+<p>Por último, en la etapa de destrucción de una variable se llevan a cabo acciones para liberar los recursos asociados a ella y finalizar su existencia en el programa. Esto puede implicar la liberación de memoria asignada o la finalización del ámbito en el que se encuentra. Los detalles específicos de la destrucción pueden variar según el lenguaje de programación utilizado. Algunos lenguajes tienen mecanismos adicionales de gestión de memoria, como destructores o métodos especiales, que permiten ejecutar acciones personalizadas antes de la destrucción de una variable, como liberar otros recursos o realizar tareas de limpieza.</p>
+<div class="admonition info">
+<p class="admonition-title">Importante</p>
+<p>Es fundamental comprender correctamente el ciclo de vida de las variables y cuál es su ámbito (<em>scope</em>) donde es accesible para evitar errores y optimizar el uso de memoria en el programa.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 Pablo Martínez Roca
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.tabs.link", "content.code.annotate", "content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
