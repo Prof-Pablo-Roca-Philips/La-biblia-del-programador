@@ -1,0 +1,662 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Lenguajes de programación - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lenguajes de programación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Primeros pasos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Primeros pasos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/introduccion-a-la-programacion/introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/introduccion-a-la-programacion/paradigmas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Lenguajes de programación</h1>
+
+<h2 id="introduccion">Introducción</h2>
+<p>Un lenguaje de programación es un conjunto de reglas y símbolos utilizados para escribir programas de computadora.</p>
+<p>Los programas escritos en un lenguaje de programación son instrucciones que le dicen a una computadora qué hacer.</p>
+<p>Cada lenguaje de programación tiene su propia sintaxis y semántica, que determinan cómo se deben escribir y entender esas instrucciones.</p>
+<h2 id="que-es-un-lenguaje-de-programacion">¿Qué es un lenguaje de programación?</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Definición</p>
+<p>Un lenguaje de programación es un lenguaje formal, artificial, formado por un conjunto de reglas gramaticales  y símbolos que le proporcionan al programador las herramientas necesarias para poder escribir una serie de instrucciones de manera ordenada, denominado programa informático, a partir de un algoritmo, con el fin de controlar el comportamiento físico y/o lógico de un sistema informático, de manera que este pueda resolver un problema de manera eficiente, devolviendo resultados procesados a partir de una serie de datos de entrada.</p>
+</div>
+<p>Los programas escritos en un lenguaje de programación son instrucciones que le dicen a una computadora qué hacer. </p>
+<p>Cada lenguaje de programación tiene su propia sintaxis y semántica, que determinan cómo se deben escribir esas instrucciones para que la computadora pueda ejecutarlas correctamente.</p>
+<p>Cada lenguaje de programación tiene sus propias características y propósitos específicos. Algunos lenguajes están especializados en ciertos dominios, como el desarrollo web, el análisis de datos, la inteligencia artificial o la programación de sistemas. Otros lenguajes son más generales y se pueden utilizar en una amplia gama de aplicaciones.</p>
+<p>Cada lenguaje tiene su propia documentación, tutoriales y recursos disponibles para ayudarte a profundizar en su estudio. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Recuerda que la práctica es fundamental para mejorar tus habilidades de programación.</p>
+</div>
+<h2 id="teoria-de-los-lenguajes-de-programacion">Teoría de los lenguajes de programación</h2>
+<p>La teoría de los lenguajes de programación es un campo de estudio que se enfoca en el diseño, la implementación, la semántica y el análisis de los lenguajes de programación. A través de la teoría de los lenguajes de programación, se busca comprender cómo los lenguajes de programación funcionan y cómo se pueden desarrollar de manera efectiva.</p>
+<p>Algunos conceptos clave dentro de la teoría de los lenguajes de programación son:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Sintaxis</td>
+<td style="text-align: center;">Tipos de datos</td>
+<td style="text-align: center;">Teoría de la complejidad</td>
+</tr>
+<tr>
+<td style="text-align: center;">Semántica</td>
+<td style="text-align: center;">Compiladores e intérpretes</td>
+<td style="text-align: center;">Teoría de la computabilidad</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Análisis léxico y análisis sintáctico</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>La teoría de los lenguajes de programación es fundamental para comprender y desarrollar lenguajes de programación, diseñar compiladores e intérpretes, y analizar y optimizar programas. </p>
+<p>Ayuda a los programadores a comprender los fundamentos teóricos detrás de los lenguajes que utilizan y proporciona herramientas para abordar problemas de programación de manera más efectiva.</p>
+<h2 id="categorias-de-los-lenguajes-de-programacion">Categorías de los lenguajes de programación</h2>
+<p>Los lenguajes de programación se pueden clasificar en tres categorías principales:</p>
+<ul>
+<li>
+<p><strong>Lenguajes de bajo nivel</strong>: estos lenguajes están más cerca del lenguaje de la máquina y proporcionan un mayor control directo sobre el hardware de la computadora. Ejemplos de lenguajes de programación de bajo nivel incluyen el lenguaje ensamblador y el lenguaje de máquina. Estos lenguajes suelen ser más difíciles de aprender y de utilizar, pero ofrecen un mayor rendimiento y eficiencia.</p>
+</li>
+<li>
+<p><strong>Lenguajes de alto nivel</strong>: estos lenguajes están más alejados del lenguaje de la máquina y se centran en la facilidad de uso y la legibilidad del código. Ejemplos de lenguajes de programación de alto nivel populares incluyen Python, Java, JavaScript, C# y muchos otros. Estos lenguajes suelen ser más fáciles de aprender y de utilizar, ya que están diseñados para ser más cercanos al lenguaje humano.</p>
+</li>
+<li>
+<p><strong>Lenguajes de nivel intermedio</strong>: el término "lenguaje de nivel intermedio" a menudo se utiliza para describir lenguajes que se encuentran entre los lenguajes de alto nivel y los lenguajes de bajo nivel. Estos lenguajes combinan características y elementos de ambos extremos del espectro.</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Atención</p>
+<p>Es importante tener en cuenta que el nivel de un lenguaje no es una clasificación absoluta y puede variar dependiendo del contexto y de las características específicas del lenguaje.</p>
+</div>
+<h3 id="lenguajes-de-bajo-nivel">Lenguajes de bajo nivel</h3>
+<p>Estos lenguajes suelen tener una correspondencia directa con las instrucciones del procesador y no proporcionan abstracciones de alto nivel.</p>
+<ul>
+<li>
+<p><strong>Lenguaje máquina</strong>: es el conjunto de instrucciones directamente entendibles y ejecutables por el procesador de una computadora. Estas instrucciones están escritas en código binario (0 y 1) y representan operaciones básicas a nivel de hardware, como cargar datos en registros o realizar operaciones aritméticas. Aunque el lenguaje máquina es el lenguaje de más bajo nivel, no es práctico para la programación manual debido a su complejidad y falta de legibilidad.</p>
+</li>
+<li>
+<p><strong>Lenguaje ensamblador (assembler)</strong>: Es el lenguaje de más cercano al lenguaje máquina. Utiliza mnemónicos para representar las instrucciones que entiende directamente el procesador y realizar optimizaciones a nivel de bit. Es específico de la arquitectura del procesador y se utiliza para programación de bajo nivel, optimización y desarrollo de controladores de hardware. Cada instrucción ensambladora se traduce directamente a una instrucción de máquina. </p>
+</li>
+<li>
+<p><strong>Lenguaje C</strong>: aunque el lenguaje C es considerado un lenguaje de nivel intermedio, también puede ser considerado un lenguaje de bajo nivel en comparación con lenguajes de más alto nivel. C proporciona un control más cercano al hardware y permite la manipulación directa de memoria y punteros.</p>
+</li>
+</ul>
+<h3 id="lenguajes-de-alto-nivel">Lenguajes de alto nivel</h3>
+<p>Estos lenguajes ofrecen un alto nivel de abstracción y se alejan de los detalles específicos del hardware de la computadora. Están diseñados para facilitar la programación y permitir un enfoque más orientado al problema en lugar de preocuparse por la implementación a nivel de máquina.</p>
+<ul>
+<li>
+<p><strong>Python</strong>: es un lenguaje ampliamente utilizado que se destaca por su sintaxis clara y legible, lo que lo hace muy accesible para principiantes. Python ofrece una amplia gama de bibliotecas y marcos de trabajo que facilitan el desarrollo rápido de aplicaciones.</p>
+</li>
+<li>
+<p><strong>Java</strong>: es un lenguaje orientado a objetos. Se enfoca en la portabilidad y la capacidad de ejecutar programas en diferentes plataformas sin tener que preocuparse por los detalles de bajo nivel. Se utiliza ampliamente en el desarrollo de aplicaciones empresariales y en el desarrollo de aplicaciones para dispositivos móviles.</p>
+</li>
+<li>
+<p><strong>C#</strong>: pronunciado "C sharp”, es un lenguaje de programación orientado a objetos que se utiliza comúnmente en el desarrollo de aplicaciones para Windows y el entorno .NET.</p>
+</li>
+<li>
+<p><strong>JavaScript</strong>: es un lenguaje de programación de alto nivel utilizado principalmente para el desarrollo Web. JavaScript permite la interactividad en los navegadores y se ha convertido en un lenguaje fundamental para el desarrollo Web front-end.</p>
+</li>
+</ul>
+<h3 id="lenguajes-de-nivel-intermedio">Lenguajes de nivel intermedio</h3>
+<p>Estos lenguajes combinan características y elementos de los lenguajes de bajo y de alto nivel, ofreciendo, generalmente, un equilibrio entre el control de bajo nivel y las abstracciones de alto nivel.</p>
+<ul>
+<li>
+<p><strong>C</strong>: El lenguaje C se considera a menudo un lenguaje de nivel intermedio, ya que ofrece un mayor control de bajo nivel en comparación con los lenguajes de alto nivel, como Python o Java. C permite la manipulación directa de memoria y el uso de punteros, lo que lo convierte en una opción popular para tareas que requieren un control cercano al hardware.</p>
+</li>
+<li>
+<p><strong>C++</strong>: C++ es una extensión del lenguaje C que agrega características de programación orientada a objetos. Si bien C++ ofrece un nivel de abstracción más alto que el lenguaje C, también permite el control de bajo nivel y la manipulación directa de memoria y punteros, considerándolo un lenguaje de nivel intermedio.</p>
+</li>
+<li>
+<p><strong>Pascal</strong>: Pascal es un lenguaje de programación estructurado que proporciona un equilibrio entre la facilidad de uso y el control de bajo nivel. Fue diseñado para fomentar la claridad y la legibilidad del código, lo que lo hace especialmente popular en entornos educativos.</p>
+</li>
+<li>
+<p><strong>Ada</strong>: Ada es un lenguaje de programación de propósito general que se utiliza en aplicaciones críticas, como sistemas embebidos y aeroespaciales. Combina características de alto nivel y control de bajo nivel para garantizar la seguridad y la fiabilidad de los sistemas.</p>
+</li>
+</ul>
+<h2 id="cada-lenguaje-un-lenguaje">Cada lenguaje, un lenguaje</h2>
+<p>Es importante comprender que cada lenguaje posee su propia sintaxis. En algunos casos, esta sentencia puede ser idéntica, en otros casos puede variar levemente, y en otros casos ser completamente diferente:</p>
+<p><div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hola Mundo!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Pyton</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola Mundo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola Mundo!&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">echo &quot;Hola Mundo!&quot;;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C#</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hola Mundo!&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola Mundo!&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Ruby</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">puts</span><span class="w"> </span><span class="s2">&quot;Hola Mundo!”</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Go</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hola Mundo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Swift</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hola Mundo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Perl</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">print</span><span class="w"> </span><span class="s">&quot;Hola Mundo!\n&quot;</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">R</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Hola Mundo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">MATLAB</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Hola Mundo!&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Estos son solo algunos ejemplos adicionales. Hay una amplia variedad de lenguajes de programación, cada uno con su propia sintaxis para imprimir <strong>"Hola Mundo!"</strong>.</p>
+<h2 id="tipos-de-programas-segun-el-lenguaje-de-programacion">Tipos de programas según el lenguaje de programación</h2>
+<p>!!! warning "sección en desarrollo</p>
+<p>Cada programa tiene un formato ejecutable que la computadora puede utilizar directamente para ejecutar las instrucciones. El mismo programa en su formato de código fuente legible para humanos, del cual se derivan los programas ejecutables (por ejemplo, compilados), le permite a un programador estudiar y desarrollar sus algoritmos. </p>
+<p>Una colección de programas de computadora y datos relacionados se conoce como software.</p>
+<ul>
+<li>
+<p>PROGRAMA FUENTE: también llamado código fuente, es el conjunto de líneas de texto con los pasos que debe seguir la computadora para realizar una tarea. Este código se escribe en un lenguaje de programación que sigue uno de los paradigmas de programación y que puede ser convertido en un archivo ejecutable (usualmente llamado un programa ejecutable) por un compilador y más tarde ejecutado por una computadora.</p>
+</li>
+<li>
+<p>PROGRAMA OBJETO: Programa escrito en lenguaje de máquina. Es el que ejecuta la computadora.</p>
+</li>
+</ul>
+<h2 id="traductores-de-lenguaje-compiladores-vs-interpretes">Traductores de lenguaje: compiladores vs. intérpretes</h2>
+<p>Un compilador y un intérprete son dos tipos de software usados para ejecutar programas de computadora. Traducen programas fuente a lenguaje de máquina.</p>
+<p>Un <strong>compilador</strong> traduce todo el código fuente de un programa en un lenguaje de programación determinado a un lenguaje de bajo nivel, generalmente en forma de código máquina, que puede ser ejecutado directamente por el hardware de la computadora. El proceso de compilación se realiza antes de la ejecución y genera un archivo ejecutable independiente. </p>
+<p>El <strong>código fuente</strong> se compila una sola vez, lo que puede llevar más tiempo, pero el programa compilado se ejecuta de manera más eficiente. Los ejemplos de compiladores incluyen GCC para C/C++ y Java JDK para Java.</p>
+<p>Por otro lado, un <em>intérprete</em> lee y ejecuta el código fuente de un programa línea por línea durante la ejecución. No se genera un archivo ejecutable independiente antes de la ejecución. El intérprete traduce y ejecuta cada instrucción a medida que se encuentra en el código fuente. Esto permite una ejecución más rápida del programa, pero puede llevar más tiempo en general, ya que la traducción y ejecución ocurren repetidamente durante la ejecución del programa. Los ejemplos de intérpretes incluyen Python, JavaScript y Ruby.</p>
+<div class="admonition success">
+<p class="admonition-title">¡Recuerda!</p>
+<p>En resumen, un compilador traduce el código fuente a un lenguaje de bajo nivel antes de la ejecución, lo que resulta en una ejecución más eficiente, pero lleva más tiempo en la fase de compilación. Un intérprete lee y ejecuta el código fuente línea por línea durante la ejecución, lo que permite una ejecución más rápida, pero puede llevar más tiempo en general.</p>
+</div>
+<p><img alt="Alt text" src="../imagenes/compiladores-vs-interpretes.svg" /></p>
+<h2 id="resumen">Resumen</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Es igual al resumen de conceptos-basicos-de-la-programacion.md</p>
+</div>
+<p>Es importante tener una <strong>comprensión clara de los conceptos básicos de la programación</strong>, como variables, estructuras de control de flujo, funciones y programación orientada a objetos, entre otros. 
+Dedica tiempo a aprender estos conceptos y asegúrate de que los comprendes antes de avanzar.</p>
+<p>Hay muchos lenguajes de programación diferentes para elegir, como Python, Java, JavaScript, C ++, entre otros. <strong>Elige un lenguaje que sea adecuado para tus objetivos y que te resulte cómodo de usar</strong>.</p>
+<p>Busca <strong>recursos en línea disponibles para aprender programación</strong>, como videos de tutoriales, documentación y foros de programación. Toma ventaja de estos recursos para profundizar tu aprendizaje.</p>
+<p>Busca <strong>ejercicios y desafíos en línea para practicar</strong> lo que has aprendido. Intenta resolver los ejercicios y retos por ti mismo y luego compara tu solución con la solución proporcionada.</p>
+<p><strong>Trabaja en proyectos</strong>. Es una excelente manera de aplicar lo que has aprendido y desarrollar tus habilidades de programación. Comienza con proyectos pequeños y luego aumenta gradualmente la complejidad.</p>
+<p>La programación requiere práctica y perseverancia para dominarla. <strong>Dedica tiempo a practicar periódicamente y no te desanimes</strong> si encuentras obstáculos en el camino.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 Pablo Martínez Roca
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.annotate", "content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
