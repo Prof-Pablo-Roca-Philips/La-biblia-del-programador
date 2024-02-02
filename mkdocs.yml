@@ -1,0 +1,369 @@
+site_name: La biblia del programador
+site_description: ''
+site_author: ''
+site_url: ''
+
+# copyright: |
+#   &copy; 2023 Pablo Martínez Roca
+
+nav:
+
+#  - Introducción a la informática:
+#    - Temario:
+#      - Introducción a la informática: unidades/introduccion-a-la-informatica/introduccion-a-la-informatica.md
+#      - Historia de la informática: unidades/introduccion-a-la-informatica/historia-de-la-informatica.md
+#      - Hardware: unidades/introduccion-a-la-informatica/hardware.md
+#      - Software: unidades/introduccion-a-la-informatica/software.md
+#      - Sistemas operativos: unidades/introduccion-a-la-informatica/sistemas-operativos.md
+#      - Línea de comandos: unidades/introduccion-a-la-informatica/linea-de-comandos.md
+#      - Resumen sobre la informática: unidades/introduccion-a-la-informatica/resumen-sobre-la-informatica.md
+  
+#  - Introducción al pensamiento computacional:
+#    - Temario:
+#
+#      - Pensamiento computacional:
+#        - Primeros pasos: unidades/introduccion-al-pensamiento-computacional/pensamiento-computacional/introduccion-al-pensamiento-computacional.md 
+#        - Pensamiento computacional: unidades/introduccion-al-pensamiento-computacional/pensamiento-computacional/que-es-el-pensamiento-computacional.md
+#        - Resumen: unidades/introduccion-al-pensamiento-computacional/pensamiento-computacional/resumen-sobre-pensamiento-computacional.md
+#        - Ejercitación: 
+#          - Tira 1: unidades/introduccion-al-pensamiento-computacional/pensamiento-computacional/ejercitacion/ejercitacion-que-es-el-pensamiento-computacional.md
+#          - Tira 2: unidades/introduccion-al-pensamiento-computacional/pensamiento-computacional/ejercitacion/ejercitacion-pensamiento-computacional.md 
+#
+#      - Representación de datos en la computadora: 
+#        - Primeros pasos: unidades/introduccion-al-pensamiento-computacional/representacion-de-datos/representacion-de-datos-en-la-computadora.md
+#        - Sistemas de representación: unidades/introduccion-al-pensamiento-computacional/representacion-de-datos/sistemas-de-representacion.md
+#        - Resumen: unidades/introduccion-al-pensamiento-computacional/representacion-de-datos/resumen-sobre-representacion-de-datos.md
+
+  - Introducción a la programación:
+        
+    - ¿Qué es la programación?: unidades/introduccion-a-la-programacion/introduccion-a-la-programacion.md
+    - Teoría de los lenguajes: unidades/introduccion-a-la-programacion/teoria-de-los-lenguajes.md
+    - Paradigmas de programación: unidades/introduccion-a-la-programacion/paradigmas-de-programacion.md
+    - Visión general de los lenguajes de programación: unidades/introduccion-a-la-programacion/vision-general-de-los-lenguajes-de-programacion.md
+
+#       - El mejor camino para aprender a programar: unidades/introduccion-a-la-programacion/el-mejor-camino-para-aprender-a-programar.md
+#       - Resumen: unidades/introduccion-a-la-programacion/resumen-sobre-introduccion-a-la-programacion.md
+
+  - Fundamentos de la programación:
+
+    - Conceptos básicos de programación: unidades/fundamentos-de-la-programacion/conceptos-basicos-de-programacion.md 
+    - Variables: 
+      - ¿Qué son las variables?: unidades/fundamentos-de-la-programacion/variables/que-son-las-variables.md
+      - Características de las variables: 
+        - ¿Cuáles son las características de una variable?: unidades/fundamentos-de-la-programacion/variables/caracteristicas-de-las-variables.md 
+        - ¿Qué es el tipo de dato de una variable?: unidades/fundamentos-de-la-programacion/variables/tipo-de-dato-de-una-variable.md
+        - ¿Qué es el identificador de una variable?: unidades/fundamentos-de-la-programacion/variables/identificador-de-una-variable.md
+        - ¿Qué es el alcance de una variable?: unidades/fundamentos-de-la-programacion/variables/alcance-de-una-variable.md
+        - ¿Qué es el dato asignado a una variable?: unidades/fundamentos-de-la-programacion/variables/dato-asignado-a-una-variable.md
+      - Utilización de variables en un programa: unidades/fundamentos-de-la-programacion/variables/utilizacion-de-variables-en-un-programa.md
+      - Para practicar:
+        - Ejercicios sobre declaración de variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-declaracion-de-variables.md
+        - Ejercicios sobre uso de variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-uso-de-variables.md
+        - Ejercicios sobre modificación de variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-modificacion-de-variables.md
+        - Ejercicios sobre operaciones con variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-operaciones-con-variables.md
+        - Ejercicios sobre alcance de variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables.md
+        - Ejercicios sobre tipos de datos de variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-tipos-de-datos-de-variables.md
+
+#        - Ejercicios introductorios: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-introductoria-de-variables
+#        - Ejercicios sobre alcance de variables: unidades/fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables.md
+
+#      - Ciclo de vida de una variable: unidades/fundamentos-de-la-programacion/variables/ciclo-de-vida-de-una-variable.md
+#
+#        - Resumen sobre el valor de una variable: unidades/fundamentos-de-la-programacion/variables/resumen-sobre-el-valor-de-una-variable.md
+#      - Variables especiales según su aplicación: unidades/fundamentos-de-la-programacion/variables/variables-especiales-segun-su-aplicacion.md
+#      - Resumen sobre variables: unidades/fundamentos-de-la-programacion/variables/resumen-sobre-variables.md
+#     
+#        - Resumen sobre el identificador de una variable: unidades/fundamentos-de-la-programacion/variables/resumen-sobre-el-identificador-de-una-variable.md
+#        - Conversión de tipos de dato: unidades/fundamentos-de-la-programacion/variables/conversion-de-tipos-de-datos.md
+#        - Resumen sobre tipos de dato: unidades/fundamentos-de-la-programacion/variables/resumen-sobre-tipos-de-datos.md
+#        - Resumen sobre el alcance de las variables: unidades/fundamentos-de-la-programacion/variables/resumen-sobre-el-alcance-de-las-variables.md
+
+    - Constantes: 
+      - ¿Qué son las constantes?: unidades/fundamentos-de-la-programacion/constantes/que-son-las-constantes.md
+      - Características de las constantes:
+        - ¿Cuáles son las características de una constante?: unidades/fundamentos-de-la-programacion/constantes/caracteristicas-de-las-constantes.md
+        - ¿Qué es el tipo de dato de una constante?: unidades/fundamentos-de-la-programacion/constantes/tipo-de-dato-de-una-constante.md
+        - ¿Qué es el identificador de una constante?: unidades/fundamentos-de-la-programacion/constantes/identificador-de-una-constante.md
+        - ¿Qué es el alcance de una constante?: unidades/fundamentos-de-la-programacion/constantes/alcance-de-una-constante.md
+        - ¿Qué es el dato asignado a una constante?: unidades/fundamentos-de-la-programacion/constantes/dato-asignado-a-una-constante.md
+      - Tipos de constantes: unidades/fundamentos-de-la-programacion/constantes/tipos-de-constantes.md
+      - Utilización de constantes en un programa: unidades/fundamentos-de-la-programacion/constantes/utilizacion-de-constantes-en-un-programa.md
+
+#      - Resumen sobre constantes: unidades/fundamentos-de-la-programacion/constantes/resumen-sobre-constantes.md
+#     
+#     - Operandos y operadores:
+#       - Introducción: unidades/fundamentos-de-la-programacion/operandos-y-operadores/introduccion-a-operandos-y-operadores.md
+#       - Resumen sobre operandos y operadores: unidades/fundamentos-de-la-programacion/operandos-y-operadores/resumen-de-operandos-y-operadores.md
+#     
+#     - Expresiones, sentencias y bloques de sentencias:
+#       - Introducción al tema: unidades/fundamentos-de-la-programacion/expresiones-sentencias-bloques/introducciom-expresiones-sentencias-bloques.md
+#       - Expresiones: unidades/fundamentos-de-la-programacion/expresiones-sentencias-bloques/expresiones.md
+#       - Sentencias: unidades/fundamentos-de-la-programacion/expresiones-sentencias-bloques/sentencias-de-un-programa.md
+#       - Bloques de sentencias: unidades/fundamentos-de-la-programacion/expresiones-sentencias-bloques/bloques-de-sentencias-de-un-programa.md
+#       - Resumen: unidades/fundamentos-de-la-programacion/expresiones-sentencias-bloques/resumen-de-expresiones-sentencias-bloques.md
+#       - Ejercitación:
+#         - Ejercitación básica: unidades/fundamentos-de-la-programacion/expresiones-sentencias-bloques/ejercitacion/ejercitacion-basica-expresiones.md
+# 
+#     - Estructuras de control:
+#       - Introducción a las estructuras de control de flujo: unidades/fundamentos-de-la-programacion/control-de-flujo/introduccion-control-de-flujo.md
+#     
+#     - Funciones y procedimientos 
+# 
+#     - Ejercitación: unidades/fundamentos-de-la-programacion/ejercitacion/ejercitacion-final.md
+# 
+#   - Estructuras de datos:
+#     - Temario:
+#       - Introducción a las estructuras de datos: unidades/fundamentos-de-la-programacion/estructuras-de-datos/introduccion-a-las-estructuras-de-datos.md
+#       - Tipos de estructuras de datos:
+#         - Cadenas: unidades/fundamentos-de-la-programacion/estructuras-de-datos/cadenas-de-caracteres.md
+#         - Otras estructuras de datos: unidades/fundamentos-de-la-programacion/estructuras-de-datos/tipos-de-estructuras-de-datos.md
+#       - Resumen sobre estructuras de datos: unidades/fundamentos-de-la-programacion/estructuras-de-datos/resumen-sobre-estructuras-de-datos.md
+# 
+#   - Lógica:
+#     - Temario:
+#       - Introducción a la lógica: unidades/logica/introduccion-a-la-logica.md
+#       - Operadores lógicos: unidades/logica/operadores-logicos.md
+#       - Tablas de verdad: unidades/logica/tablas-de-verdad.md
+#       - Declaraciones lógicas: unidades/logica/declaraciones-logicas.md
+#       - Control de flujo de un programa: unidades/logica/control-de-flujo-de-un-programa.md
+#       - Resumen sobre lógica: unidades/logica/resumen-sobre-logica.md
+# 
+#   - Matemáticas básicas:
+#     - Temario:
+#       - Álgebra: unidades/matematicas-basicas/algebra.md
+#       - Estadística: unidades/matematicas-basicas/estadistica.md
+#       - Cálculo: unidades/matematicas-basicas/calculo.md
+#     
+#   - Algoritmos:
+#     - Temario:
+#       - Introducción a los algoritmos: unidades/algoritmos/introduccion-a-los-algoritmos.md
+#       - Tipos de algoritmos: unidades/algoritmos/tipos-de-algoritmos.md
+#       - Algoritmos y estructuras de datos: unidades/algoritmos/algoritmos-y-estructura-de-datos.md
+#       - Resolución de algoritmos cotidianos: unidades/algoritmos/resolucion-de-algoritmos-cotidianos.md
+#       - Resumen y recursos: unidades/algoritmos/resumen-y-recursos-sobre-algoritmos.md
+# 
+#    - Lenguajes de programación:
+#      - Lenguajes de programación: unidades/lenguajes-de-programacion/lenguajes-de-programacion.md
+#
+#      - Python:
+#         - Instrucciones de I/O: unidades/lenguajes-de-programacion/python/instrucciones-de-entrada-y-salida-con-python.md
+#         - Uso de módulos: unidades/lenguajes-de-programacion/python/modulos-en-python.md
+#         
+#         - Estructuras de datos:
+#           - Estructuras de datos en Python: unidades/lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/fundamentos-de-la-programacion/estructuras-de-datos-en-python.md
+#           - cadenas de caracteres: unidades/lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/cadenas-de-caracteres/uso-de-cadenas-de-caracteres-en-python.md
+#           - Listas: unidades/lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/listas/uso-de-listas-en-python.md
+#           - Diccionarios: unidades/lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/diccionarios/uso-de-diccionarios-en-python.md
+#           - Tuplas: unidades/lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/tuplas/uso-de-tuplas-en-python.md
+#           - Conjuntos: unidades/lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/conjuntos/uso-de-conjuntos-en-python.md
+#         
+#         - Funciones: unidades/lenguajes-de-programacion/python/funciones-con-python.md
+# 
+#         - Funciones Lambda (anónimas): unidades/lenguajes-de-programacion/python/funciones-lambda-con-python.md
+# 
+#         - Ejercitación:
+#           - Ejercicios de I/O: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-entrada-salida-con-python.md
+#           - Ejercicios de estructuras alternativas: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-estructuras-alternativas-con-python.md
+#           - Ejercicios de estructuras repetitivas: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-estructuras-repetitivas-con-python.md
+#           - Ejercicios de funciones: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-funciones-con-python.md
+#           - Ejercicios de estructuras de datos: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-estructuras-de-datos-con-python.md
+#           - Ejercicios de cadenas de caracteres: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-cadenas-de-caracteres.md
+#           - Ejercicios de listas: unidades/lenguajes-de-programacion/python/ejercitacion/ejercicios-de-listas.md
+# 
+#   - Diseño de algoritmos:
+#     - Temario:
+#       - Descripción teórica y conceptual de una idea o proceso: unidades/diseno-de-algoritmos/descripcion-conceptual-de-un-proceso.md
+#       - Diseño de algoritmos: unidades/diseno-de-algoritmos/diseno-de-algoritmos.md
+#       - Herramientas para la representación de algoritmos: unidades/diseno-de-algoritmos/herramientas-para-la-representacion-de-algoritmos.md
+#       - Análisis de problema y diseño de algoritmo: unidades/diseno-de-algoritmos/analisis-de-problema-y-diseno-de-algoritmo.md
+#       - Resumen: unidades/diseno-de-algoritmos/resumen-diseno-de-algoritmos.md
+# 
+#   - Diagramas de flujo:
+#     - Temario:
+#       - Conceptos básicos de los diagramas de flujo: unidades/diagramas-de-flujo/conceptos-basicos-de-los-diagramas-de-flujo.md
+#       - Simbología de los diagramas de flujo: unidades/diagramas-de-flujo/simbologia-de-los-diagramas-de-flujo.md
+#       - Caso práctico de resolución de un problema: unidades/diagramas-de-flujo/caso-practico-resolucion-de-problema-mediante-diagrama-de-flujo.md
+#       - Resumen: unidades/diagramas-de-flujo/resumen-de-diagramas-de-flujo.md
+# 
+#   - Pseudocódigo:
+#     - Temario:
+#       - Conceptos básicos de pseudocódigo: unidades/pseudocodigo/conceptos-basicos-de-pseudocodigo.md
+#       - Sintaxis empleada en pseudocódigo: unidades/pseudocodigo/sintaxis-empleada-en-pseudocodigo.md
+#       - Análisis de problema y diseño de algoritmo: unidades/diseno-de-algoritmos/analisis-de-problema-y-diseno-de-algoritmo.md
+#       - Resumen sobre pseudocódigo: unidades/pseudocodigo/resumen-de-pseudocodigo.md
+# 
+#   - Abstracción:
+#     - Temario:
+#       - Introducción a la abstracción: unidades/abstraccion/introduccion-a-la-abstraccion.md
+#       - Resumen sobre abstracción: unidades/abstraccion/resumen-sobre-abstraccion.md
+# 
+#   - Implementación subyacente:
+#     - Temario:
+#       - Introducción a la implementación subyacente: unidades/implementacion-subyacente/introduccion-a-la-implementacion-subyacente.md
+#       - Resumen sobre implementación subyacente: unidades/implementacion-subyacente/resumen-sobre-implementacion-subyascente.md  
+# 
+#   - Programación estructurada:
+#     - Temario:
+#       - Introducción a la programación estructurada: unidades/programacion-estructurada/introduccion-a-la-programacion-estructurada.md
+# 
+#   - Programación procedimental:
+#     - Temario:
+#       - Introducción a la programación procedimental: unidades/programacion-procedimental/introduccion-a-la-programacion-procedimental.md
+#       - Funciones: 
+#         - Introducción: unidades/programacion-procedimental/funciones.md
+#         - Función asignada a una variable: unidades/programacion-procedimental/funciones/funcion-asignada-a-una-variable.md
+#       - Resumen sobre programación procedimental: unidades/programacion-procedimental/resumen-sobre-programacion-procedimental.md
+#       - Ejercitación: unidades/programacion-procedimental/funciones/ejercitacion/ejercitacion-funciones.md 
+# 
+#   - Programación modular:
+#     - Temario:
+#       - Introducción a la programación modular: unidades/programacion-modular/introduccion-a-la-programacion-modular.md
+# 
+#   - Programación orientada a objetos:
+#     - Temario:
+#       - Introducción a la programación orientada a objetos: unidades/programacion-orientada-a-objetos/introduccion-a-la-programacion-orientada-a-objetos.md
+#       - Clases y objetos: unidades/programacion-orientada-a-objetos/clases-y-objetos.md
+#       - Herencia: unidades/programacion-orientada-a-objetos/herencia.md
+#       - Polimorfismo: unidades/programacion-orientada-a-objetos/polimorfismo.md
+#       - Abstracción y encapsulamiento: unidades/programacion-orientada-a-objetos/abstraccion-y-encapsulamiento.md
+# 
+#   - Bases de datos:
+#     - Temario:
+#       - Introducción a las bases de datos: unidades/bases-de-datos/introduccion-a-las-bases-de-datos.md
+#       - Tipos de bases de datos: unidades/bases-de-datos/tipos-de-bases-de-datos.md
+#       - Bases de datos relacionales: unidades/bases-de-datos/bases-de-datos-relacionales.md
+#       - Bases de datos no relacionales: unidades/bases-de-datos/bases-de-datos-no-relacionales.md
+#       - Resumen sobre bases de datos: unidades/bases-de-datos/resumen-sobre-bases-de-datos.md
+# 
+#   - Desarrollo Web:
+#     - Temario:
+#       - FrontEnd:
+#         - HTML: unidades/desarrollo-web/frontend/html.md
+#         - CSS: unidades/desarrollo-web/frontend/css.md
+#         - JavaScript: unidades/desarrollo-web/frontend/JavaScript.md
+#         - React: unidades/desarrollo-web/frontend/react.md
+#         - Angular: unidades/desarrollo-web/frontend/angular.md
+#         - Vue: unidades/desarrollo-web/frontend/vue.md
+#       - BackEnd:
+#         - Node: unidades/desarrollo-web/backend/node.md
+#         - Express: unidades/desarrollo-web/backend/express.md
+#         - Django: unidades/desarrollo-web/backend/django.md
+#         - Flask: unidades/desarrollo-web/backend/flask.md
+#         - Spring: unidades/desarrollo-web/backend/spring.md
+#         - Laravel: unidades/desarrollo-web/backend/laravel.md
+#         - Ruby on Rails: unidades/desarrollo-web/backend/ruby-on-rails.md
+# 
+#   - Control de versiones:
+#     - Temario:
+#       - Introducción al control de versiones: unidades/control-de-versiones/introduccion-al-control-de-versiones.md
+#       - Git: unidades/control-de-versiones/git.md
+#       - GitHub: unidades/control-de-versiones/github.md
+#       - GitLab: unidades/control-de-versiones/gitlab.md
+#       - BitBucket: unidades/control-de-versiones/bitbucket.md
+#       - Resumen sobre control de versiones: unidades/control-de-versiones/resumen-sobre-control-de-versiones.md
+# 
+#   - Pruebas de versiones:
+#     - Temario:
+#       - Introducción a las pruebas de versiones: unidades/pruebas-de-versiones/introduccion-a-las-pruebas-de-versiones.md
+#       - Tipos de pruebas de versiones: unidades/pruebas-de-versiones/tipos-de-pruebas-de-versiones.md
+#       - Resumen sobre pruebas de versiones: unidades/pruebas-de-versiones/resumen-sobre-pruebas-de-versiones.md
+# 
+#   - Principios de diseño de software y patrones de diseño:
+#     - Temario:
+#       - SOLID: unidades/principios-de-diseno-de-software-y-patrones-de-diseno/solid.md
+# 
+#   - Despliegue de aplicaciones y DevOps:
+#     - Temario:
+#       - Integración continua y entrega continua: unidades/despliegue-de-aplicaciones-y-devops/integracion-continua-y-entrega-continua.md
+#       - Docker: unidades/despliegue-de-aplicaciones-y-devops/docker.md
+#       - Kubernetes: unidades/despliegue-de-aplicaciones-y-devops/kubernetes.md}
+#       - La nube: unidades/despliegue-de-aplicaciones-y-devops/la-nube.md
+# 
+#   - Aprendizaje continuo:
+#     - Temario:
+#       - Introducción al aprendizaje continuo: unidades/aprendizaje-continuo/introduccion-al-aprendizaje-continuo.md
+#       - Recursos para el aprendizaje continuo: unidades/aprendizaje-continuo/recursos-para-el-aprendizaje-continuo.md
+#       - Resumen sobre aprendizaje continuo: unidades/aprendizaje-continuo/resumen-sobre-aprendizaje-continuo.md
+
+exclude:
+    - '**/_*'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Prof-Pablo-Roca-Philips/python-bible
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/pablomartinezroca/
+
+extra_css:
+    - css/extra.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details  # for admmonitions...
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences  # for admmonitions...
+  - pymdownx.tilde
+  - tables
+
+plugins:
+  # - include-markdown # pip install mkdocs-include-markdown-plugin
+  - search:
+      ignore:
+        - '**/_*'
+
+theme:
+  name: material
+
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.footnote.tooltips
+    - content.tabs.link
+#    - navigation.expand # expand all collapsible subsections by default 
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+  icon:
+    annotation: material/arrow-right-circle
+    
+  language: es
+  
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark theme
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light theme

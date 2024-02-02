@@ -1,0 +1,159 @@
+h1 {
+    border-bottom: 2px #ccc solid;
+    color: rgb(186, 80, 186) !important;
+    font-size: 3em !important;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid #ff6347;
+    color:#ff6347;
+}
+
+h3 {
+    color: #a47bea;
+    text-decoration: underline;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.back-white {
+    background-color: #fff;
+}
+
+img.border-round {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+/* Revision */
+label.revision {
+    font-style: italic;
+    display: block;
+    margin-top: -3em;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+/* Layout */
+@media (min-width: 1220px) {
+    .md-grid {
+        max-width: 95% !important;
+    }
+}
+
+/* Navigation */
+@media (min-width: 1220px) {
+    .md-sidebar {
+        /* min-width: 300px; */
+        width: 35% !important;
+        min-width: 400px!important;
+        max-width: 500px !important;
+    }
+
+    .md-sidebar__inner {
+        padding-right: calc(100% - 14rem) !important;
+        padding-right: 5% !important;
+    }
+}
+
+label.md-nav__title {
+    border-bottom: rgb(186, 80, 186) solid 1px !important;
+    border-top: rgb(186, 80, 186) solid 1px !important;
+    font-size: 1.2em;
+    padding: 0.5em !important;
+    text-align: center !important;
+}
+
+.md-nav__item--section>.md-nav__link[for] {
+    font-size: 1.2em;
+    color:rgb(186, 80, 186);
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-bottom: #aaa dotted 1px;
+}
+
+nav[aria-expanded="true"] nav[aria-expanded="true"] ul li.md-nav__item--active > label {
+    border-bottom: dotted 1px #2094f3;
+    color: rgb(72, 152, 159) !important;
+    font-size: 1.2em;
+    font-weight: bold !important;
+}
+
+/* Code blocks */
+.highlight code
+.highlight .linenos {
+    white-space : pre-wrap !important;
+    word-break: break-word;
+    line-height: 1.6em !important;
+}
+
+.highlight .linenos {
+    min-width: 50px !important
+}
+
+.highlight.consecutive {
+    margin-top: -1em !important;
+}
+
+/* Font color */
+
+.blue code * {
+    color: #2094f3 !important;
+}
+
+.green code * {
+    color: #4cae4f !important;
+}
+
+.purple code * {
+    color: #a47bea !important;
+}
+
+/* Text decoration */
+
+.tachado {
+    text-decoration:line-through !important;
+}
+
+/* Table */
+
+.full-width {
+    width: 100% !important;
+}
+
+/* Columns */
+
+.col-2 {
+    width: 50% !important;
+}
+
+/* Annotations */
+
+.md-tooltip.md-tooltip--active {
+    width: -webkit-fill-available !important;
+    max-width: 1000px !important;
+}
+
+@media (min-width: 1220px) {
+    .md-tooltip.md-tooltip--active {
+        width: -webkit-fill-available !important;
+        max-width: 700px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .md-tooltip.md-tooltip--active {
+        width: -webkit-fill-available !important;
+        max-width: 800px !important;
+    }
+}
+
+/* Admonitions */
+
+.admonition p {
+    font-size: 0.8rem;
+}
