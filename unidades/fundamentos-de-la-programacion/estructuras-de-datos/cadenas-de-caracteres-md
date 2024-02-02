@@ -1,0 +1,40 @@
+title: Cadenas de caracteres
+
+## Cadenas de caracteres (_strings_)
+
+!!! abstract "Definición"
+    La **cadena de caracteres** es una estructura de datos que representa una secuencia de caracteres. 
+
+ ### Características
+
+* Una cadena de caracteres está compuesta por cero o más caracteres.
+
+* En muchos lenguajes de programación se delimitan usando comillas simples ( ' ) o comillas dobles ( " ). 
+
+    Por ejemplo, 'Hola, mundo!', '1452', "$ 10.48 c/u" y "123abc" son cadenas de caracteres, independientemente de si están conformadas por caracteres numéricos, de texto o símbolos entre comillas simples o dobles.
+
+    El poder delimitar cadenas con comillas simples o comillas dobles es que si usamos comillas de una clase, las de otra clase pueden utilizarse como parte de la cadena:
+
+    ``` py title="Las cadenas de caracteres también pueden contener comillas"
+    print("Mi perro 'Toby'") # Mi perro 'Toby'
+    print('Mi perro "Toby"') # Mi perro "Toby"
+    ```
+
+
+
+
+
+
+
+Sí, un string o cadena de caracteres es considerado una estructura de datos básica en la mayoría de los lenguajes de programación. Es una secuencia de caracteres que se utiliza para representar texto. En muchos lenguajes de programación, los strings son inmutables, lo que significa que una vez que se crean, no pueden ser modificados directamente. Sin embargo, puedes realizar operaciones en ellos para crear nuevos strings. Algunas de las operaciones comunes incluyen concatenación, división, y transformaciones como convertir a mayúsculas o minúsculas.
+
+Los strings son inmutables en algunos lenguajes de programación, lo que significa que una vez que se crean, no pueden ser modificados. Sin embargo, puedes crear un nuevo string basado en uno existente, por ejemplo, cambiando algunos caracteres, convirtiendo a mayúsculas o minúsculas, etc.
+
+Los strings son utilizados en programación para manejar y manipular texto. Puedes concatenarlos, dividirlos, convertirlos a otros tipos de dato y mucho más.
+
+Cadenas de caracteres (_string_): también conocidas como cadenas de caracteres, son una sucesión de caracteres delimitados por una comilla simple (apóstrofo) (') o comillas dobles ("), según el tipo de lenguajes de programación. Es decir, las cadenas de caracteres son una secuencia de caracteres entre comillas.
+
+```
+'Estoesunacadenadecaracteres'  'string'  '123abc'
+"Estoesunacadenadecaracteres"  "string"  "123abc"
+```
