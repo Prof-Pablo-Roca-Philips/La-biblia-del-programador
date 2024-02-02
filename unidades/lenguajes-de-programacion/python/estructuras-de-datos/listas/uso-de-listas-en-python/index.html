@@ -1,0 +1,1718 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Listas en Python - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#declaracion-de-una-lista" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Listas en Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../introduccion-a-la-programacion/introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../introduccion-a-la-programacion/teoria-de-los-lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teoría de los lenguajes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../introduccion-a-la-programacion/paradigmas-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../introduccion-a-la-programacion/vision-general-de-los-lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visión general de los lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentos de la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentos de la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/conceptos-basicos-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptos básicos de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/que-son-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las variables?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/caracteristicas-de-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/tipo-de-dato-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/identificador-de-una-variable.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/alcance-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/dato-asignado-a-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/utilizacion-de-variables-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Para practicar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Para practicar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-declaracion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre declaración de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-uso-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre uso de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-modificacion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre modificación de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-operaciones-con-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre operaciones con variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre alcance de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-tipos-de-datos-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre tipos de datos de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/que-son-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las constantes?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/caracteristicas-de-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/tipo-de-dato-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/identificador-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/alcance-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/dato-asignado-a-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/tipos-de-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fundamentos-de-la-programacion/constantes/utilizacion-de-constantes-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de constantes en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Listas en Python</h1>
+
+<p>Una lista en Python es una estructura de datos que puede contener múltiples elementos, que pueden ser de diferentes tipos (por ejemplo, números enteros, flotantes, cadenas, etc.), aunque esto último es poco frecuente.  Por lo general, todos los elementos de una lista son del mismo tipo o estructura de datos.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p>En este ejemplo, <code>mi_lista</code> es una lista que contiene cuatro elementos: dos números enteros, una cadena y un número flotante.</p>
+</blockquote>
+<p>Los elementos en una lista están ordenados en secuencia y tienen un índice definido, que comienza desde 0 para el primer elemento.</p>
+<p>Las listas son mutables, lo que significa que puedes cambiar sus elementos después de que la lista ha sido creada. Puedes agregar, eliminar y modificar elementos en una lista en cualquier momento de la ejecución del programa.</p>
+<h2 id="declaracion-de-una-lista">Declaración de una lista</h2>
+<p>Las listas se crean asignando a una variable una secuencia de elementos encerrados entre corchetes ( [] )y separados por comas. </p>
+<p>Se puede crear una lista vacía, y las listas pueden ser elementos de otras listas. Para incluir una lista como parte de otra, basta con incluirla separada por comas de los elementos restantes.</p>
+<p>Aquí tienes varios ejemplos de cómo se ve una lista en Python:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="c1"># Lista de números</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Lunes&quot;</span><span class="p">,</span> <span class="s2">&quot;Martes&quot;</span><span class="p">,</span> <span class="s2">&quot;Miércoles&quot;</span><span class="p">,</span> <span class="s2">&quot;Jueves&quot;</span><span class="p">,</span> <span class="s2">&quot;Viernes&quot;</span><span class="p">,</span> <span class="s2">&quot;Sábado&quot;</span><span class="p">,</span> <span class="s2">&quot;Domingo&quot;</span><span class="p">]</span> <span class="c1"># Lista de cadenas de caracteres</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">elementos</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Lista vacía</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">matriz</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="p">]</span> <span class="c1"># lista de listas (también llamada matriz)</span>
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Las listas se suelen nombrar en plural. </p>
+</div>
+<h2 id="acceso-a-los-elementos-de-una-lista">Acceso a los elementos de una lista</h2>
+<p>En Python, puedes acceder a los elementos de una lista utilizando su índice, que es la posición del elemento en la lista. Los índices en Python comienzan en 0, por lo que el primer elemento de la lista está en el índice 0, el segundo elemento está en el índice 1, y así sucesivamente.</p>
+<p>Aquí tienes varios ejemplos:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Definir la lista</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Acceder al primer elemento</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 1</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Acceder al segundo elemento</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: 2</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Acceder al último elemento</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: 4.0</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>mi_lista[0]</code> accede al primer elemento de mi_lista, <code>mi_lista[1]</code> accede al segundo elemento, y <code>mi_lista[-1]</code> accede al último elemento.<br />
+Los índices negativos cuentan desde el final de la lista, por lo que -1 es el último elemento, -2 es el penúltimo elemento, y así sucesivamente.</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">¡Muy importante!</p>
+<p>Intentar acceder a un elemento con un índice fuera de rango generará un error: </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Definir la lista</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># La lista solo tiene índices 0 al 3 (4 elementos)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1"># Acceder a un elemento con índice fuera de rango</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll"><span class="nb">print</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Traceback (most recent call last):
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>File &quot;…&quot;, line 6, in &lt;module&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    print(mi_lista[4])
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        ~~~~~~~~^^^
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>IndexError: list index out of range
+</code></pre></div>
+</div>
+<h2 id="impresion-de-listas">Impresión de listas</h2>
+<p>La impresión de listas en Python se refiere a mostrar en la consola o terminal los elementos de la lista.  Para imprimir una lista, puedes usar la función <code>print()</code>.</p>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[1, 2, &#39;tres&#39;, 4.0]
+</code></pre></div>
+<p>En este código, <code>print(mi_lista)</code> imprime la representación de la lista <code>mi_lista</code>, que incluye los corchetes que delimitan la lista y las comas que separan los elementos.</p>
+<h2 id="longitud-de-una-lista">Longitud de una lista</h2>
+<p>La función <code>len()</code> devuelve la cantidad de elementos en un objeto iterable, en este caso, una lista. </p>
+<p>Por lo tanto, <code>len(lista)</code> devolverá el número de elementos en la lista <code>lista</code>.</p>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mi_lista</span><span class="p">))</span>  <span class="c1"># Output: 5</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>len(mi_lista)</code> devuelve 5, porque hay cinco elementos en la lista <code>mi_lista</code>.</p>
+</blockquote>
+<h2 id="iterar-sobre-una-lista">Iterar sobre una lista</h2>
+<p>Una de las tareas más comunes que se realizan con listas es recorrer su contenido con el objetivo de conocer como está compuesta:</p>
+<h3 id="impresion-de-los-elementos-de-una-lista">Impresión de los elementos de una lista</h3>
+<p>Si quieres imprimir los elementos de una lista, uno por uno, puedes hacerlo de diferentes maneras:</p>
+<ol>
+<li>
+<p>Emplear un bucle <em>for … in</em> para acceder a cada elemento:</p>
+<p>La estructura <em>for … in</em> permite acceder a cada uno de los elementos de una lista y almacenar una copia en la variable de control:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">mi_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">mi_lista</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">elemento</span><span class="p">)</span>
+</code></pre></div>
+<p>Este código imprimirá cada elemento de la lista en una línea separada:</p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>tres
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>4.0
+</code></pre></div>
+</li>
+<li>
+<p>Emplear un bucle <em>for … in range</em> o un bucle <em>while</em> para generar la secuencia de índices para acceder a cada elemento:</p>
+<p>Emplear un bucle tradicional no permite acceder directamente al elemento de la lista pero si permite generar una secuencia de índices par luego referencia cada posición de la lista para acceder al elemento almacenado en ella:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)):</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>1
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>tres
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>4.0
+</code></pre></div>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">]</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>1
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>tres
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>4.0
+</code></pre></div>
+</li>
+</ol>
+<h2 id="desempaquetado-de-listas">Desempaquetado de listas</h2>
+<p>El desempaquetado de listas, también conocido como <em>unpacking</em>, es un proceso que permite asignar los valores de una lista a variables individuales. </p>
+<div class="admonition info">
+<p class="admonition-title">Esto se hace utilizando la asignación múltiple.</p>
+</div>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">numeros</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: 2</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># Output: 3</span>
+</code></pre></div>
+<p>En este código, <code>a, b, c = numeros</code> desempaqueta la lista <code>numeros</code> en las variables <code>a</code>, <code>b</code> y <code>c</code>. La variable <code>a</code> recibe el primer valor de la lista, <code>b</code> el segundo y <code>c</code> el tercero.</p>
+<div class="admonition warning">
+<p class="admonition-title">¡Muy importante!</p>
+<p>Hay que tener en cuenta que el número de variables debe coincidir con el número de elementos en la lista. Si no coinciden, Python lanzará un error.</p>
+</div>
+<h2 id="uso-de-operadores-con-cadenas-de-caracteres">Uso de operadores con cadenas de caracteres</h2>
+<h3 id="concatenacion-de-listas">Concatenación de listas</h3>
+<p>La concatenación de listas en Python es el proceso de unir o combinar dos o más listas. Esto se puede hacer utilizando el operador de concatenación ( + ).</p>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">lista2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">lista_concatenada</span> <span class="o">=</span> <span class="n">lista1</span> <span class="o">+</span> <span class="n">lista2</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista_concatenada</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4, 5, 6]</span>
+</code></pre></div>
+<p>En este código, <code>lista1 + lista2</code> concatena <code>lista1</code> y <code>lista2</code> para formar una nueva lista que contiene todos los elementos de <code>lista1</code> seguidos de todos los elementos de <code>lista2</code>.</p>
+<h3 id="comprobar-si-un-elemento-se-encuentra-o-no-dentro-de-una-lista">Comprobar si un elemento se encuentra, o no, dentro de una lista</h3>
+<p>Los operadores <strong>in</strong> y <strong>not in</strong> también se pueden usar con listas en Python para verificar si un elemento está o no en la lista. Aquí hay un ejemplo:</p>
+<ul>
+<li>
+<p><strong>in</strong>: devuelve True si un elemento se encuentra en la lista y False de lo contrario.</p>
+</li>
+<li>
+<p><strong>not in</strong>: devuelve True si un elemento no se encuentra en la lista y False de lo contrario.</p>
+</li>
+</ul>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cereza&quot;</span><span class="p">]</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;manzana&quot;</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;naranja&quot;</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: False</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;manzana&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: False</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;naranja&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: True</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>"manzana" in lista</code> devuelve <code>True</code> porque "manzana" es un elemento de la lista. Por otro lado, <code>"naranja" in lista</code> devuelve <code>False</code> porque "naranja" no es un elemento de la lista.</p>
+<p>De manera similar, <code>"manzana" not in lista</code> devuelve <code>False</code> porque "manzana" es un elemento de la lista, y <code>"naranja" not in lista</code> devuelve <code>True</code> porque "naranja" no es un elemento de la lista.</p>
+</blockquote>
+<p>Más adelante veremos que podremos realizar estas comparaciones directamente mediante el uso de métodos.</p>
+<p>''' info "¡¡Para recordar! que estos operadores también funcionan con otras estructuras de datos!"</p>
+<h2 id="uso-de-funciones-con-listas">Uso de funciones con listas</h2>
+<ul>
+<li><strong>list([iterable])</strong>: Es un <em>constructor</em> de listas. Se utiliza para crear una lista a partir de un iterable (como una cadena, tupla, conjunto, etc.) o para crear una lista vacía si no se proporciona el parámetro <em>iterable</em>.</li>
+</ul>
+<p>Aquí está la sintaxis básica:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">list</span><span class="p">([</span><span class="n">iterable</span><span class="p">])</span>
+</code></pre></div>
+<blockquote>
+<p>Donde iterable es opcional. Si se proporciona, list() crea una lista donde cada elemento es un elemento del iterable. Si no se proporciona iterable, list() crea una lista vacía.</p>
+</blockquote>
+<p>Aquí tienes algunos ejemplos de cómo usar list():</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Crear una lista vacía</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">lista_vacia</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista_vacia</span><span class="p">)</span>  <span class="c1"># Output: []</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="c1"># Crear una lista a partir de una cadena</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">lista_cadena</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista_cadena</span><span class="p">)</span>  <span class="c1"># Output: [&#39;H&#39;, &#39;o&#39;, &#39;l&#39;, &#39;a&#39;]</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="c1"># Crear una lista a partir de una tupla</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="n">lista_tupla</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista_tupla</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3]</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="c1"># Crear una lista a partir de un conjunto</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="n">lista_conjunto</span> <span class="o">=</span> <span class="nb">list</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">})</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista_conjunto</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3]</span>
+</code></pre></div>
+<blockquote>
+<p>recuerda que una cadena de caracteres es una estructura de datos que alberga uno o mas elementos, en este caso, caracteres.</p>
+<p>Aún no hemos visto en profundidad que son tuplas y conjuntos pero, por el momento y para clarificar los ejemplos, una tupla es una colección de objetos que son ordenados e inmutables. Esto significa que una vez que una tupla es creada, no puedes cambiar sus elementos o su tamaño. Por lo tanto, si precisaras modificarla por algún motivo, es necesario convertirla en una lista, aplicar las modificaciones, y luego volver a convertirla en una tupla. Un conjunto es una colección de elementos que no están ordenados y no tienen índices y tampoco permiten elementos duplicados. Esto significa que si es preciso trabajar con índices, ordenamiento o duplicar elementos es necesario convertirlo en una lista, realizar las tareas correspondientes, y luego volver a convertirlo en un conjunto.</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">¡Para recordar!</p>
+<p><code>list()</code> crea una <strong>nueva lista</strong>. Si el iterable es mutable (como una lista o un conjunto), los cambios en el iterable utilizado para crear la lista no afectarán a la lista creada, y viceversa.</p>
+</div>
+<ul>
+<li><strong>range([inicio,] fin[, paso])</strong>: Se utiliza para generar una secuencia de números.<br />
+Aunque no se utiliza directamente con listas, se puede utilizar para generar listas de números si se combina con la función <em>list()</em>.  </li>
+</ul>
+<p>Donde:</p>
+<div class="highlight"><pre><span></span><code>* **inicio**: Opcional. Un número entero que especifica en qué posición empezar. El valor predeterminado es 0.
+
+* **fin**: Requerido. Un número entero que especifica en qué posición parar.
+
+* **paso**: Opcional. Un número entero que especifica el incremento. El valor predeterminado es 1. Dependiendo del valor de inicio y de fin, _paso_ debe ser positivo o negativo.
+
+Aquí hay algunos ejemplos de cómo usar range() para generar listas:
+
+``` py title=&quot;Python&quot;
+# Generar una lista de números del 0 al 9
+lista1 = list(range(10))
+print(lista1)  # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Generar una lista de números del 5 al 9
+lista2 = list(range(5, 10))
+print(lista2)  # Output: [5, 6, 7, 8, 9]
+
+# Generar una lista de números del 0 al 9, pero con pasos de 2
+lista3 = list(range(0, 10, 2))
+print(lista3)  # Output: [0, 2, 4, 6, 8]
+```
+
+También puedes usar _range()_ con listas existentes para iterar sobre ellas, como hemos visto previamente:
+
+``` py title=&quot;Python&quot;
+lista = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+
+# Imprimir cada elemento de la lista usando range()
+for i in range(len(lista)):
+    print(lista[i])
+```
+
+&gt; En este código, `range(len(lista))` genera una lista de números del 0 al 4, que son los índices de los elementos en `lista`. Luego, en cada iteración del bucle `for`, se utiliza el número generado por `range()` como índice para acceder a cada elemento de lista.
+</code></pre></div>
+<ul>
+<li><strong>sum(iterable[, inicio])</strong>: Se utiliza para sumar todos los elementos de una lista. </li>
+</ul>
+<p>Donde:</p>
+<ul>
+<li>
+<p><strong>iterable</strong>: es una secuencia (como una lista, tupla, etc.) o una colección (como un conjunto, diccionario, etc.) de números (enteros y flotantes).  </p>
+</li>
+<li>
+<p><strong>inicio</strong>: es un número opcional que se suma al resultado de sumar los elementos del iterable. Si se omite start, la suma comienza desde cero.</p>
+</li>
+</ul>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>  <span class="c1"># Output: 15</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="n">suma_con_inicio</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">suma_con_inicio</span><span class="p">)</span>  <span class="c1"># Output: 25</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>sum(lista)</code> suma todos los elementos de lista, y sum<code>(lista, 10)</code> suma todos los elementos de lista y luego añade 10 al resultado.</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">¡Importante!</p>
+<p>Es importante mencionar que <code>sum()</code> sólo puede sumar elementos que sean números. Si intentas usar <code>sum()</code> en una lista que contiene elementos que no son números, Python lanzará un error.</p>
+</div>
+<ul>
+<li><strong>min(iterable, *[, clave, valor_defecto])</strong>,</li>
+<li>
+<p><strong>max(iterable, *[, clave, valor_defecto])</strong>: Se utilizan para obtener el valor mínimo y máximo de un iterable, una lista en este caso.</p>
+<ul>
+<li>
+<p><strong>clave</strong> (opcional): Una función para servir como clave o criterio de ordenación. La función <code>min()</code> o <code>max()</code> aplicará esta función a cada elemento del iterable y devolverá el elemento para el cual la función key devuelve el valor mínimo o máximo.</p>
+</li>
+<li>
+<p><strong>valor_defecto</strong> (opcional): Un valor por defecto que se devuelve si el iterable está vacío.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="c1"># Obtener el valor mínimo de una lista</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">minimo</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">minimo</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="c1"># Obtener el valor máximo de una lista</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="n">maximo</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">maximo</span><span class="p">)</span>  <span class="c1"># Output: 5 </span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>min(lista)</code> y <code>max(lista)</code> devuelven el valor mínimo y máximo de <code>lista</code>, respectivamente. </p>
+</blockquote>
+<p>Por el momento utilizaremos ambas funciones sin aplicar los parámetros opcionales.</p>
+<h2 id="uso-de-metodos-de-listas">Uso de métodos de listas</h2>
+<p>Los métodos de las listas en Python son funciones incorporadas que se pueden usar para realizar diferentes operaciones en las listas. </p>
+<p>Algunos de los métodos más comunes que poseen las listas en Python incluyen los que veremos a continuación. Para ello, primero crearemos una lista:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+<p>Y ahora efectuaremos una serie de procesos para ir describiendo los diferentes funcionamientos. recuerda ir siguiendo lo que ocurre con la lista, ejecución tras ejecución.</p>
+<ul>
+<li>
+<p><strong>append(elemento)</strong>: Agrega un elemento al final de la lista.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4, 5, 6]</span>
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>El método <em>append(elemento)</em> equivale a sumar una lista con el elemento para agregar a continuación de la lista que recibirá el elemento:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">lista</span> <span class="o">=</span> <span class="n">lista</span> <span class="o">+</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4, 5, 6]</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p><strong>extend()</strong>: Agrega todos los elementos de una lista a otra lista.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div>
+<blockquote>
+<p>La ejecución de este método equivale a concatenar dos listas.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>insert(posicion, elemento)</strong>: Inserta un elemento en una posición específica de la lista.</p>
+<p>Los parámetros son:</p>
+<ul>
+<li>
+<p><strong>posicion</strong>: Es el índice donde se insertará el nuevo elemento. Los índices en Python comienzan en 0, por lo que si quieres insertar un elemento al inicio de la lista, la posición sería 0.</p>
+</li>
+<li>
+<p><strong>elemento</strong>: Es el valor que se insertará en la lista.</p>
+</li>
+</ul>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>remove(valor)</strong>: Elimina la primera aparición de un elemento en la lista.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>pop()</strong>: Elimina y devuelve el elemento en una posición dada. Si no se proporciona ninguna posición, elimina y devuelve el último elemento de la lista.</p>
+</li>
+</ul>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">elemento</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">elemento</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div>
+<ul>
+<li>
+<p><strong>index(valor[, inicio[, fin]])</strong>: Devuelve el índice del primer elemento que coincide con el valor especificado.</p>
+<p>Donde:</p>
+<ul>
+<li><strong>inicio</strong> (opcional): Es el índice inicial desde donde se debe comenzar la búsqueda.</li>
+<li><strong>fin</strong> (opcional): Es el índice final donde se debe detener la búsqueda.</li>
+</ul>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="n">indice</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span>  <span class="c1"># Output: 4</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="n">indice</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span>  <span class="c1"># Output: 3</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="n">indice</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span>  <span class="c1"># Output: 5</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Si el valor no se encuentra en la lista, se lanza una excepción <code>ValueError</code>.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="n">indice</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span>  <span class="c1"># Output: ValueError: 4 is not in list</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p><strong>count(valor)</strong>: Devuelve el número de veces que un valor específico aparece en la lista.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">conteo</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">conteo</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>sort([reverse=False])</strong>: Ordena los elementos de la lista en un orden específico: ascendente o descendente.<br />
+Tiene un parámetro opcional <em>reverse</em>, que por defecto es False. Si no se especifica, la lista se ordenará en orden ascendente. Si el parámetro <em>reverse</em> se establece en True, entonces la lista se ordenará en orden descendente.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [2, 3, 4, 5, 6, 7, 8, 9]</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [9, 8, 7, 6, 5, 4, 3, 2]</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>reverse()</strong>: Invierte el orden de los elementos de la lista.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: [2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div>
+<blockquote>
+<p>La ejecución de este método equivale a ejecutar el método <em>sort(reverse=True)</em></p>
+</blockquote>
+</li>
+<li>
+<p><strong>clear()</strong>: Se utiliza para eliminar todos los elementos de la lista. Después de usar este método, la lista se convierte en una lista vacía.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">lista</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># Output: []</span>
+</code></pre></div>
+</li>
+</ul>
+<p>Estos métodos proporcionan una forma conveniente de manipular y trabajar con listas en Python.</p>
+<div class="admonition warning">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Cada uno de estos métodos modifica la lista original y no devuelve una nueva lista, <strong>excepto el método <em>pop()</em></strong>, que devuelve el elemento eliminado.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

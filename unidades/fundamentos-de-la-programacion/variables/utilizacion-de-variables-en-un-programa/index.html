@@ -1,0 +1,1964 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../dato-asignado-a-una-variable/">
+      
+      
+        <link rel="next" href="../ejercitacion/ejercitacion-declaracion-de-variables/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Utilización de variables en un programa - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utilizacion-de-variables-en-un-programa" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Utilización de variables en un programa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/teoria-de-los-lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teoría de los lenguajes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/paradigmas-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/vision-general-de-los-lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visión general de los lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentos de la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentos de la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-basicos-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptos básicos de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../que-son-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las variables?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caracteristicas-de-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tipo-de-dato-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../identificador-de-una-variable.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alcance-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dato-asignado-a-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sintaxis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-lee-la-sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo se lee la sintaxis?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-de-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de una variable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaración de una variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-reserva-el-espacio-en-memoria-para-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo se reserva el espacio en memoria para una variable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-multiples-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de múltiples variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-palabras-clave-para-definir-el-alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de palabras clave para definir el alcance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializacion-de-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicialización de una variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaracion-e-inicializacion-en-la-misma-instruccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Declaración e inicialización en la misma instrucción?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Declaración e inicialización en la misma instrucción?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-aplicacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizacion-de-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilización de una variable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilización de una variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificacion-del-valor-almacenado-en-una-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificación del valor almacenado en una variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intercambio-de-valores-almacenados-entre-dos-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intercambio de valores almacenados entre dos variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-variables-temporales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de variables temporales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destruccion-de-la-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destrucción de la variable
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Para practicar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Para practicar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercitacion/ejercitacion-declaracion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre declaración de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercitacion/ejercitacion-uso-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre uso de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercitacion/ejercitacion-modificacion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre modificación de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercitacion/ejercitacion-operaciones-con-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre operaciones con variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercitacion/ejercitacion-alcance-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre alcance de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercitacion/ejercitacion-tipos-de-datos-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre tipos de datos de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/que-son-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las constantes?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/caracteristicas-de-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/tipo-de-dato-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/identificador-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/alcance-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/dato-asignado-a-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/tipos-de-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constantes/utilizacion-de-constantes-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de constantes en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="utilizacion-de-variables-en-un-programa">Utilización de variables en un programa</h1>
+<p><label class="revision">Rev. 11/01/2024</label></p>
+<p>La utilización de una variable en un programa es cuando una instrucción de código accede a la variable para realizar alguna operación o acción con ella. </p>
+<h2 id="sintaxis">Sintaxis</h2>
+<p>La sintaxis se refiere a las reglas y convenciones que se deben seguir al declarar, inicializar y utilizar variables en un lenguaje de programación específico. Estas reglas pueden variar de un lenguaje a otro, pero generalmente incluyen lo siguiente:</p>
+<p><strong>Declaración de variables</strong>: La sintaxis para declarar una variable generalmente incluye un tipo de dato y un identificador. </p>
+<div class="highlight"><span class="filename">Declaración</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>tipo_de_dato identificador_de_variable
+</code></pre></div>
+<p>Por ejemplo, en Java, puedes declarar una variable de tipo entero llamada <code>a</code> de la siguiente manera: </p>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Inicialización de variables</strong>: La inicialización se refiere a la asignación de un valor inicial a una variable en el momento de la declaración. </p>
+<div class="highlight"><span class="filename">Inicialización</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>identificador_de_variable = valor_para_asignar
+</code></pre></div>
+<p>Por ejemplo, en Python, puedes declarar e inicializar una variable <code>a</code> con el valor <code>10</code> de la siguiente manera: </p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div>
+<p>En algunos lenguajes de programación es posible declarar e inicializar una variable en la misma línea de código.</p>
+<div class="highlight"><span class="filename">Inicialización en la declaración</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tipo_de_dato identificador_de_variable = valor_para_asignar
+</code></pre></div>
+<p>Por ejemplo, podemos unir la declaración y la inicialización que hemos visto en una sola línea de código en Java o C++:</p>
+<div class="highlight"><span class="filename">Java / C++</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Asignación de variables</strong>: La asignación se refiere a cambiar el valor de una variable ya declarada. </p>
+<div class="highlight"><span class="filename">Asignación</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>identificador_de_variable = valor_para_asignar
+</code></pre></div>
+<p>Por ejemplo, en JavaScript, puedes cambiar el valor de una variable <code>a</code> con un valor almacenado de <code>10</code> a otro valor de <code>20</code> de la siguiente manera: </p>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Uso de variables</strong>: Las variables se pueden utilizar en expresiones y sentencias. La sintaxis para utilizar una variable depende de la operación que se esté realizando. Por ejemplo, en C++, puedes utilizar la variable <code>a</code> en una operación de suma de la siguiente manera: </p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<p>Como puedes observar en cada caso, la sintaxis parece ser la misma. Es decir, la misma manera de escribir. Pero ten cuidado porque no siempre ocurre esto.</p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Es importante seguir la sintaxis correcta para evitar errores de compilación y de tiempo de ejecución.</p>
+</div>
+<p>Dependiendo del lenguaje, es posible declarar, inicializar o asignar dos o más variables en una misma línea de código, separadas por una coma:</p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">num_1</span><span class="p">,</span><span class="w"> </span><span class="n">num_2</span><span class="p">,</span><span class="w"> </span><span class="n">num_3</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">num_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">num_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">num_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración e inicialización</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">num_1</span><span class="p">,</span><span class="w"> </span><span class="n">num_2</span><span class="p">,</span><span class="w"> </span><span class="n">num_3</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">num_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">num_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">num_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inicialización</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">num_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">num_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">num_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">  </span><span class="c1">// Asignación</span>
+</code></pre></div>
+<h3 id="como-se-lee-la-sintaxis">¿Cómo se lee la sintaxis?</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración</span>
+</code></pre></div>
+<blockquote>
+<p>Se lee:<br />
+Se declara la variable <code>a</code> de tipo entero (en inglés integer)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración e inicialización</span>
+</code></pre></div>
+<blockquote>
+<p>Se lee: <br />
+Se declara la variable <code>a</code> de tipo entero (en inglés integer) y se inicializa con el valor cuarenta.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inicialización</span>
+</code></pre></div>
+<blockquote>
+<p>Se lee:<br />
+Se declara la variable <code>a</code> de tipo entero (en inglés integer).<br />
+Luego, se inicializa con el valor cuarenta.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w">  </span><span class="c1">// Asignación</span>
+</code></pre></div>
+<blockquote>
+<p>Se lee:<br />
+Se asigna a la variable <code>a</code> el valor cuarenta.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inicialización</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// Declaración e inicialización</span>
+</code></pre></div>
+<blockquote>
+<p>Se lee:<br />
+Se declara la variable <code>a</code> de tipo entero (en inglés integer).<br />
+Luego, se inicializa con el valor cuarenta. 
+Se declara la variable <code>b</code> de tipo entero (en inglés integer) y se inicializa con el valor almacenado en la variable <code>a</code>.</p>
+<p>Está mal decir: Inicializo la variable <code>b</code> de tipo entero con a; o b es igual a a (en ambos casos puedo entender: b = "a")</p>
+</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Importante</p>
+<p>En realidad, cualquier lectura que lleve a la correcta interpretación de la instrucción, es válida. Para que ello ocurra, <strong>no puede existir ambigüedad posible</strong>. Si la lectura puede interpretarse de dos o maneras diferentes, entonces será inválida.</p>
+</div>
+<p>A continuación, veremos todos estos temas en profundidad:</p>
+<h2 id="declaracion-de-una-variable">Declaración de una variable</h2>
+<p>Empecemos por el principio. Para poder utilizar una variable en un programa, dicha variable debe existir y ser accesible al momento de su utilización.</p>
+<p>En todos de los lenguajes de programación, antes de que una variable pueda ser utilizada debe ser declarada. </p>
+<p>En términos simples, <strong>declarar</strong> una variable significa <strong>crear una nueva variable</strong> en el programa, especificando su <strong>identificador</strong> y el <strong>tipo de dato</strong> asociado:</p>
+<ul>
+<li>
+<p>El identificador de una variable es su nombre. Debe ser único y referencial del dato que almacenará.  </p>
+</li>
+<li>
+<p>El tipo de dato de una variable define el espacio que se reserva en memoria para almacenar el dato correctamente y de manera completa. </p>
+</li>
+</ul>
+<h3 id="como-se-reserva-el-espacio-en-memoria-para-una-variable">¿Cómo se reserva el espacio en memoria para una variable?</h3>
+<p>Cada vez que se crea una variable, se reserva el espacio necesario en memoria para que esa variable pueda almacenar un valor de un determinado tipo de dato.</p>
+<p>Por lo tanto, la declaración de una variable es la acción de reservar el espacio necesario en la memoria central (RAM) para almacenar un valor según el <strong>tipo de dato</strong>, asociando dicho espacio a un  <strong>identificador</strong> que se utilizará en el código para acceder a esa porción de memoria, durante la ejecución del programa o hasta que la variable se destruya, pero <strong>sin asignarle un valor inicial</strong>.  </p>
+<p>Si no asignas un valor a la variable al declararla, lo que se almacena en ese espacio de memoria depende del lenguaje de programación:</p>
+<ul>
+<li>
+<p>En algunos lenguajes de programación, como C y C++, si no inicializas una variable al declararla, su valor es indeterminado y puede contener "basura", es decir, cualquier valor que estuviera previamente en ese espacio de memoria.</p>
+</li>
+<li>
+<p>En otros lenguajes de programación, como Java, si no inicializas una variable al declararla, se le asignará un valor predeterminado, como 0 para los tipos numéricos, false para el tipo booleano, y null para los tipos de objeto.</p>
+</li>
+<li>
+<p>En Python, debes asignar un valor a la variable al declararla. Si no quieres asignar un valor específico, puedes asignarle None, que es un valor especial que indica la ausencia de valor.</p>
+</li>
+</ul>
+<p>Por ejemplo, en el lenguaje de programación C++, una declaración de variable podría verse así:</p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>La variable <code>a</code> es declarada como tipo de dato entero.</p>
+</blockquote>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/declaracion-de-una-variable.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Luego de cada declaración de variable se habrá reservado espacio suficiente en la memoria central (RAM) para almacenar el valor de un tipo de dato específico en ella, pero no tendrá un valor inicial asignado aún.</p>
+<p><strong>Dependiendo del lenguaje de programación</strong>, el <strong>espacio reservado tendrá asignado</strong> un valor predeterminado que en general representa <strong>neutralidad</strong>, <strong>falsedad</strong> o <strong>nulidad</strong>; o mucho peor aun, <strong>un valor indeterminado pudiendo contener "basura"</strong>, es decir, cualquier valor que estuviera previamente en ese espacio de memoria.</p>
+</div>
+<p>Una vez que asignas un valor a la variable, ese valor se almacena en el espacio de memoria reservado para la variable.</p>
+<h3 id="declaracion-de-multiples-variables">Declaración de múltiples variables</h3>
+<p>Veamos el siguiente ejemplo: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>int edad;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>int numero_de_hijos;
+</code></pre></div>
+<p>Puesto que las dos variables son del mismo tipo de dato, se podrían declarar en la misma línea separándolas por medio de la coma (,).<br />
+La coma es un operador que permite crear expresiones compuestas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>int edad, numero_de_hijos;
+</code></pre></div>
+<p>En el ejemplo, La declaración <code>int edad, numero_de_hijos;</code> se llama <strong>declaración de múltiples variables</strong>.  </p>
+<p>Esta es una manera común de declarar varias variables del mismo tipo en una sola línea en muchos lenguajes de programación, incluyendo C, C++, Java y C#.</p>
+<p>En la declaración del ejemplo, se crean dos variables, <code>edad</code> y <code>numero_de_hijos</code>, ambas del tipo de dato entero, y se reserva el espacio en la memoria central (RAM) necesario para almacenar la edad de una persona y su número de hijos.</p>
+<p>Así, en la memoria RAM podría ocurrir uno de estos dos casos de asignación de espacio reservado para ambas variables:
+<img alt="Alt text" src="../imagenes/representaci%C3%B3n-asignacion-espacio-memoria-ram.png" /></p>
+<p>Como se ve en la imagen, los espacios de memoria reservados para las variables no tienen por qué estar de manera contigua.</p>
+<h3 id="uso-de-palabras-clave-para-definir-el-alcance">Uso de palabras clave para definir el alcance</h3>
+<p>En algunos lenguajes, para crear una variable se utiliza una palabra clave que, además, define su alcance, seguida del identificador de la variable.<br />
+En el caso de JavaScript, las palabras clave son  <code>var</code> para definir una variable global o <code>let</code> para definir una variable local. </p>
+<p>Por ejemplo,</p>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w">  </span><span class="c1">// variable de alcance global</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span><span class="w">  </span><span class="c1">// variable de alcance local</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, se declaran dos variables, una de alcance global (accesible desde cualquier bloque del programa) y otra de alcance local (accesible solo desde el bloque donde fue declarada y desde los bloques dentro de este bloque).</p>
+</blockquote>
+<h3 id="ejemplos-de-aplicacion">Ejemplos de aplicación</h3>
+<p>A continuación, se presentan ejemplos de aplicación en algunos lenguajes de programación:</p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">primera_vocal</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">primera_vocal</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w">  </span><span class="c1">// variable local</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">precio</span><span class="w">  </span><span class="c1">// variable local</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">primera_vocal</span><span class="w">  </span><span class="c1">// variable global</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="x">$edad;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">$precio;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="x">$primera_vocal;</span>
+</code></pre></div>
+<p>En todos estos ejemplos, se declaran variables. Es decir, se define el identificador y se asocia el tipo de dato específico si el lenguaje lo requiere (como en los dos primeros ejemplos) pero no se asigna ningún valor inicial a cada una.</p>
+<h2 id="inicializacion-de-una-variable">Inicialización de una variable</h2>
+<p><strong>Inicializar</strong> una variable significa asignarle un valor por primera vez. </p>
+<p>Cuando se declara una variable, se reserva espacio en la memoria para ella. Sin embargo, hasta que no se le asigna un valor, esa variable no tiene un valor definido o puede contener basura (un valor residual de la memoria).</p>
+<p>Por ejemplo, en el lenguaje de programación C++, una inicialización luego de la declaración de variable podría verse así:</p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, primero se declara la variable <code>a</code> de tipo entero y luego, en otra línea de código, se inicializa con el valor <code>10</code>.<br />
+Esto significa que en la memoria reservada para <code>a</code>, se almacena el valor <code>10</code> como valor inicial.</p>
+</blockquote>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/declaracion-de-una-variable-luego-se-inicializa.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">Buena práctica</p>
+<p>Siempre debes inicializar tus variables. Esto es muy importante porque asegura que cada variable tenga un valor inicial definido antes de que sea utilizada en el programa, evitando así comportamientos impredecibles.</p>
+</div>
+<h2 id="declaracion-e-inicializacion-en-la-misma-instruccion">¿Declaración e inicialización en la misma instrucción?</h2>
+<p>Cuando se declara e inicializa una variable en una sola línea de código, se llama a esta <em>unidad de ejecución</em><sup id="fnref:1^"><a class="footnote-ref" href="#fn:1^">1</a></sup> como "inicialización en la declaración" ("<em>declaration with initialization</em>" o "<em>definition with initialization</em>"). </p>
+<p>No existe un término técnico específico para esta <em>unidad de ejecución</em> en la mayoría de los lenguajes de programación, simplemente se describe como declarar e inicializar una variable al mismo tiempo.</p>
+<p>Por ejemplo, en C++, una inicialización en la declaración se vería así: </p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, se declara la variable <code>a</code> de tipo entero y se inicializa con el valor <code>10</code> en la misma unidad de ejecución.  </p>
+</blockquote>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/inicializacion-en-la-declaracion-de-una-variable.png" /></p>
+<h3 id="ejemplos-de-aplicacion_1">Ejemplos de aplicación</h3>
+<p>A continuación, se presentan ejemplos de aplicación en algunos lenguajes de programación:</p>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">primera_vocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">primera_vocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p>En ambos ejemplos, se inicializan variables durante su declaración. Es decir, se define el identificador, se asocia el tipo de dato y se asigna el valor inicial a cada una.</p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Es importante notar que algunos lenguajes de programación, como Python o JavaScript, no distinguen entre la declaración y la inicialización de una variable; simplemente se le asigna un valor a un nombre de variable, y si ese nombre no es una variable al momento de la asignación, se crea una nueva variable.</p>
+</div>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">precio</span> <span class="o">=</span> <span class="mf">9.99</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="n">primera_vocal</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="w">  </span><span class="c1">// variable local</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="w">  </span><span class="c1">// variable local</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">primera_vocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="w">  </span><span class="c1">// variable global</span>
+</code></pre></div>
+<h2 id="utilizacion-de-una-variable">Utilización de una variable</h2>
+<p>Una vez que la variable ha sido declarada e inicializada, se puede utilizar en el código durante la ejecución del programa.</p>
+<p>Volviendo a los posibles usos que puede tener una variable en un programa, vamos explicar los siguientes dado que son los más básicos pero más importantes; y los necesitarás para escribir cualquier programa:</p>
+<ul>
+<li>
+<p><strong>Asignar su valor a otra variable</strong>: Por ejemplo, <code>b = a</code> donde <code>a</code> es la variable que estamos utilizando.</p>
+<p>Analicemos un ejemplo práctico:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Primero, inicializamos una variable con el valor 10</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c1"># Luego, inicializamos una segunda variable con el valor de la primera</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</code></pre></div>
+<p>En este código, primero se declara la variable <code>a</code> y se le asigna el valor <code>10</code> (a esto se lo llama <em>inicializar</em>). Luego, se declara una segunda variable <code>b</code> y se le asigna el valor de <code>a</code> (<em>inicialización</em>).  </p>
+<p>Esta asignación de valor a <code>b</code> no es el valor original de <code>a</code> si no una copia de este valor. </p>
+<details class="question">
+<summary>¿Cómo es esto?</summary>
+<p>Cuando asignas el valor de una variable a otra, lo que realmente estás haciendo es copiando el valor de la primera variable en la segunda. No estás creando una conexión o enlace entre las dos variables.</p>
+<p>En el código estamos copiando el valor actual de <code>a</code> en <code>b</code>. Pero <code>a</code> y <code>b</code> son dos variables completamente independientes. Si cambiamos el valor de <code>a</code> después de la asignación, no afectará el valor de <code>b</code>.</p>
+</details>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Aquí está el concepto clave: <code>a</code> y <code>b</code> son contenedores separados que pueden almacenar valores. Cuando haces <code>b = a</code>, estás diciendo "haz que el contenido del contenedor <code>b</code> sea igual al contenido del contenedor <code>a</code>". Pero después de eso, los dos contenedores son independientes. Puedes cambiar el contenido de <code>a</code> sin que afecte a <code>b</code>, y viceversa.</p>
+<p>En términos de identidad, <code>a</code> y <code>b</code> son diferentes porque son contenedores diferentes, aunque puedan contener el mismo valor. Es como tener dos tazas de café: aunque ambas contengan café, son dos tazas diferentes. Si viertes más café en una taza, no afectará la cantidad de café en la otra taza.</p>
+</div>
+<p>Por lo tanto, es importante notar que <code>b</code> no está vinculada a <code>a</code> de ninguna manera después de la asignación. Si cambias el valor de <code>a</code> después de la asignación, el valor de <code>b</code> no cambiará. Por ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Esto imprimirá &#39;10&#39;, no &#39;20&#39;</span>
+</code></pre></div>
+<p>En este caso, aunque hemos cambiado el valor de <code>a</code> a <code>20</code>, el valor de <code>b</code> sigue siendo <code>10</code> porque <code>b</code> conserva una copia del valor que <code>a</code> tenía en el momento de la asignación.</p>
+</li>
+<li>
+<p><strong>Usarla en una operación matemática</strong>: Por ejemplo, <code>b = a + 3</code> donde <code>a</code> es la variable que estamos utilizando.</p>
+<p>Analicemos un ejemplo práctico:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Inicialización de la variable</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="c1"># Uso de la variable en una operación matemática</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span>
+</code></pre></div>
+<p>En este código, primero se declara la variable <code>a</code> y se le asigna el valor <code>5</code> (<em>inicialización</em>). Luego, se declara una segunda variable <code>b</code> y se le asigna el resultado de la operación matemática <code>a + 3</code>.</p>
+<p>Dado que el valor de <code>a</code> es <code>5</code>, la operación <code>a + 3</code> resulta en <code>8</code>. Por lo tanto, después de ejecutar este código, la variable <code>b</code> tendrá el valor <code>8</code>.</p>
+<p>Es importante notar que el valor de <code>a</code> no cambia como resultado de esta operación. Aunque se usa en la operación matemática, su valor sigue siendo <code>5</code> después de que se ejecuta el código.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># Impresión de los valores almacenados en ambas variables</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Output : 5</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Output : 8</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Usarla en una condición</strong>: Por ejemplo, en una estructura alternativa condicional <code>if</code>, cuya condición sea <code>a &gt; 10</code> donde <code>a</code> es la variable que estamos utilizando.</p>
+<p>Analicemos un ejemplo práctico:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># Inicialización de la variable</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="c1"># Uso de la variable en una estructura alternativa condicional</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a es mayor que 10&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a no es mayor que 10&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>En este código, primero se declara la variable <code>a</code> y se le asigna el valor <code>5</code> (<em>inicialización</em>). Luego, se usa <code>a</code> en una declaración <code>if</code> para verificar si <code>a</code> es mayor que <code>10</code>. Si <code>a</code> es mayor que <code>10</code>, se imprime "a es mayor que 10". Si <code>a</code> no es mayor que <code>10</code>, se imprime "a no es mayor que 10".</p>
+<p>Dado que el valor de <code>a</code> es <code>5</code>, que no es mayor que <code>10</code>, al ejecutar este código se imprimirá "a no es mayor que 10".</p>
+</li>
+<li>
+<p><strong>Usarla en un bucle</strong>: Por ejemplo, en una estructura repetitiva <code>while</code>, como <code>while a &lt;= 10</code> donde <code>a</code> es la variable que estamos utilizando.</p>
+<p>Analicemos un ejemplo práctico:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># Inicialización de la variable</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="c1"># Uso de la variable en una estructura repetitiva</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="k">while</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+<p>En este código, inicializamos <code>a</code> con el valor <code>1</code>. Luego, entramos en un bucle <code>while</code> que continuará ejecutándose mientras <code>a</code> sea menor o igual a <code>10</code>. Dentro del bucle, imprimimos el valor actual de <code>a</code> y luego incrementamos <code>a</code> en <code>1</code>. Cuando <code>a</code> se convierte en <code>11</code>, la condición del bucle <code>while</code> ya no se cumple, por lo que el bucle termina.</p>
+</li>
+<li>
+<p><strong>Pasarla como argumento a una función</strong>: Por ejemplo, <code>print(a)</code> donde <code>a</code> es la variable que estamos utilizando.</p>
+<p>Analicemos un ejemplo práctico:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="c1"># Inicialización de la variable</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;¡Hola, mundo!&quot;</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="c1"># Uso de la variable en una función print</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+<p>En este código, se imprime el texto "¡Hola, mundo!" en la consola. Esto es porque la función <code>print</code> toma la variable <code>a</code> como argumento y luego imprime su valor.</p>
+</li>
+<li>
+<p><strong>Asignarle un nuevo valor</strong>: Por ejemplo, teniendo <code>a = 10</code> en algún momento de la ejecución del programa se modifica el valor almacenado en <code>a</code> al valor <code>20</code> con la instrucción <code>a = 20</code> donde <code>a</code> es la variable que estamos utilizando. </p>
+<div class="admonition abstract">
+<p class="admonition-title">Definición</p>
+<p><strong>Asignar</strong> un valor a una variable significa <strong>almacenar un valor</strong> en el espacio de memoria reservado para ella, reemplazando el valor anterior. </p>
+<p>Esta operación se realiza empleando el operador de asignación igual (=).</p>
+</div>
+<p>Analicemos un ejemplo práctico:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1"># Primero, inicializamos una variable con el valor 10</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="c1"># Imprimimos el valor almacenado en la variable</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Output: 10</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="c1"># Modificamos el valor almacenado en la variable</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="c1"># Imprimimos el nuevo valor almacenado en la variable</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Output: 20</span>
+</code></pre></div>
+<p>En este código, la variable <code>a</code> es declarada e inicializada con el valor <code>10</code> en la misma instrucción. Python define, a partir del valor en cuestión, que la variable <code>a</code> es del tipo entero.</p>
+<p>Luego, se imprime el valor almacenado en <code>a</code>, es decir, <code>10</code>.</p>
+<p>A continuación, se asigna el valor <code>20</code> a la variable <code>a</code> reemplazando el valor <code>10</code> que contenía previamente. En esta operación, el valor previo, <code>10</code>, es eliminado para siempre, sin posibilidad de recuperarlo.  </p>
+<p>Por último, cuando se vuelve a imprimir el valor almacenado en <code>a</code>, ahora se imprime el valor <code>20</code>.</p>
+</li>
+</ul>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/reemplazo-de-valor-en-una-variable.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">¡Aprende esto porque es muy importante!</p>
+<p>Al almacenar un valor en una variable, si esta contenía un valor previo almacenado, el mismo será reemplazado y ya no habrá manera de recuperarlo, perdiéndolo para siempre.</p>
+<p>NO HAY MANERA QUE AMBOS VALORES COEXISTAN PORQUE NO PUEDEN SUPERPONERSE.</p>
+</div>
+<h3 id="modificacion-del-valor-almacenado-en-una-variable">Modificación del valor almacenado en una variable</h3>
+<p>Desde que se crea y hasta que se destruye, el valor almacenado en una variable puede cambiar durante la ejecución del programa. </p>
+<p>Esto puede deberse a diversos motivos de la lógica del programa, siempre con el objetivo de almacenar un nuevo valor porque el viejo valor ya no será de utilidad.</p>
+<p>Y esta operación se realiza, como hemos visto en el uso anterior, a partir de la asignación de un nuevo valor. </p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Cada vez que se modifica el valor almacenado en una variable, en realidad se está reemplazando por un valor nuevo, eliminando para siempre el valor viejo.</p>
+</div>
+<h3 id="intercambio-de-valores-almacenados-entre-dos-variables">Intercambio de valores almacenados entre dos variables</h3>
+<p>Como dijimos, una variable es un espacio reservado de la memoria RAM que pueda almacenar un dato.</p>
+<p>Reforcemos:</p>
+<div class="admonition warning">
+<p class="admonition-title">Una variable es un espacio reservado de la memoria RAM que pueda almacenar un dato ¡A LA VEZ!</p>
+</div>
+<p>Por lo tanto, no es posible hacer un intercambio de valores entre dos variables de esta manera:</p>
+<div class="highlight"><span class="filename">Código generalizado</span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a vale&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b vale&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<p>Porque si luego accedemos a los valores almacenado en <code>a</code> y en <code>b</code> ocurrirá lo siguiente:</p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>a vale 10
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>b vale 10
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">¿Qué ha ocurrido aquí?</p>
+</div>
+<p>Resulta que si se ejecuta <code>a = b</code> esto significa que se almacena el valor de <code>b</code> en <code>a</code>.<br />
+Así, el valor que se encontraba almacenado en <code>a</code> es reemplazado por el nuevo valor que viene de <code>b</code>.<br />
+Y por supuesto, el valor antiguo que tenía <code>a</code> se pierde <strong>¡para siempre!</strong></p>
+<p>A continuación, cuando se ejecuta <code>b = a</code>  esto significa que se almacena el valor de <code>a</code> en <code>b</code>.<br />
+Pero <code>a</code> en este momento tiene almacenado el valor que había recibido de <code>b</code> en la línea de ejecución anterior.<br />
+Así, en realidad <code>b</code> estaría recibiendo y almacenando su propio valor.</p>
+<div class="admonition question">
+<p class="admonition-title">¿Cómo se resuelve este problema?</p>
+</div>
+<h3 id="uso-de-variables-temporales">Uso de variables temporales</h3>
+<p>Ahora, si empleamos una variable temporal para almacenar uno de los valores almacenados, podremos reemplazarlo luego por otro valor sin perderlo.
+Veamos el código para entenderlo mejor.</p>
+<div class="highlight"><span class="filename">Código generalizado</span><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="n">temp</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># Se almacena 5 en temp</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="c1"># Se almacena 10 en a</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="n">b</span> <span class="o">=</span> <span class="n">temp</span> <span class="c1"># Se almacena 5 en b</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a vale&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b vale&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<p>Si ahora accedemos a los valores almacenado en <code>a</code> y en <code>b</code> ocurrirá lo siguiente:</p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>a vale 10
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>b vale 5
+</code></pre></div>
+<h2 id="destruccion-de-la-variable">Destrucción de la variable</h2>
+<p>La vida de una variable termina cuando se sale del alcance en el que fue declarada, cuando el programa termina o cuando la variable se elimina de la memoria. </p>
+<p>Las primeras dos opciones son naturales de la ejecución del programa, mientras que la tercera dependerá de la capacidad del lenguaje para poder eliminar una variable a partir de un comando u operación.</p>
+<p>En Python, por ejemplo, las variables locales (declaradas dentro de una función) se destruyen cuando la función termina, mientras que las variables globales existen hasta que el programa termina. Si se quisiera eliminar una variable global antes de la finalización del programa, o incluso eliminar una variable local dentro de su ámbito de creación, tendrías que utilizar un comando específico para ello:</p>
+<p>``` py title="Python" numlines="1"</p>
+<h1 id="inicializa-la-variable">Inicializa la variable</h1>
+<p>a = 10
+print(a)</p>
+<h1 id="destruye-la-variable">Destruye la variable</h1>
+<p>del a
+print(a)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>``` title=&quot;Terminal (Entrada/Salida)&quot;
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>10
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>Traceback (most recent call last):
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>  File &quot;…&quot;, line 7, in &lt;module&gt;
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>    print(a)
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>          ^
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>NameError: name &#39;a&#39; is not defined    
+</code></pre></div></p>
+<blockquote>
+<p>Después de ejecutar <code>del a</code>, la variable <code>a</code> ya no existe. Al intentar acceder a ella, Python lanzará un <code>NameError</code> indicando que <code>a</code> no está definida.</p>
+</blockquote>
+<hr />
+<p>Acabamos de estudiar una gran cantidad de temas relacionados con la utilización de variables en un programa. Todos son muy importantes y deberás tenerlos muy incorporados para poder programar de manera eficiente.</p>
+<p>A continuación profundizaremos en conceptos más avanzados como el <em>ciclo de vida de las variables</em>, que incluye entender cuándo y cómo se asigna y libera la memoria para las variables, y cómo el alcance de una variable afecta su disponibilidad en diferentes partes del código.</p>
+<p><strong>Referencias</strong></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1^">
+<p>Una unidad de ejecución, en el contexto de la programación, puede referirse a cualquier segmento de código que se puede ejecutar como una entidad única. Esto puede ser una instrucción individual, una sentencia, una función o método, o incluso un programa completo, dependiendo del contexto.<br />
+Por ejemplo, <code>int a = 10</code> es una sentencia que declara la variable <code>a</code> como entero y la inicializa con el valor <code>10</code> en la misma unidad de ejecución.&#160;<a class="footnote-backref" href="#fnref:1^" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../dato-asignado-a-una-variable/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: ¿Qué es el dato asignado a una variable?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                ¿Qué es el dato asignado a una variable?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ejercitacion/ejercitacion-declaracion-de-variables/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Ejercicios sobre declaración de variables">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Ejercicios sobre declaración de variables
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

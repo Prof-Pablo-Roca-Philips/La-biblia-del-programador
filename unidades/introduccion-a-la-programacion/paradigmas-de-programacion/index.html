@@ -1,0 +1,1591 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../teoria-de-los-lenguajes/">
+      
+      
+        <link rel="next" href="../vision-general-de-los-lenguajes-de-programacion/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Paradigmas de programación - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#paradigmas-de-programacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Paradigmas de programación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teoria-de-los-lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teoría de los lenguajes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-un-paradigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un paradigma?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es un paradigma?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programacion-imperativaprocedural-1950s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación imperativa/procedural (1950s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-procedimental-1950s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación procedimental (1950s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-funcional-1950s-1980s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación funcional (1950s-1980s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-estructurada-1960s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación estructurada (1960s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-orientada-a-objetos-oop-1960s-1970s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación orientada a objetos / OOP (1960s-1970s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-modular-1960s-1070s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación modular (1960s-1070s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-logica-1970s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación lógica (1970s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-declarativa-1980s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación declarativa (1980s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-reactiva-2000s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación reactiva (2000s)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vision-general-de-los-lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visión general de los lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentos de la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentos de la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/conceptos-basicos-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptos básicos de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/que-son-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las variables?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/caracteristicas-de-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/tipo-de-dato-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/identificador-de-una-variable.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/alcance-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/dato-asignado-a-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/utilizacion-de-variables-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Para practicar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Para practicar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-declaracion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre declaración de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-uso-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre uso de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-modificacion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre modificación de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-operaciones-con-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre operaciones con variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre alcance de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-tipos-de-datos-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre tipos de datos de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/que-son-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las constantes?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/caracteristicas-de-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/tipo-de-dato-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/identificador-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/alcance-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/dato-asignado-a-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/tipos-de-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/utilizacion-de-constantes-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de constantes en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="paradigmas-de-programacion">Paradigmas de programación</h1>
+<p><label class="revision">Rev. 10/01/2024</label></p>
+<h2 id="que-es-un-paradigma">¿Qué es un paradigma?</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Definición</p>
+<p>Los paradigmas de programación son una manera de clasificar los lenguajes de programación según sus características.<br />
+Se trata de modelos formados por un conjunto de métodos sistemáticos aplicables en todos los niveles del diseño de programas para resolver problemas computacionales. </p>
+</div>
+<p>Existen varios paradigmas de programación que se utilizan para desarrollar software. Cada paradigma proporciona un enfoque particular para resolver problemas y organizar el código del programa. </p>
+<p>Los paradigmas de programación han evolucionado a lo largo del tiempo, a medida que los desarrolladores han buscado nuevas formas de abordar los problemas de programación. </p>
+<p>Aquí está una cronología aproximada de los principales paradigmas:</p>
+<h3 id="programacion-imperativaprocedural-1950s">Programación imperativa/procedural (1950s)</h3>
+<p>Este es uno de los paradigmas más antiguo, básico y ampliamente utilizado. Los programas consisten en una sucesión de instrucciones detalladas y concretas sobre cómo se deben ejecutar las tareas en orden. </p>
+<p>Utiliza instrucciones que cambian el estado del programa. Los programas imperativos consisten en comandos para la computadora, detallando paso a paso cómo se deben ejecutar las tareas.</p>
+<p>Los lenguajes de programación imperativos suelen utilizar variables, asignaciones, estructuras repetitivas (bucles) y estructuras alternativas (condicionales) para controlar el flujo de ejecución. Los bucles, como <em>for</em> y <em>while</em>, se utilizan para repetir un bloque de código varias veces. Las estructuras condicionales, como <em>if</em> y <em>switch</em>, se utilizan para ejecutar diferentes bloques de código dependiendo de ciertas condiciones. Estas estructuras de control son fundamentales para la programación imperativa y permiten a los programadores escribir código que puede manejar, paso por paso, una variedad de situaciones y realizar tareas complejas.</p>
+<p>Los lenguajes como Fortran y COBOL, C, Pascal y C++ son ejemplos de este paradigma.</p>
+<h3 id="programacion-procedimental-1950s">Programación procedimental (1950s)</h3>
+<p>La programación procedimental es un subtipo del paradigma de programación imperativa donde el flujo de la ejecución del programa se controla con procedimientos, o rutinas, que son llamados en un orden específico. Estos procedimientos, que engloban un número de expresiones repetidas, son llamados cada vez que tengan que ser ejecutadas las mencionadas expresiones y pueden modificar el estado del programa.</p>
+<p>Por lo tanto, los programas se construyen a partir de procedimientos, también conocidos como funciones o rutinas, que son una serie de instrucciones que realizan una tarea específica en un determinado momento de ejecución del programa. </p>
+<p>Los procedimientos pueden ser llamados por otros procedimientos, permitiendo la reutilización de código y la estructuración del programa en bloques de código más manejables. </p>
+<p>Los procedimientos pueden manipular variables, realizar operaciones y controlar el flujo del programa a través de estructuras de control como bucles y condicionales.</p>
+<p>Algunos lenguajes de programación que utilizan el paradigma procedimental incluyen Fortran, COBOL, Pascal, C y C++.</p>
+<h3 id="programacion-funcional-1950s-1980s">Programación funcional (1950s-1980s)</h3>
+<p>La programación procedimental y la programación funcional son dos paradigmas de programación diferentes, aunque ambos involucran el uso de funciones.</p>
+<p>El énfasis de la programación funcional está en la evaluación de expresiones y en la aplicación de funciones matemáticas, evita el uso de estados mutables (evita cambiar el estado) y bucles, y se enfoca en la inmutabilidad de los datos. </p>
+<p>El cálculo lambda, que es la base de la programación funcional, es un sistema formal en la lógica matemática y la ciencia de la computación que se utiliza para investigar funciones, aplicaciones de funciones y la recursión. </p>
+<p>Se basa en la abstracción de funciones y la aplicación de funciones. En términos simples, permite tratar las funciones como entidades de primera clase (funciones puras), lo que significa que las funciones pueden ser pasadas como argumentos a otras funciones, devueltas como valores de otras funciones, y asignadas a variables. </p>
+<p>Estas funciones no tienen efectos secundarios y siempre producen el mismo resultado para los mismos datos de entrada.</p>
+<p>Aunque Lisp, uno de los primeros lenguajes funcionales, se desarrolló en los años 50, este paradigma no se popularizó hasta los años 80 con lenguajes como ML y Haskell, más tarde con Java, Scala y Kotlin y más recientemente con versiones funcionales de lenguajes como JavaScript y Python.</p>
+<h3 id="programacion-estructurada-1960s">Programación estructurada (1960s)</h3>
+<p>La programación estructurada surgió como una manera de mejorar la claridad y la eficiencia de los programas escritos en lenguajes de programación imperativos. </p>
+<p>Por lo tanto, es un subtipo de programación imperativa que introduce conceptos adicionales para mejorar la claridad y eficiencia del código. La programación estructurada enfatiza un flujo de control claro y estructurado, utilizando estructuras de control como bucles y condicionales, y evitando el uso de instrucciones de salto como "goto". La idea es dividir un programa en partes más pequeñas o secciones, generalmente utilizando subrutinas (también conocidas como funciones o procedimientos).</p>
+<p>Por lo tanto, la principal diferencia entre la programación imperativa y la programación estructurada es que la programación estructurada introduce reglas y prácticas adicionales para mejorar la claridad y la eficiencia del código. Todos los programas estructurados son imperativos, pero no todos los programas imperativos son estructurados.</p>
+<h3 id="programacion-orientada-a-objetos-oop-1960s-1970s">Programación orientada a objetos / OOP (1960s-1970s)</h3>
+<p>Este paradigma se centra en la organización del código para construir modelos de objetos (estructura abstracta que, de manera más fiable, describe un posible objeto del mundo real y su relación con el resto del mundo que lo rodea a través de interfaces), que son instancias de clases, que representan elementos (objetos) del problema a resolver. </p>
+<p>Estos objetos tienen atributos o propiedades (datos) y métodos (funciones), y se comunican entre sí a través de mensajes, permitiendo separar los diferentes componentes de un programa, simplificando así su creación, depuración y posteriores mejoras. </p>
+<p>Se popularizó con lenguajes como Simula y Smalltalk, y más tarde con C++, Java, C# y Python.</p>
+<p>Permite el encapsulamiento de datos y la modularidad, como características principales, disminuyendo los errores y promocionando la reutilización del código. </p>
+<p>Este paradigma es una manera especial de programar, que se acerca de alguna manera a cómo expresaríamos las cosas en la vida real, puesto que se sirve de diferentes conceptos como:</p>
+<ul>
+<li>
+<p>Abstracción de datos</p>
+</li>
+<li>
+<p>Encapsulamiento</p>
+</li>
+<li>
+<p>Eventos</p>
+</li>
+<li>
+<p>Modularidad</p>
+</li>
+<li>
+<p>Herencia</p>
+</li>
+<li>
+<p>Polimorfismo</p>
+</li>
+</ul>
+<h3 id="programacion-modular-1960s-1070s">Programación modular (1960s-1070s)</h3>
+<p>La programación modular es un paradigma que enfatiza la separación de la funcionalidad de un programa en módulos independientes e intercambiables, cada uno de los cuales contiene todo lo necesario para ejecutar una única función de la lógica del programa, con el fin de hacerlo más manejable y legible, permitiendo resolver problemas de programación más complejos.</p>
+<p>La programación modular fue popularizada por lenguajes como Modula, Ada y, más recientemente, Python y Java.</p>
+<p>Los lenguajes que soportan la programación modular incluyen, pero no se limitan a, Python, Java, C, C++, JavaScript, Ruby, Swift, y muchos otros.</p>
+<p>La programación modular es un subparadigma de la programación procedimental, pero también se puede utilizar en otros paradigmas como la programación orientada a objetos. La idea es que los módulos pueden ser probados de manera independiente y luego ensamblados para formar un programa completo, lo que puede mejorar la reutilización del código, la legibilidad y el mantenimiento.</p>
+<h3 id="programacion-logica-1970s">Programación lógica (1970s)</h3>
+<p>En este paradigma, los programas son un conjunto de declaraciones lógicas, y la ejecución del programa es un proceso de inferencia lógica. </p>
+<p>Es decir, se basa en la lógica formal y en la resolución de problemas mediante la deducción lógica. </p>
+<p>Los programas lógicos están compuestos por reglas y por hechos y se utiliza la inferencia lógica para derivar conclusiones. </p>
+<p>Prolog, desarrollado en los años 70, es el principal representante de este paradigma.</p>
+<h3 id="programacion-declarativa-1980s">Programación declarativa (1980s)</h3>
+<p>La programación declarativa es un paradigma de programación que se centra en "qué" se debe hacer, en lugar de "cómo" se debe hacer. En otras palabras, en lugar de escribir código detallado paso a paso para lograr una tarea, simplemente se declara lo que se desea y se deja que el lenguaje y el sistema de tiempo de ejecución figuren cómo hacerlo.</p>
+<p>Asi, no necesita definir algoritmos puesto que describe el problema en lugar de encontrar una solución al mismo.</p>
+<p>Este paradigma utiliza el principio del razonamiento lógico para responder a las preguntas o cuestiones consultadas.</p>
+<p>Un ejemplo de programación declarativa podría ser una consulta SQL. En lugar de describir exactamente cómo obtener los datos de una base de datos (recorrer filas, abrir y cerrar conexiones, etc.), simplemente declaras lo que quieres:</p>
+<div class="highlight"><span class="filename">Programación declarativa</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, simplemente estás declarando que quieres los nombres y las edades de los usuarios que son mayores de 18 años. No te preocupas por cómo SQL va a buscar esa información.</p>
+</blockquote>
+<p>Algunos lenguajes que utilizan el paradigma de programación declarativa son:</p>
+<ul>
+<li>
+<p><strong>SQL</strong>: utilizado para consultas de bases de datos.</p>
+</li>
+<li>
+<p><strong>HTML</strong>: utilizado para describir la estructura de las páginas web. Sí, HTML (HyperText Markup Language) es considerado un lenguaje declarativo. No es un lenguaje de programación en el sentido tradicional, ya que no tiene estructuras de control como bucles o condicionales. Sin embargo, es un lenguaje en el sentido de que tiene una sintaxis y reglas definidas que se utilizan para describir la estructura de las páginas web. En este contexto, "declarativo" significa que con HTML declaras qué elementos deben aparecer en la página web y en qué orden, pero no cómo deben implementarse o renderizarse, eso es manejado por el navegador web.</p>
+</li>
+<li>
+<p><strong>CSS</strong>: utilizado para describir la presentación de las páginas web. Sí, CSS (Cascading Style Sheets) es considerado un lenguaje declarativo. Al igual que HTML, no es un lenguaje de programación en el sentido tradicional, ya que no tiene estructuras de control como bucles o condicionales. Sin embargo, es un lenguaje en el sentido de que tiene una sintaxis y reglas definidas que se utilizan para describir la presentación de las páginas web. En este contexto, "declarativo" significa que con CSS declaras cómo deben verse los elementos en la página web, pero no cómo se implementa esa presentación, eso es manejado por el navegador web.</p>
+</li>
+<li>
+<p><strong>Prolog</strong>: utilizado en inteligencia artificial y lingüística computacional.</p>
+</li>
+<li>
+<p><strong>Haskell</strong>: un lenguaje de programación funcional que también es declarativo.</p>
+</li>
+<li>
+<p><strong>XSLT</strong>: utilizado para transformar documentos XML.</p>
+</li>
+<li>
+<p><strong>Terraform</strong>: utilizado para describir infraestructura como código.</p>
+</li>
+</ul>
+<h3 id="programacion-reactiva-2000s">Programación reactiva (2000s)</h3>
+<p>La programación reactiva es un paradigma enfocado en la programación y el trabajo con flujos de datos finitos o infinitos de manera asíncrona y la propagación de cambios. Se basa en escuchar lo que emite un evento o cambios en el flujo de datos, en donde los objetos reaccionan a los valores que reciben de dicho cambio.</p>
+<p>Ha ganado popularidad en los últimos años con lenguajes y bibliotecas como React.js y RxJava.</p>
+<p>React/Angular usan RxJs para hacer uso de la programación reactiva.</p>
+<p>Su concepción y evolución ha ido ligada a la publicación del Reactive Manifesto, que establecía las bases de los sistemas reactivos, los cuales deben ser:</p>
+<ul>
+<li>
+<p><strong>Responsivos</strong>: aseguran la calidad del servicio cumpliendo unos tiempos de respuesta establecidos.</p>
+</li>
+<li>
+<p><strong>Resilientes</strong>: se mantienen responsivos incluso cuando se enfrentan a situaciones de error.</p>
+</li>
+<li>
+<p><strong>Elásticos</strong>: se mantienen responsivos incluso ante aumentos en la carga de trabajo.</p>
+</li>
+<li>
+<p><strong>Orientados a mensajes</strong>: minimizan el acoplamiento entre componentes al establecer interacciones basadas en el intercambio de mensajes de manera asíncrona.</p>
+</li>
+</ul>
+<p>La motivación detrás de este nuevo paradigma procede de la necesidad de responder a las limitaciones de escalado presentes en los modelos de desarrollo actuales, que se caracterizan por su desaprovechamiento del uso de la CPU debido a la interacción de entrada y salida (I/O), el sobre uso de memoria y la ineficiencia de las interacciones bloqueantes.</p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Cada paradigma tiene sus propias ventajas y desventajas, y se adapta mejor a ciertos tipos de problemas que a otros. </p>
+<p>Es importante tener en cuenta que estos paradigmas no son mutuamente excluyentes.  </p>
+<p>Muchos lenguajes modernos, como Python y JavaScript, adoptan uno o varios paradigmas en función del tipo de órdenes que permiten implementar, es decir, son soportan múltiples paradigmas o son multi paradigmas.  </p>
+<p>Además, nuevos paradigmas continúan emergiendo a medida que los desarrolladores buscan nuevas formas de abordar los problemas de programación.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../teoria-de-los-lenguajes/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Teoría de los lenguajes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Teoría de los lenguajes
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vision-general-de-los-lenguajes-de-programacion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Visión general de los lenguajes de programación">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Visión general de los lenguajes de programación
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1484 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Introducción a la abstracción - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción a la abstracción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/teoria-de-los-lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teoría de los lenguajes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/paradigmas-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/vision-general-de-los-lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visión general de los lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentos de la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentos de la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/conceptos-basicos-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptos básicos de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/que-son-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las variables?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/caracteristicas-de-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/tipo-de-dato-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/identificador-de-una-variable.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/alcance-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/dato-asignado-a-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/utilizacion-de-variables-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Para practicar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Para practicar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-declaracion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre declaración de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-uso-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre uso de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-modificacion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre modificación de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-operaciones-con-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre operaciones con variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre alcance de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-tipos-de-datos-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre tipos de datos de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/que-son-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las constantes?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/caracteristicas-de-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/tipo-de-dato-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/identificador-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/alcance-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/dato-asignado-a-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/tipos-de-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/utilizacion-de-constantes-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de constantes en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Introducción a la abstracción</h1>
+
+<h2 id="introduccion">Introducción</h2>
+<p>El objetivo de la abstracción es simplificar la programación y promover la reutilización de código.</p>
+<p>Al dividir un programa en tareas más simples, se maneja la complejidad de manera más eficiente, se organiza el código de forma modular y escalable y permite cambios sin afectar otras partes del programa.</p>
+<h2 id="definicion">Definición</h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">abstracción</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Acción y efecto de abstraer o abstraerse.
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">abstraer</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Apartar, separar por medio de una operación intelectual un rasgo o una cualidad de algo para analizarlos aisladamente o considerarlos en su pura esencia o noción.
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Hacer caso omiso de algo, o dejarlo a un lado.
+</code></pre></div></td></tr></table></div>
+<p>El objetivo de la abstracción es simplificar la programación y promover la reutilización de código, ya que, en términos generales, se refiere al proceso de separar o distanciar los aspectos esenciales de un problema de sus detalles concretos y particulares. </p>
+<p>En esencia, la abstracción implica centrarse en los elementos fundamentales y generales, ignorando o dejando de lado los detalles específicos y menos relevantes.</p>
+<p>Es un proceso de simplificación y generalización que permite comprender, comunicar y trabajar con ideas y elementos complejos de manera más eficiente.</p>
+<h2 id="abstraccion-en-el-contexto-de-la-programacion-y-la-informatica">Abstracción en el contexto de la programación y la informática</h2>
+<p>La abstracción es un concepto fundamental en la programación y se encuentra en varios tópicos, pero es más prominente en los siguientes:</p>
+<ol>
+<li>
+<p><strong>Programación Orientada a Objetos (POO)</strong>: La abstracción es un pilar de la POO. Se utiliza para ocultar la complejidad de los detalles y mostrar solo la funcionalidad al usuario. Por ejemplo, cuando se crea una clase (que es una abstracción de un objeto del mundo real), no necesitamos entender cómo funciona internamente para poder usarla.</p>
+</li>
+<li>
+<p><strong>Diseño de Software y Arquitectura</strong>: La abstracción ayuda a separar las preocupaciones y a crear componentes de software más manejables. Por ejemplo, en el diseño de sistemas, se pueden crear capas de abstracción para separar la lógica de negocio de la lógica de acceso a datos.</p>
+</li>
+<li>
+<p><strong>Algoritmos y Estructuras de Datos</strong>: Al diseñar algoritmos y estructuras de datos, a menudo se utiliza la abstracción para simplificar el problema y concentrarse en lo que realmente importa.</p>
+</li>
+</ol>
+<p>Por lo tanto, la abstracción puede entrar en varios tópicos de programación dependiendo del contexto.</p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>En el contexto de la programación y la informática, la abstracción se refiere proceso que tiene la capacidad de representar un conjunto de datos, conceptos y elementos complejos del mundo real de manera simplificada, concisa y generalizada, a través de modelos o estructuras que permiten trabajar con ellos de manera más eficiente y comprensible en un programa.</p>
+</div>
+<p>La abstracción busca capturar los aspectos esenciales y relevantes de una entidad o problema, omitiendo los detalles innecesarios.</p>
+<p>En la programación, se utilizan técnicas de abstracción, como la encapsulación y la creación de interfaces, para ocultar los detalles internos y complejos de un componente o sistema, y proporcionar una forma más fácil de interactuar con él.
+Puede manifestarse en diferentes niveles y paradigmas:</p>
+<ul>
+<li>En un nivel más alto, puede implicar la creación de interfaces, clases o módulos que encapsulan la funcionalidad y ocultan los detalles de implementación subyacentes. Esto permite que los usuarios o programadores interactúen con estas abstracciones sin tener que preocuparse por los detalles internos.</li>
+<li>En un nivel más bajo, la abstracción puede involucrar la creación de funciones, procedimientos o bloques de código que agrupan instrucciones relacionadas y se utilizan para resolver tareas específicas. Estas abstracciones ayudan a modularizar y organizar el código, facilitando su mantenimiento y reutilización.</li>
+</ul>
+<h2 id="abstraccion-en-programacion-imperativa-funciones-y-procedimientos">Abstracción en programación imperativa: funciones y procedimientos</h2>
+<p>En programación imperativa, la abstracción se refiere a la capacidad de agrupar un conjunto de instrucciones en una sola unidad lógica y tratarla como una entidad única. La idea es simplificar y organizar el código para facilitar su comprensión y mantenimiento.</p>
+<p>En este paradigma, la abstracción se logra mediante el uso de <strong>funciones</strong> o <strong>procedimientos</strong> (también conocidos como <strong>subrutinas</strong>):</p>
+<ul>
+<li>Una <strong>función</strong> es un bloque de código que toma ciertos valores de entrada, realiza una serie de operaciones y devuelve un resultado. </li>
+<li>Un <strong>procedimiento</strong> es similar a una función, pero no devuelve un valor específico, sino que realiza una serie de acciones.</li>
+</ul>
+<p>Al utilizar funciones y procedimientos, se <strong>pueden agrupar instrucciones relacionadas en una única entidad abstracta</strong>. Esto permite separar la lógica del programa en módulos más pequeños y manejables, lo que facilita la comprensión del código y su reutilización en diferentes partes del programa.</p>
+<p>La abstracción en programación imperativa también puede lograrse mediante el uso de <strong>estructuras abstractas de datos</strong>. Estas son estructuras que <strong>definen un conjunto de operaciones y reglas de acceso</strong>, pero <strong>ocultan los detalles internos de implementación</strong>. </p>
+<p>Al utilizar estructuras de datos abstractas, se puede trabajar con datos de manera más abstracta y enfocarse en la forma en que se manipulan y acceden, en lugar de preocuparse por los detalles específicos de almacenamiento y organización.</p>
+<p>Por ahora no te preocupes. Suena complejo, pero lo entenderás muy bien cuando veamos el tema en profundidad, más adelante.</p>
+<h2 id="introduccion-a-la-abstraccion-en-el-contexto-de-la-programacion-visual">Introducción a la abstracción en el contexto de la programación visual</h2>
+<p>Al igual que con la plataforma de <a href="https://pilasbloques.program.ar/" target="_blank">Pilas Bloques</a>, <a href="https://scratch.mit.edu/" target="_blank">Scatch</a> es una excelente manera de ingresar a la programación de computadoras porque te permite jugar con bloques de construcción de una manera visual, sin tener que preocuparte por la sintaxis de llaves, puntos y comas, paréntesis y similares.</p>
+<p>Scratch es un lenguaje de programación visual desarrollado por el MIT. Y utiliza bloques de construcción de codificación esenciales similares a los vistos en Pilas Bloques. Posee un IDE (entorno de desarrollo integrado) muy amigable que te permitirá resolver una gran variedad de problemas computacionales, aunque no es tema para esta bibliografía. Solo te contaremos que Scratch posee un gato estrella que nos ayudará a comprender el concepto de abstracción.</p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/scratch-interfaz.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Te interesaría saber:</p>
+<p>Al gato, por cierto, podemos llamarlo <strong>sprite</strong>: un término general utilizado en la programación de juegos para un objeto o personaje en la pantalla con el que el jugador interactuará.</p>
+</div>
+<p>Si quieres echarle un vistazo, puedes ingresar en <a href="https://scratch.mit.edu/" target="_blank">https://scratch.mit.edu/</a></p>
+<p>Junto con la pseudocodificación, la abstracción es una habilidad y un concepto esencial dentro de la programación informática.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definición</p>
+<p>Dijimos que la abstracción es el acto de simplificar un problema en problemas cada vez más pequeños.</p>
+</div>
+<p>Por ejemplo, si estuviera organizando una gran cena para sus amigos, ¡el problema de tener que cocinar toda la comida podría ser bastante abrumador! Sin embargo, si divide la tarea de cocinar la comida en tareas (o problemas) cada vez más pequeños, la gran tarea de crear esta deliciosa comida puede parecer menos desafiante.</p>
+<p>En programación, e incluso dentro de Scratch, podemos ver la abstracción en acción. Realicemos un programa que haga que el gato haga 3 maullidos:</p>
+<p><img alt="Alt text" src="../imagenes/abstraccion-3-maullidos-1.png" /></p>
+<p>Date cuenta de que estamos haciendo lo mismo, repitiendo bloques una y otra vez. De hecho, si te ves codificando repetidamente las mismas declaraciones, es probable que puedas programar de manera más ingeniosa, abstrayendo el código repetitivo.</p>
+<p>Puedes modificar tu código de la siguiente manera, usando un <strong>bucle</strong>, <strong>ciclo</strong> o <strong>bloque de repetición</strong>:</p>
+<p><img alt="Alt text" src="../imagenes/abstraccion-3-maullidos-2.png" /></p>
+<p>Ahora nuestro programa logra los mismos resultados, pero con menos bloques. </p>
+<p>Podemos considerar que <strong>tiene un mejor diseño</strong>: si hay algo que quisiéramos cambiar, <strong>solo tendríamos que cambiarlo en un solo lugar en lugar de tres</strong>.</p>
+<p>Observe que el ciclo hace exactamente lo que hizo el programa anterior. Sin embargo, el <strong>problema se simplifica abstrayendo la repetición a un bloque que repite el código</strong> para nosotros.</p>
+<p>Podemos usar la idea de <strong>abstracción</strong> para combinar <strong>varias acciones como si fuera una sola</strong>, para que podamos usarlas y pensar en ellas más fácilmente. Para ello, debemos implementar un procedimiento. Este concepto lo veremos más adelante, pero por el momento hay que entenderlo como un bloque de código independiente que realizar una tarea específica, y tienen un identificador único para ser llamado:</p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/abstraccion-varias-acciones-como-una-sola-1.png" /></p>
+<p>Nota que estamos definiendo nuestro propio <strong>procedimiento</strong> (bloque de código aislado) llamado <strong>meow</strong>. La función reproduce el sonido <em>meow</em>, y luego espera un segundo. Así, la lógica del procedimiento queda aislada de su implementación.</p>
+<p>Ahora, nuestro bloque principal del programa solo puede usar el procedimiento <strong>meow</strong>, y podremos leer este código más tarde y entender lo que hace más fácilmente.</p>
+<p>Aquí puedes ver que cuando se hace clic en la bandera verde, la llamada al procedimiento <strong>meow</strong> se repite tres veces.</p>
+<p>Incluso, el procedimiento puede tener un parámetro <strong>n</strong>, y recibir un valor como <strong>argumento</strong> que le indique que debe repetir el bloque de código varias veces:</p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/abstraccion-varias-acciones-como-una-sola-2.png" /></p>
+<p>Nota como <strong>n</strong> toma el valor pasado desde la llamada <strong>meow 3 times</strong>.</p>
+<p>Ahora, el procedimiento <strong>meow</strong> consigue el mismo efecto, pero podemos reutilizarlo fácilmente o cambiar el número de veces que nuestro gato dice miau.</p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>Una buena estrategia cuando se programa es dividir un problema más grande en problemas más pequeños y resolverlos primero.</p>
+</div>
+<h2 id="ejemplo-de-abstraccion-en-programacion-imperativa">Ejemplo de abstracción en programación imperativa</h2>
+<p>Un ejemplo de abstracción en programación imperativa se puede ver en el uso de funciones o procedimientos para encapsular un conjunto de instrucciones relacionadas y reutilizables. Estas abstracciones permiten simplificar y modularizar el código, evitando la repetición y mejorando la legibilidad.</p>
+<p>Supongamos que tenemos un programa que necesita calcular el área de diferentes figuras geométricas, como cuadrados, círculos y triángulos. </p>
+<p>Podemos utilizar funciones para abstraer la lógica de cálculo del área para cada una de estas figuras. </p>
+<p>Aquí hay un ejemplo en Python:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">calcular_area_cuadrado</span><span class="p">(</span><span class="n">lado</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="k">return</span> <span class="n">lado</span> <span class="o">*</span> <span class="n">lado</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">calcular_area_circulo</span><span class="p">(</span><span class="n">radio</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="k">return</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">radio</span> <span class="o">*</span> <span class="n">radio</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">def</span> <span class="nf">calcular_area_triangulo</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  <span class="k">return</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altura</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">lado</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">area_cuadrado</span> <span class="o">=</span> <span class="n">calcular_area_cuadrado</span><span class="p">(</span><span class="n">lado</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El área del cuadrado de lado&quot;</span><span class="p">,</span> <span class="n">lado</span><span class="p">,</span> <span class="s2">&quot;es:&quot;</span><span class="p">,</span> <span class="n">area_cuadrado</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">radio</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">area_circulo</span> <span class="o">=</span> <span class="n">calcular_area_circulo</span><span class="p">(</span><span class="n">radio</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El área del círculo de radio&quot;</span><span class="p">,</span> <span class="n">radio</span><span class="p">,</span> <span class="s2">&quot;es:&quot;</span><span class="p">,</span> <span class="n">area_circulo</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">base</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="n">altura</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">area_triangulo</span> <span class="o">=</span> <span class="n">calcular_area_triangulo</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">)</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El área del triángulo de base&quot;</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="s2">&quot;y altura&quot;</span><span class="p">,</span> <span class="n">altura</span><span class="p">,</span> <span class="s2">&quot;es:&quot;</span><span class="p">,</span> <span class="n">area_triangulo</span><span class="p">)</span>
+</code></pre></div>
+<p>En este ejemplo, hemos creado tres funciones:
+* calcular_area_cuadrado
+* calcular_area_circulo
+* calcular_area_triangulo</p>
+<p>Cada una de estas funciones recibe los parámetros necesarios para realizar el cálculo del área y devuelve el resultado correspondiente.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">calcular_area_cuadrado</span><span class="p">(</span><span class="n">lado</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="k">return</span> <span class="n">lado</span> <span class="o">*</span> <span class="n">lado</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">def</span> <span class="nf">calcular_area_circulo</span><span class="p">(</span><span class="n">radio</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  <span class="k">return</span> <span class="n">PI</span> <span class="o">*</span> <span class="n">radio</span> <span class="o">*</span> <span class="n">radio</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">def</span> <span class="nf">calcular_area_triangulo</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  <span class="k">return</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altura</span> <span class="o">/</span> <span class="mi">2</span>
+</code></pre></div>
+<p>Gracias a estas abstracciones, podemos utilizar estas funciones en diferentes partes de nuestro programa para calcular el área de las diferentes figuras geométricas sin tener que repetir el código de cálculo en cada instancia. </p>
+<p>En este caso, las funciones abstractas nos permiten calcular el área de diferentes figuras geométricas sin preocuparnos por los detalles específicos de cada cálculo. Esto simplifica y organiza el código, y facilita su reutilización en diferentes partes del programa donde sea necesario calcular áreas.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">lado</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">area_cuadrado</span> <span class="o">=</span> <span class="n">calcular_area_cuadrado</span><span class="p">(</span><span class="n">lado</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El área del cuadrado de lado&quot;</span><span class="p">,</span> <span class="n">lado</span><span class="p">,</span> <span class="s2">&quot;es:&quot;</span><span class="p">,</span> <span class="n">area_cuadrado</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">radio</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">area_circulo</span> <span class="o">=</span> <span class="n">calcular_area_circulo</span><span class="p">(</span><span class="n">radio</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El área del círculo de radio&quot;</span><span class="p">,</span> <span class="n">radio</span><span class="p">,</span> <span class="s2">&quot;es:&quot;</span><span class="p">,</span> <span class="n">area_circulo</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">base</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">altura</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">area_triangulo</span> <span class="o">=</span> <span class="n">calcular_area_triangulo</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El área del triángulo de base&quot;</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="s2">&quot;y altura&quot;</span><span class="p">,</span> <span class="n">altura</span><span class="p">,</span> <span class="s2">&quot;es:&quot;</span><span class="p">,</span> <span class="n">area_triangulo</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="abstraccion-en-programacion-orientada-a-objetos-clases-interfaces-y-objetos">Abstracción en programación orientada a objetos: clases, interfaces y objetos</h2>
+<p>Como dijimos, la abstracción se refiere proceso que tiene la capacidad de representar un conjunto de datos, conceptos y elementos complejos del mundo real de manera simplificada, concisa y generalizada, a través de modelos o estructuras que permiten trabajar con ellos de manera más eficiente y comprensible en un programa.</p>
+<p>Es una técnica que permite aislar ciertos aspectos relevantes de un problema y enfocarse únicamente en ellos, ignorando los detalles innecesarios.</p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>En la programación orientada a objetos, la abstracción se logra mediante la creación de clases, que son plantillas o moldes para crear objetos. Una clase define las propiedades y comportamientos que los objetos de ese tipo pueden tener. Los objetos, a su vez, son instancias concretas de esas clases. </p>
+<p>Por el momento, es todo lo que debes saber. Este paradigma de programación se estudiará en profundidad mucho más adelante. Un paradigma es una manera o estilo de programación de software</p>
+</div>
+<p>La abstracción permite ocultar los detalles internos de una clase u objeto y proporcionar una interfaz clara y bien definida para interactuar con ellos. Esto significa que un usuario o programador puede utilizar un objeto sin necesidad de conocer cómo está implementado internamente. Solo necesita saber qué métodos o funciones están disponibles y cómo usarlos.</p>
+<h2 id="ejemplo-de-abstraccion-en-programacion-orientada-a-objetos">Ejemplo de abstracción en programación orientada a objetos</h2>
+<p>Un ejemplo de abstracción en programación orientada a objetos se puede ver en el uso de una clase en lenguajes de programación como Java o Python. Una clase es una abstracción que encapsula datos y comportamientos relacionados en un solo objeto. No te preocupes, lo veremos mucho más adelante.</p>
+<p>Supongamos que estamos desarrollando un sistema para una biblioteca y necesitamos representar los libros.
+Podemos crear una clase llamada <strong>Libro</strong> que abstraiga las propiedades y acciones asociadas a un libro. </p>
+<p>Aquí hay un ejemplo en Python:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span> <span class="nc">Libro</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">autor</span><span class="p">):</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>     <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span> <span class="o">=</span> <span class="n">titulo</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>     <span class="bp">self</span><span class="o">.</span><span class="n">autor</span> <span class="o">=</span> <span class="n">autor</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>   <span class="k">def</span> <span class="nf">mostrar_informacion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Título:&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="s2">&quot;Autor:&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">autor</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>   <span class="k">def</span> <span class="nf">prestar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El libro&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span><span class="p">,</span> <span class="s2">&quot;ha sido prestado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>   <span class="k">def</span> <span class="nf">devolver</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El libro&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span><span class="p">,</span> <span class="s2">&quot;ha sido devuelto.&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">mi_libro</span> <span class="o">=</span> <span class="n">Libro</span><span class="p">(</span><span class="s2">&quot;El Gran Gatsby&quot;</span><span class="p">,</span> <span class="s2">&quot;F. Scott Fitzgerald&quot;</span><span class="p">)</span> <span class="c1"># Crear un objeto Libro</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">mi_libro</span><span class="o">.</span><span class="n">mostrar_informacion</span><span class="p">()</span> <span class="c1"># Mostrar información del libro</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">mi_libro</span><span class="o">.</span><span class="n">prestar</span><span class="p">()</span> <span class="c1"># Prestar el libro</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">mi_libro</span><span class="o">.</span><span class="n">devolver</span><span class="p">()</span> <span class="c1"># Devolver el libro</span>
+</code></pre></div>
+<p>En este ejemplo, la clase Libro abstrae las propiedades o atributos de un libro, como el título y el autor; y las acciones o métodos asociados, como mostrar la información del libro, prestarlo y devolverlo.</p>
+<p>Gracias a esta abstracción, podemos crear objetos individuales basados en esta clase y utilizar sus métodos para interactuar con los libros de manera más sencilla.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Libro</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">autor</span><span class="p">):</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>     <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span> <span class="o">=</span> <span class="n">titulo</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>     <span class="bp">self</span><span class="o">.</span><span class="n">autor</span> <span class="o">=</span> <span class="n">autor</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>   <span class="k">def</span> <span class="nf">mostrar_informacion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Título:&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="s2">&quot;Autor:&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">autor</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>   <span class="k">def</span> <span class="nf">prestar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El libro&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span><span class="p">,</span> <span class="s2">&quot;ha sido prestado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>   <span class="k">def</span> <span class="nf">devolver</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El libro&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">titulo</span><span class="p">,</span> <span class="s2">&quot;ha sido devuelto.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>En este caso, la clase Libro nos permite abstraer los detalles específicos de cada libro y proporcionar una interfaz clara y coherente para interactuar con ellos. </p>
+<p>Esta abstracción simplifica el manejo y la manipulación de los libros en nuestro sistema de biblioteca.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">mi_libro</span> <span class="o">=</span> <span class="n">Libro</span><span class="p">(</span><span class="s2">&quot;El Gran Gatsby&quot;</span><span class="p">,</span> <span class="s2">&quot;F. Scott Fitzgerald&quot;</span><span class="p">)</span> <span class="c1"># Crear un objeto Libro</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">mi_libro</span><span class="o">.</span><span class="n">mostrar_informacion</span><span class="p">()</span> <span class="c1"># Mostrar información del libro</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">mi_libro</span><span class="o">.</span><span class="n">prestar</span><span class="p">()</span> <span class="c1"># Prestar el libro</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">mi_libro</span><span class="o">.</span><span class="n">devolver</span><span class="p">()</span> <span class="c1"># Devolver el libro</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

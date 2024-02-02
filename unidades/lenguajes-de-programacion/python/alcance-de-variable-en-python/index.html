@@ -1,0 +1,2159 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Alcance de variable - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#alcance-de-una-variable" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Alcance de variable
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/introduccion-a-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/teoria-de-los-lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teoría de los lenguajes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/paradigmas-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduccion-a-la-programacion/vision-general-de-los-lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visión general de los lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentos de la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentos de la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/conceptos-basicos-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptos básicos de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/que-son-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las variables?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/caracteristicas-de-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/tipo-de-dato-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/identificador-de-una-variable.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/alcance-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/dato-asignado-a-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/utilizacion-de-variables-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Para practicar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Para practicar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-declaracion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre declaración de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-uso-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre uso de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-modificacion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre modificación de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-operaciones-con-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre operaciones con variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre alcance de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-tipos-de-datos-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre tipos de datos de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/que-son-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las constantes?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/caracteristicas-de-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/tipo-de-dato-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/identificador-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/alcance-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/dato-asignado-a-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/tipos-de-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fundamentos-de-la-programacion/constantes/utilizacion-de-constantes-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de constantes en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="alcance-de-una-variable">Alcance de una variable</h1>
+<p><label class="revision">Rev. 11/01/2024</label></p>
+<p>Un concepto muy importante en programación es lo que llamamos alcance de una variable (<em>variable scope</em>).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definición</p>
+<p>El alcance de una variable se refiere a la parte del código donde una variable existe y es accesible para poder ser utilizada por el programa. </p>
+<p>Hay dos tipos principales de alcance: <strong>local</strong>, limitado a la parte del código donde esa variable existe y puede ser accedida; o <strong>global</strong>, accesible desde cualquier parte del código.</p>
+</div>
+<h2 id="que-es-el-ambito-de-aplicacion">¿Qué es el ámbito de aplicación?</h2>
+<p>En el contexto de la programación, los términos "ámbito" y "alcance" se utilizan a menudo de manera intercambiable para referirse a la región o parte de código donde una variable es visible y accesible.</p>
+<p>Por ejemplo, si decimos que una variable tiene "alcance local", significa que la variable es accesible solo dentro de la región o parte de código donde se declara. De manera similar, si decimos que una variable está en el "ámbito local", estamos diciendo lo mismo.</p>
+<p>Entonces, el <strong>ámbito</strong> de aplicación de una variable es el <strong>alcance</strong> que tiene la variable, que no es ni más ni menos que la región o parte de código donde la variable existe y es accesible.</p>
+<p>Por lo tanto, puedes usar cualquiera de los dos términos para describir dónde una variable puede ser utilizada en tu código.</p>
+<h2 id="ambito-global-o-ambito-local">¿Ámbito global o ámbito local?</h2>
+<p>Hemos dicho que básicamente podemos dividir a las variables, en función del ámbito de aplicación donde existen y son accesibles, como <strong>locales</strong> o <strong>globales</strong>.<br />
+Y que la principal diferencia entre una variable global y otra local radica en su alcance o ámbito de aplicación, es decir, en la región o parte de código donde son visibles y accesibles.</p>
+<p>Evaluemos un ejemplo de utilización de variables globales y locales en Python:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Variable global</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="c1"># Variable local</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Esto es válido, porque &#39;a&#39; es global</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Esto es válido, porque &#39;b&#39; es local a esta función</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">mi_funcion</span><span class="p">()</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Esto es válido, porque &#39;a&#39; es global</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Esto dará un error, porque &#39;b&#39; es local a &#39;mi_funcion&#39; y no existe aquí</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>El código anterior demuestra la diferencia entre las variables globales y las variables locales:</p>
+<p><code>a = 10</code>: Aquí, <code>a</code> es una variable global. Se declara fuera de cualquier función, por lo que es accesible desde cualquier lugar del código.</p>
+<p><code>def mi_funcion()</code>: Esta es la definición de una función llamada <code>mi_funcion</code>.</p>
+<p><code>b = 20</code>: Dentro de <code>mi_funcion</code>, se declara <code>b</code> como una variable local. Solo es accesible dentro de <code>mi_funcion</code>.</p>
+<p><code>print(a)</code>: Dentro de <code>mi_funcion</code>, se puede acceder a la variable global <code>a</code>. Por lo tanto, esta línea imprimirá el valor de <code>a</code>, que es <code>10</code>.</p>
+<p><code>print(b)</code>: También se puede acceder a la variable local <code>b</code> dentro de <code>mi_funcion</code>. Esta línea imprimirá el valor de <code>b</code>, que es <code>20</code>.</p>
+<p><code>mi_funcion()</code>: Esta línea llama a <code>mi_funcion</code>, lo que provocará que se impriman los valores de <code>a</code> y <code>b</code>.</p>
+<p><code>print(a)</code>: Después de llamar a <code>mi_funcion</code>, esta línea imprime el valor de la variable global <code>a</code> nuevamente. Esto es válido y imprimirá <code>10</code>.</p>
+<p><code>print(b)</code>: Intenta imprimir el valor de <code>b</code>. Sin embargo, dado que <code>b</code> es una variable local a <code>mi_funcion</code>, no es accesible fuera de esa función. Por lo tanto, esta línea dará un error, indicando que <code>b</code> no está definida.</p>
+</blockquote>
+<p>Estudiaremos estos conceptos con mayor profundidad, a continuación.</p>
+<h3 id="variable-de-alcance-global">Variable de alcance global</h3>
+<p>El ámbito donde se encuentra el código principal de un programa, generalmente definido como <code>main()</code> en algunos lenguajes, se llama <strong>ámbito global</strong>. </p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>En la mayoría de los lenguajes de programación, incluyendo Python, cualquier código que no está dentro de una función o clase se ejecuta en el ámbito global.</p>
+</div>
+<p>Por lo tanto, una variable global es aquella que se define en el código principal de un programa fuera de cualquier otro ámbito, como ser funciones o bloques de código, por ejemplo. </p>
+<p>Las variables globales existen, son visibles, son accesibles y pueden ser modificadas desde cualquier parte del código. Por este motivo, su uso debe ser limitado ya que puede llevar a comportamientos inesperados debido a modificaciones no controladas.</p>
+<p>Aquí tenemos varios ejemplos en diferentes lenguajes:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">variable_global</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable global&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">variable_global</span><span class="p">)</span>  <span class="c1"># Esto es válido! Output : Soy una variable global</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">mi_funcion</span><span class="p">()</span>  
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">variableGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Soy una variable global&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">miFuncion</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variableGlobal</span><span class="p">);</span><span class="w">  </span><span class="c1">// Esto es válido! Output : Soy una variable global</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">miFuncion</span><span class="p">();</span><span class="w">  </span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">variableGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Soy una variable global&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">variableGlobal</span><span class="p">);</span><span class="w">  </span><span class="c1">// Esto es válido! Output : Soy una variable global</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">variableGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Soy una variable global&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">variableGlobal</span><span class="p">;</span><span class="w">  </span><span class="c1">// Esto es válido! Output : Soy una variable global</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+</code></pre></div>
+<p>De todos estos códigos, solo nos detendremos en el detalle de que la variable global se declara en el ámbito global, fuera de cualquier función, y luego es accedida desde algún ámbito, en cualquier parte del código.</p>
+<div class="admonition warning">
+<p class="admonition-title">¡Atención!</p>
+<p>Es importante tener cuidado al usar variables globales, ya que pueden ser modificadas desde cualquier parte del código, lo que puede llevar a comportamientos inesperados. </p>
+</div>
+<h3 id="variable-de-alcance-local">Variable de alcance local</h3>
+<p>En términos generales, en la mayoría de los lenguajes de programación, una variable local es una variable que se declara dentro un ámbito local como una función o un bloque de código. </p>
+<p>Esta variable solo puede ser accesible y modificada dentro de dicho ámbito, es decir, su ámbito se limita al bloque de código donde se declara. Esto proporciona un control más estricto sobre su utilización. </p>
+<p>A su vez, los ámbitos que se encuentren contenidos dentro del ámbito de declaración también tendrán visibilidad y acceso a la variable en cuestión.</p>
+<p>Una vez que la ejecución del programa abandona el ámbito en cuestión, la variable local deja de existir (es destruida) y ya no será posible acceder a ella.</p>
+<p>Por ejemplo, si declaras una variable dentro de una función, esa variable es local a esa función. No puedes acceder a esa variable fuera de la función o desde otras funciones. Esto ayuda a evitar conflictos de nombres de variables y a mantener el código más organizado y legible.</p>
+<p>Aquí tienes un ejemplo genérico:</p>
+<div class="highlight"><span class="filename">Código genérico</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">variable_local</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable local&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto es válido! Output : Soy una variable local</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto dará un error porque &#39;variable_local&#39; no está definida en este ámbito</span>
+</code></pre></div>
+<blockquote>
+<p>En este ejemplo, <code>variable_local</code> es una variable local a <code>mi_funcion</code> y solo puede ser utilizada dentro de <code>mi_funcion</code>. Intentar acceder a <code>variable_local</code> fuera de <code>mi_funcion</code> dará un error.</p>
+</blockquote>
+<p>Los ámbitos de aplicación de una variable local pueden ser los siguientes:</p>
+<ol>
+<li>
+<p><strong>Ámbito de función</strong>: Una variable local declarada dentro de una función solo puede ser accedida dentro de esa función. No es visible fuera de la función.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">j</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Esta es una variable local</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>  <span class="c1"># Podemos acceder a la variable local &#39;j&#39;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">func</span><span class="p">()</span>  <span class="c1"># Output : 20</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>  <span class="c1"># Esto dará un error porque &#39;j&#39; no está definida en el ámbito global</span>
+</code></pre></div>
+<blockquote>
+<p>En el código, <code>j</code> es una variable local a la función <code>func()</code>. No puede ser accedida fuera de <code>func()</code>, por lo que el intento de imprimir <code>j</code> fuera de la función resulta en un error.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Ámbito de bloque</strong>: En algunos lenguajes de programación, una variable local puede tener un ámbito limitado a un bloque específico de código, como un bucle o una estructura condicional. </p>
+<p>Aquí tienes ejemplos de cómo se maneja el ámbito de bloque en diferentes lenguajes de programación:</p>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// En JavaScript, la palabra clave &#39;let&#39; declara la variable como local. Así, &#39;x&#39; NO es accesible fuera del bucle</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Esto dará un error en JavaScript</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// En Java, &#39;x&#39; NO es accesible fuera del bucle</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Esto dará un error en Java</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// En C++, &#39;x&#39; NO es accesible fuera del bucle</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">}</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// Esto dará un error en C++</span>
+</code></pre></div>
+<p>En los tres códigos, donde se utilizan variables locales de bloque, estas variables solo son accesibles dentro de ese bloque.</p>
+<details class="question">
+<summary>¿Qué ocurre con las variables locales de bloque en Python?</summary>
+<p>En Python, sin embargo, las variables declaradas dentro de un bloque de código como un bucle <em><code>for</code></em> o una declaración <em><code>if</code></em> no son locales a ese bloque solamente. En cambio, son visibles en el alcance en el que se encuentra ese bloque. </p>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">i</span>  <span class="c1"># En Python, &#39;x&#39; es accesible fuera del bucle</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x es mayor que 0 y vale&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># Esto es válido! Output : x es mayor que 0 y vale 4</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">variable_en_bloque</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable en un bloque&quot;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">variable_en_bloque</span><span class="p">)</span>  <span class="c1"># Esto es válido! Output : Soy una variable en un bloque</span>
+</code></pre></div>
+<blockquote>
+<p>Este es un ejemplo de cómo Python maneja el ámbito de las variables. Aquí está lo que sucede paso a paso:</p>
+<p>El bucle <code>for</code> se ejecuta 5 veces, con <code>i</code> tomando los valores de <code>0</code> a <code>4</code>. En cada iteración, <code>i</code> se asigna a <code>x</code>. Por lo tanto, al final del bucle, <code>x</code> es igual a <code>4</code>.</p>
+<p>Después del bucle, hay una estructura alternativa <code>if</code> que comprueba si <code>x</code> es mayor que <code>0</code>. Dado que <code>x</code> es <code>4</code>, la condición es verdadera, por lo que se ejecuta el bloque de código dentro del <code>if</code>.</p>
+<p>Dentro de dicho bloque, se imprime un mensaje que dice "x es mayor que 0 y vale 4". Luego, se declara una variable llamada <code>variable_en_bloque</code> y se le asigna la cadena "Soy una variable en un bloque".</p>
+<p>Después de estructura alternativa <code>if</code>, se imprime <code>variable_en_bloque</code>. Aunque <code>variable_en_bloque</code> se declaró dentro de la estructura alternativa <code>if</code>, todavía es accesible fuera de ella. </p>
+<p>Esto se debe a que Python no tiene un ámbito de bloque como algunos otros lenguajes de programación; en su lugar, tiene un ámbito de función.</p>
+<p>Por lo tanto, la salida de este código será:</p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>x es mayor que 0 y vale 4
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Soy una variable en un bloque
+</code></pre></div>
+</blockquote>
+<p>Como podemos evaluar, las variables locales de bloque en Python se comportan de manera diferente a muchos otros lenguajes de programación, donde las variables declaradas dentro de un bloque de código son locales a ese bloque solamente. </p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>En Python, las variables son locales a las funciones, no a los bloques de código.</p>
+</div>
+</details>
+</li>
+<li>
+<p><strong>Ámbito de clase (en lenguajes orientados a objetos)</strong>: En lenguajes de programación orientados a objetos como Python, Java, C++, etc., una variable local puede ser declarada dentro de un método de una clase. Esta variable solo será accesible dentro de ese método.</p>
+<details class="example">
+<summary>Puedes analizar un ejemplo aquí:</summary>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">Mi_Clase</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="k">def</span> <span class="nf">mi_metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Variable local</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Esto es válido</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="k">def</span> <span class="nf">otro_metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Esto dará un error, &#39;x&#39; no es accesible fuera de &#39;mi_metodo&#39;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">Mi_Clase</span><span class="p">()</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="n">obj</span><span class="o">.</span><span class="n">mi_metodo</span><span class="p">()</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">obj</span><span class="o">.</span><span class="n">otro_metodo</span><span class="p">()</span>
+</code></pre></div>
+<blockquote>
+<p>Este código define una clase llamada <code>Mi_Clase</code> que tiene dos métodos: <code>mi_metodo</code> y <code>otro_metodo</code>.</p>
+<p>En el método <code>mi_metodo</code>, se declara una variable local <code>x</code> y se le asigna el valor <code>10</code>. Luego, este valor se imprime.</p>
+<p>En el método <code>otro_metodo</code>, se intenta imprimir la variable <code>x</code>. Sin embargo, dado que <code>x</code> es una variable local dentro del método <code>mi_metodo</code>, no es accesible desde <code>otro_metodo</code>. Por lo tanto, este intento de imprimir <code>x</code> resultará en un error.</p>
+<p>Finalmente, se crea un objeto <code>obj</code> de la clase <code>Mi_Clase</code> y se llaman ambos métodos. La llamada a <code>obj.mi_metodo()</code> imprimirá <code>10</code>, mientras que la llamada a <code>obj.otro_metodo()</code> dará un error porque <code>x</code> no está definida en ese contexto.</p>
+</blockquote>
+</details>
+</li>
+<li>
+<p><strong>Ámbito de objeto</strong>: En la programación orientada a objetos, las variables definidas dentro de un objeto (a menudo llamadas propiedades o atributos del objeto) tienen un ámbito local al objeto.</p>
+<details class="example">
+<summary>Puedes analizar un ejemplo aquí:</summary>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span> <span class="nc">MiClase</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">mi_variable</span> <span class="o">=</span> <span class="n">valor</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="k">def</span> <span class="nf">muestra_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mi_variable</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="c1"># Crear un objeto de MiClase</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">objeto</span> <span class="o">=</span> <span class="n">MiClase</span><span class="p">(</span><span class="s2">&quot;Hola, mundo!&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="c1"># Acceder a mi_variable a través del objeto</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">objeto</span><span class="o">.</span><span class="n">mi_variable</span><span class="p">)</span>  <span class="c1"># Esto imprimirá: Hola, mundo!</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="c1"># Usar un método del objeto para acceder a mi_variable</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="n">objeto</span><span class="o">.</span><span class="n">muestra_variable</span><span class="p">()</span>  <span class="c1"># Esto también imprimirá: Hola, mundo!   </span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>mi_variable</code> tiene un ámbito de objeto. Solo es accesible a través de una instancia de <code>MiClase</code> (en este caso, <code>objeto</code>). Dentro de la clase, puedes acceder a <code>mi_variable</code> usando <code>self.mi_variable</code>. Fuera de la clase, puedes acceder a <code>mi_variable</code> usando <code>objeto.mi_variable</code>.</p>
+</blockquote>
+</details>
+</li>
+</ol>
+<p>Existen otros ámbitos más específicos que por su utilización, solo vamos a referenciarlos:</p>
+<ol>
+<li>
+<p><strong>Ámbito de módulo o archivo</strong>: En algunos lenguajes de programación como Python o JavaScript (Node.js), las variables definidas en un archivo o módulo son locales a ese archivo. No son accesibles desde otros archivos a menos que se exporten o se importen explícitamente.</p>
+<details class="example">
+<summary>Puedes analizar un ejemplo aquí:</summary>
+<p>En Python, las variables definidas en un archivo son locales a ese archivo. Aquí tienes un ejemplo:</p>
+<p>Supongamos que tienes dos archivos Python: <code>archivo1.py</code> y <code>archivo2.py</code>.</p>
+<p>En <code>archivo1.py</code>, defines una variable:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># archivo1.py</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">mi_variable</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo!&quot;</span>
+</code></pre></div>
+<p>Si intentas acceder a <code>mi_variable</code> desde <code>archivo2.py</code> sin importarla explícitamente, obtendrás un error:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># archivo2.py</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_variable</span><span class="p">)</span>  <span class="c1"># Esto dará un error, mi_variable no está definida en este archivo</span>
+</code></pre></div>
+<p>Para acceder a <code>mi_variable</code> desde <code>archivo2.py</code>, necesitas importarla:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># archivo2.py</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kn">from</span> <span class="nn">archivo1</span> <span class="kn">import</span> <span class="n">mi_variable</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_variable</span><span class="p">)</span>  <span class="c1"># Esto imprimirá: Hola, mundo!</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>mi_variable</code> tiene un ámbito de módulo o archivo. Solo es accesible dentro de <code>archivo1.py</code> a menos que se importe explícitamente en otro archivo.</p>
+</blockquote>
+</details>
+</li>
+<li>
+<p><strong>Ámbito de espacio de nombres (namespace)</strong>: En lenguajes como C++ o Python, puedes definir espacios de nombres que proporcionan ámbitos para las variables. Las variables definidas dentro de un espacio de nombres son locales a ese espacio de nombres.</p>
+<details class="example">
+<summary>Puedes analizar un ejemplo aquí:</summary>
+<p>En Python, un espacio de nombres (namespace) es una forma de encapsular variables, funciones y clases. Un ejemplo común de un espacio de nombres es un módulo. </p>
+<p>Supongamos que tienes dos archivos Python: <code>modulo1.py</code> y <code>modulo2.py</code>.</p>
+<p>En <code>modulo1.py</code>, defines una variable y una función:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># modulo1.py</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">mi_variable</span> <span class="o">=</span> <span class="s2">&quot;Hola, mundo!&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="k">return</span> <span class="s2">&quot;¡Hola desde modulo1!&quot;</span>
+</code></pre></div>
+<p>En <code>modulo2.py</code>, puedes acceder a <code>mi_variable</code> y <code>mi_funcion()</code> importándolas desde <code>modulo1</code>:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># modulo2.py</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">import</span> <span class="nn">modulo1</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">modulo1</span><span class="o">.</span><span class="n">mi_variable</span><span class="p">)</span>  <span class="c1"># Esto imprimirá: Hola, mundo!</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">modulo1</span><span class="o">.</span><span class="n">mi_funcion</span><span class="p">())</span>  <span class="c1"># Esto imprimirá: ¡Hola desde modulo1!</span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>modulo1</code> es un espacio de nombres. <code>mi_variable</code> y <code>mi_funcion()</code> están en el espacio de nombres de <code>modulo1</code>, y puedes acceder a ellas usando la sintaxis <code>modulo1.mi_variable</code> y <code>modulo1.mi_funcion()</code>. Esto ayuda a evitar conflictos entre nombres de variables y funciones en diferentes módulos.</p>
+</blockquote>
+</details>
+</li>
+<li>
+<p><strong>Ámbito de cierre (closure)</strong>: En algunos lenguajes de programación que admiten funciones de primera clase o funciones anidadas, una variable definida en una función externa puede ser accesible en una función interna. Este es un concepto avanzado conocido como cierre o closure.</p>
+<details class="example">
+<summary>Puedes analizar un ejemplo aquí:</summary>
+<p>Un cierre en Python es una función que recuerda los valores de las variables del ámbito en el que fue creada, incluso si ese ámbito ya no existe.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span> <span class="nf">funcion_externa</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="k">def</span> <span class="nf">funcion_interna</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="k">return</span> <span class="n">funcion_interna</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">mi_closure</span> <span class="o">=</span> <span class="n">funcion_externa</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="c1"># Aunque la función externa ya ha terminado de ejecutarse,</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c1"># mi_closure recuerda el valor de x</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">mi_closure</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Esto imprimirá: 15   </span>
+</code></pre></div>
+<blockquote>
+<p>En este código, <code>funcion_interna</code> es un cierre que recuerda el valor de <code>x</code> del ámbito de <code>funcion_externa</code>. Cuando llamamos a <code>mi_closure(5)</code>, <code>funcion_interna</code> todavía puede acceder al valor de <code>x</code>, incluso aunque <code>funcion_externa</code> ya ha terminado de ejecutarse. Esto es posible gracias al ámbito de cierre.</p>
+</blockquote>
+</details>
+</li>
+</ol>
+<hr />
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>El ámbito de una variable determina dónde puede ser accesible en el código. </p>
+<p>Una variable global es accesible y modificable desde todo el código del programa.</p>
+<p>Una variable local es accesible y modificable solo dentro del ámbito donde es accesible y modificable, ya sea una función, un bloque de código específico o un método de una clase; y no desde todo el código del programa.</p>
+<p>Es importante entender estos ámbitos para evitar errores y escribir código más limpio y mantenible.</p>
+</div>
+<h2 id="ventajas-de-utilizar-variables-locales">Ventajas de utilizar variables locales</h2>
+<p>Las variables locales tienen varias ventajas sobre las variables globales:</p>
+<ol>
+<li>
+<p><strong>Evitan colisiones de nombres</strong>: Las variables locales existen solo dentro de la función donde se definen, lo que significa que puedes usar el mismo nombre de variable en diferentes funciones sin que se produzcan conflictos.</p>
+</li>
+<li>
+<p><strong>Facilitan la lectura y el mantenimiento del código</strong>: Al limitar el alcance de una variable a una sola función, se hace más fácil entender qué hace esa variable y cómo se utiliza.</p>
+</li>
+<li>
+<p><strong>Promueven la modularidad y la reutilización del código</strong>: Las funciones que utilizan solo variables locales (y parámetros) son independientes del estado global del programa, lo que significa que pueden ser fácilmente reutilizadas en diferentes contextos.</p>
+</li>
+<li>
+<p><strong>Evitan efectos secundarios inesperados</strong>: Cuando usas variables globales, cualquier función podría cambiar su valor, lo que puede llevar a comportamientos inesperados. Con las variables locales, tienes un control total sobre cuándo y cómo cambia su valor.</p>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Buena práctica</p>
+<p>Es una buena práctica de programación limitar el uso de variables globales y utilizar variables locales siempre que sea posible para evitar colisiones de nombres, facilitar la lectura y el mantenimiento del código, promover la modularidad y la reutilización del código y evitar efectos secundarios inesperados.</p>
+</div>
+<hr />
+<p>En Python, el ámbito de una variable se refiere a la parte del código donde esa variable es accesible. Aquí están los ámbitos en los que una variable puede existir:</p>
+<p>Ámbito Local: Una variable declarada dentro de una función o método es local a esa función o método. Solo puede ser accedida dentro de esa función o método.</p>
+<p>Ámbito Encerrado (Nonlocal): Este ámbito se refiere a las variables en la función más cercana que encierra a la función actual. Específicamente, se aplica a las funciones anidadas. Una variable declarada en la función externa es accesible en la función interna, pero no al revés.</p>
+<p>Ámbito Global: Una variable declarada fuera de todas las funciones es una variable global. Puede ser accedida desde cualquier parte del código, aunque para modificarla dentro de una función, necesitas declararla como global dentro de esa función.</p>
+<p>Ámbito Incorporado (Built-in): Este es el ámbito más amplio. Incluye nombres predefinidos en Python, como funciones incorporadas (built-in functions) y excepciones. Estos nombres están disponibles en todas partes en tu código.</p>
+<p>Estos ámbitos se buscan en el orden: Local → Encerrado (Nonlocal) → Global → Incorporado (Built-in). Este es el concepto de LEGB en Python.</p>
+<p>En Python, por ejemplo, hay cuatro tipos principales de alcance que son la base de la regla <em>LEGB</em>. 
+<em>LEGB</em> significa Local (Local) &#x2192; Envolvente, Padre o Superior (Enclosing) &#x2192; Global (Global) &#x2192; Integrado o Incorporado (<em>Built-in</em>) y es la lógica seguida por un intérprete de Python cuando ejecuta su programa.</p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/alcance-de-variable-en-python.png" /></p>
+<h2 id="diferentes-ambitos-de-alcance-de-una-variable">Diferentes ámbitos de alcance de una variable</h2>
+<p>Como dijimos, en programación, el alcance de una variable se refiere a la parte del código donde esta es declarada y puede ser accedida. Los tipos más comunes de alcances en la programación son:</p>
+<ol>
+<li>
+<p><strong>Ámbito global (Global)</strong>: las variables declaradas como globales en el bloque principal del programa, afuera de una función, método, clase, instancia o bloque de código, tienen un ámbito y una duración global, y son accesibles durante toda la ejecución del programa desde cualquier lugar del bloque principal del programa, función, clase, instancia o bloque de código. </p>
+</li>
+<li>
+<p><strong>Ámbito local (Local)</strong>: las variables declaradas dentro de una función, método, clase, instancia o bloque de código tienen un ámbito local. Solo son accesibles dentro de esa función, método, clase, instancia o bloque de código y tienen una duración que se extiende desde el punto de declaración hasta el final de la mencionada función, método, clase, instancia o bloque de código.</p>
+</li>
+<li>
+<p><strong>Ámbito envolvente (Enclosing)</strong>: todas las variables locales declaradas dentro de un bloque son accesibles dentro de los bloques internos que este bloque contenga, por no viceversa. Es decir que todas las variables locales declaradas dentro del bloque interno no son accesibles en el bloque externo. Al <strong>ámbito envolvente</strong> se lo considera un <strong>ámbito anidado (Nested scope)</strong>.</p>
+</li>
+<li>
+<p><strong>Ámbito de bloque (Block)</strong>: algunos lenguajes de programación, como C, C++ y JavaScript, permiten ámbitos de nivel de bloque. Las variables declaradas dentro de un bloque, como dentro de una estructura alternativa o de un bucle, tienen un alcance limitado a ese bloque. Solo son accesibles dentro del bloque y sus bloques anidados. La vida útil de las variables de ámbito de bloque depende del idioma y el contexto específico.</p>
+</li>
+<li>
+<p><strong>Ámbito de función (Function)</strong>: las variables declaradas dentro de una función se comportan como variables locales. Solo son accesibles dentro de esa función y tienen una duración que se extiende desde el punto de declaración hasta el final de la mencionada función.</p>
+</li>
+<li>
+<p><strong>Ámbito de clase (Class)</strong>: en la programación orientada a objetos, las variables declaradas dentro de una clase pero fuera de cualquier método se conocen como variables de clase o variables estáticas. Estas variables pertenecen a la clase misma en lugar de instancias de la clase. Son accesibles para todas las instancias de la clase y tienen una duración vinculada a la duración del programa.</p>
+</li>
+<li>
+<p><strong>Ámbito de instancia (Instance)</strong>: las variables de instancia se declaran dentro de una clase y se asocian con instancias u objetos específicos de esa clase. Cada instancia de la clase tiene su propio conjunto de variables de instancia, y solo se puede acceder a ellas a través de la instancia misma. Las variables de instancia tienen una vida útil vinculada a la vida útil del objeto correspondiente.</p>
+</li>
+<li>
+<p><strong>Ámbito integrado (Built-in)</strong>: El ámbito integrado está comprendido por la colección de identificadores y funciones predefinidos que están automáticamente disponibles para cualquier parte del programa sin necesidad de una declaración o importación explícita. Estos identificadores y funciones son parte de la biblioteca estándar o funcionalidad principal de cada lenguaje de programación e incluyen operaciones fundamentales, tipos de dato, estructuras de control y funciones de utilidad que se usan comúnmente en la programación. </p>
+<p>Esta colección puede variar según el lenguaje de programación, pero algunos ejemplos comunes son:</p>
+<ol>
+<li>tipos de dato básicos: el ámbito integrado suele incluir tipos de dato estándar, como números enteros, números de punto flotante, valores booleanos, caracteres, cadenas, matrices y, en ocasiones, estructuras de datos más complejas, como listas o diccionarios.</li>
+<li>Funciones matemáticas: muchos lenguajes de programación proporcionan funciones matemáticas integradas, como funciones trigonométricas (sin, cos, tan), funciones logarítmicas (log, exp) y operaciones aritméticas (suma, resta, multiplicación, división, etc.).</li>
+<li>Funciones de entrada/salida: las funciones integradas suelen estar disponibles para realizar operaciones de entrada/salida, como leer o escribir en la consola, leer y escribir archivos y manejar la entrada del usuario.</li>
+<li>Estructuras de control: las estructuras de control básicas como alternativas (if, switch) y bucles (for, while) suelen formar parte del ámbito integrado.</li>
+<li>Manejo de errores: la funcionalidad integrada a menudo incluye mecanismos para manejar las excepciones o los errores que pueden ocurrir durante la ejecución del programa, como los bloques try-catch o las funciones de informe de errores.</li>
+<li>Manipulación de cadenas: las funciones para operaciones de cadenas como la concatenación, la extracción de sub cadenas, la búsqueda y el reemplazo a menudo se proporcionan en el ámbito integrado.</li>
+<li>Funciones de fecha y hora: muchos lenguajes de programación incluyen funciones integradas para manejar fechas, horas y zonas horarias, lo que permite operaciones como formateo de fechas, cálculo de horas y conversiones de zonas horarias.</li>
+</ol>
+</li>
+</ol>
+<p>Los elementos y las funcionalidades específicas pueden variar significativamente entre los lenguajes de programación, por lo que es importante consultar la documentación o los recursos específicos del lenguaje para explorar el alcance integrado de un lenguaje de programación en particular.</p>
+<h2 id="como-identificar-el-ambito-de-una-variable">¿Cómo identificar el ámbito de una variable?</h2>
+<p>Cada variable solo existe y es accesible dentro del ámbito en el que ha sido declarada. Cuando hablamos de la existencia y accesibilidad dentro de un ámbito, nos referimos a su <strong>alcance</strong>. </p>
+<p>Para determinar su ámbito, hay que identificar las marcas de apertura y cierre de bloque de código más cercanas que rodean la declaración de la variable. </p>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>La mayoría de los lenguajes de programación utilizan llaves ( {} ) para marcar el principio y el final de un bloque de código.</p>
+<p>Una <strong>variable global</strong> estará disponible en todos los bloques de código dentro del programa.</p>
+<p>Y una <strong>variable local</strong> solo estará disponible dentro del bloque de código en el que se haya declarado. Si este bloque contiene a su vez otros bloques, la <strong>variable local</strong> también será accesible dentro de ellos. </p>
+</div>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/identificacion-de-alcance-de-variables-en-js.png" /></p>
+<p>Aquí vemos que la variable <em>soyGlobal</em> ha sido declarada entre las dos llaves marcadas con un círculo azul. El alcance de esa variable es todo lo que se encuentra entre esas dos llaves. 
+El mismo concepto se aplica para las variables <em>localVarB1</em> y <em>localVarB2</em>, cuyos alcances están limitados por las llaves de cada función marcadas con un círculo verde.</p>
+<div class="admonition question">
+<p class="admonition-title">Para pensar:</p>
+<p>¿Qué ocurre, entonces, con las variables <em>localVarB1</em> y <em>localVarB2</em> cuando son accedidas dentro de las funciones <em>bloque1()</em> y <em>bloque2()</em>?</p>
+</div>
+<p>En caso de que se utilice el mismo nombre de variable declarado en varios niveles de anidamiento (significa que hay al menos un bloque dentro de otro bloque), prevalecerá la declaración del bloque más interno, evitando el acceso, durante la ejecución del bloque interno, a la variable declarada en el bloque externo.</p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/identificacion-de-alcance-de-variables-en-js-2.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">Para pensar:</p>
+<p>¿Qué ocurre ahora, en cada caso, con la variable declarada dentro de cada bloque con el mismo nombre <em>localVar</em> cuando se accede a su valor?</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>Dada su escasa legibilidad, las declaraciones anidadas de un mismo nombre de variable son situaciones que nunca deberían ocurrir en un programa bien diseñado.</p>
+</div>
+<h2 id="alcance-global">Alcance global</h2>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">   </span><span class="c1">// Acceder a la variable global</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Mi nombre es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">)</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">}</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="p">{</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="c1">// Definición de variable global</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">   </span><span class="nx">mostrarNombre</span><span class="p">()</span><span class="w">  </span><span class="c1">// Salida: Mi nombre es Juan</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>En este ejemplo, la variable nombre se declara como global fuera de cualquier tipo de bloque de código.<br />
+Sin embargo, al ser global, la función mostrarNombre() puede acceder a ella y mostrar su valor en la consola</p>
+</blockquote>
+<h2 id="alcance-local">Alcance local</h2>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">calcularSuma</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">   </span><span class="c1">// Definición de variable local</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">suma</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">}</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calcularSuma</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">))</span><span class="w">  </span><span class="c1">// Salida: 8</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">suma</span><span class="p">);</span><span class="w"> </span><span class="c1">// Error: suma no está definida (solo existe dentro de la función calcularSuma)</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>En este ejemplo, la variable suma se declara dentro de la función calcularSuma() y, por lo tanto, tiene un alcance local.<br />
+La variable solo puede ser accedida dentro de la función y no está disponible fuera de ella.</p>
+</blockquote>
+<h2 id="alcance-de-bloque">Alcance de bloque</h2>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">verificarNumero</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;El número es positivo&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Definición de variable de bloque</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;El número es negativo&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Definición de variable de bloque</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">}</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="p">{</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">   </span><span class="nx">verificarNumero</span><span class="p">(</span><span class="mf">5</span><span class="p">)</span><span class="w">  </span><span class="c1">// Salida: El número es positivo</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="w">   </span><span class="nx">verificarNumero</span><span class="p">(</span><span class="o">-</span><span class="mf">3</span><span class="p">)</span><span class="w">  </span><span class="c1">// Salida: El número es negativo</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span><span class="w">  </span><span class="c1">// Error: mensaje no está definido (fuera de ambos bloques de la estructura if)</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>En este ejemplo, se declaran dos variables, una dentro de un bloque verdadero y el otra dentro del bloque falso de la estructura alternativa, con el mismo nombre info.<br />
+Al tener, cada una, un alcance de bloque (local), solo existirán dentro del bloque de código donde fueran declaradas.  }
+Fuera de su bloque, cada variable no está disponible, produciendo un error al intentar acceder a ellas.</p>
+</blockquote>
+<h2 id="caso-practico-1-de-analisis-e-identificacion-de-ambitos-de-variables">Caso práctico 1 de análisis e identificación de ámbitos de variables</h2>
+<div class="admonition question">
+<p class="admonition-title">¿Para pensar?</p>
+<p>¿Puedes analizar y entender como funciona este programa?</p>
+<p>Guíate por los colores. Si no, continúa leyendo y ¡lograrás entenderlo!</p>
+</div>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/alcance-de-variable-en-python.png" /></p>
+<p><div class="blue highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="c1">// Global scope (main)</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="p">{</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="w">  </span><span class="c1">// Declara x como global en el cuerpo principal del programa (main)</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">   </span><span class="nx">outer</span><span class="p">()</span><span class="w">  </span><span class="c1">// Llama a la función outer() dentro del cuerpo principal del programa</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable global g vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 0</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="green consecutive highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="kd">function</span><span class="w"> </span><span class="nx">outer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Es una función (equivale a un bloque de código) llamada en main</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">   </span><span class="c1">// Local scope de outer() y Enclosing scope respecto de inner()</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w">  </span><span class="c1">// Declara x localmente en outer()</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w">  </span><span class="c1">// Declara y localmente en outer()</span>
+</code></pre></div></td></tr></table></div>
+<div class="purple consecutive highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">   </span><span class="kd">function</span><span class="w"> </span><span class="nx">inner</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Es una función (equivale a un bloque de código) dentro de outer()</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">      </span><span class="c1">// Local scope de inner()</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="w">  </span><span class="c1">// declara x localmente en inner()</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local x dentro de inner() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 2</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local y declarada en outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 1</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="green consecutive highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-17">17</a></span>
+<span class="normal"><a href="#__codelineno-26-18">18</a></span>
+<span class="normal"><a href="#__codelineno-26-19">19</a></span>
+<span class="normal"><a href="#__codelineno-26-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-17" name="__codelineno-26-17"></a><span class="w">   </span><span class="nx">inner</span><span class="p">()</span><span class="w">  </span><span class="c1">// Llama a la función inner() dentro de outer()</span>
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local x dentro de outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 1</span>
+<a id="__codelineno-26-19" name="__codelineno-26-19"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable global g dentro de outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 0</span>
+<a id="__codelineno-26-20" name="__codelineno-26-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Esto se ejecuta en el ámbito de inner():
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>La variable local x dentro de inner() vale  2
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>La variable local y declarada en outer() vale  1
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Esto se ejecuta en el ámbito de outer():
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>La variable local x dentro de outer() vale  1
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>La variable global g dentro de outer() vale  0
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>Esto se ejecuta en el ámbito principal del programa:
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>La variable global x vale  0
+</code></pre></div>
+<h2 id="caso-practico-2-de-analisis-e-identificacion-de-ambitos-de-variables">Caso práctico 2 de análisis e identificación de ámbitos de variables</h2>
+<div class="admonition question">
+<p class="admonition-title">¿Para pensar?</p>
+<p>Aquí existe una ligera diferencia en la declaración de una variable,</p>
+<p>¿Puedes analizar y entender cuál es el error de este programa?</p>
+<p>Si no, continúa leyendo y ¡lograrás entenderlo!</p>
+</div>
+<p><div class="blue highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span>
+<span class="normal"><a href="#__codelineno-28-5">5</a></span>
+<span class="normal"><a href="#__codelineno-28-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="c1">// Global scope (main)</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="p">{</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="hll"><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="w">  </span><span class="c1">// Declara x como local en el cuerpo principal del programa (main)</span>
+</span><a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">   </span><span class="nx">outer</span><span class="p">()</span><span class="w">  </span><span class="c1">// Llama a la función outer() dentro del cuerpo principal del programa</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local g vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 0</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="green consecutive highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="kd">function</span><span class="w"> </span><span class="nx">outer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Es una función (equivale a un bloque de código) llamada en main</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">   </span><span class="c1">// Local scope de outer() y Enclosing scope respecto de inner()</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w">  </span><span class="c1">// Declara x localmente en outer()</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w">  </span><span class="c1">// Declara y localmente en outer()</span>
+</code></pre></div></td></tr></table></div>
+<div class="purple consecutive highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-11">11</a></span>
+<span class="normal"><a href="#__codelineno-30-12">12</a></span>
+<span class="normal"><a href="#__codelineno-30-13">13</a></span>
+<span class="normal"><a href="#__codelineno-30-14">14</a></span>
+<span class="normal"><a href="#__codelineno-30-15">15</a></span>
+<span class="normal"><a href="#__codelineno-30-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-11" name="__codelineno-30-11"></a><span class="w">   </span><span class="kd">function</span><span class="w"> </span><span class="nx">inner</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Es una función (equivale a un bloque de código) dentro de outer()</span>
+<a id="__codelineno-30-12" name="__codelineno-30-12"></a><span class="w">      </span><span class="c1">// Local scope de inner()</span>
+<a id="__codelineno-30-13" name="__codelineno-30-13"></a><span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="w">  </span><span class="c1">// declara x localmente en inner()</span>
+<a id="__codelineno-30-14" name="__codelineno-30-14"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local x dentro de inner() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 2</span>
+<a id="__codelineno-30-15" name="__codelineno-30-15"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local y declarada en outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 1</span>
+<a id="__codelineno-30-16" name="__codelineno-30-16"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="green consecutive highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-17">17</a></span>
+<span class="normal"><a href="#__codelineno-31-18">18</a></span>
+<span class="normal"><a href="#__codelineno-31-19">19</a></span>
+<span class="normal"><a href="#__codelineno-31-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-17" name="__codelineno-31-17"></a><span class="w">   </span><span class="nx">inner</span><span class="p">()</span><span class="w">  </span><span class="c1">// Llama a la función inner() dentro de outer()</span>
+<a id="__codelineno-31-18" name="__codelineno-31-18"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local x dentro de outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// Imprime 1</span>
+<a id="__codelineno-31-19" name="__codelineno-31-19"></a><span class="hll"><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local g dentro de outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">)</span><span class="w">  </span><span class="c1">// ¿ Imprime 0 ?</span>
+</span><a id="__codelineno-31-20" name="__codelineno-31-20"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>Esto se ejecuta en el ámbito de inner():
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>La variable local x dentro de inner() vale  2
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>La variable local y declarada en outer() vale  1
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>Esto se ejecuta en el ámbito de outer():
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>La variable local x dentro de outer() vale  1
+</code></pre></div>
+<div class="consecutive highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nx">index</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">19</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La variable local g dentro de outer() vale &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">)</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">                                                             </span><span class="o">^</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="ne">ReferenceError</span><span class="o">:</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">defined</span>
+</code></pre></div></p>
+<h2 id="uso-de-variables-globales-en-funciones-locales">Uso de variables globales en funciones locales</h2>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">global_var</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="k">def</span> <span class="nf">local_function</span><span class="p">():</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>    <span class="k">global</span> <span class="n">global_var</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>    <span class="n">local_var</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span> <span class="n">local_var</span><span class="p">)</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="n">local_function</span><span class="p">()</span>
+</code></pre></div>
+<blockquote>
+<p>En Python se utiliza la palabra clave global seguida del nombre de la variable dentro de la función local para poder tener alcance a la variable.<br />
+Esto permite que la función tenga acceso tanto a las variables locales definidas dentro de ella como a las variables globales definidas fuera de ella.</p>
+</blockquote>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">global_Var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">local_function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">local_Var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Var local: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">local_Var</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Var global: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_Var</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="p">}</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>
+<a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="w">    </span><span class="n">local_function</span><span class="p">();</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">localFunction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">localVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">localVar</span><span class="p">)</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">globalVar</span><span class="p">)</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="p">}</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">globalVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">   </span><span class="nx">localFunction</span><span class="p">();</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>En JavaScript y C++ se accede directamente a la variable global dentro de la función local para poder utilizarla.<br />
+Esto permite que la función tenga acceso tanto a las variables locales definidas dentro de ella como a las variables globales definidas fuera de ella.</p>
+</blockquote>
+<p>En todos los ejemplos, se obtendría el siguiente resultado:</p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Var local: 20
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Var global: 10
+</code></pre></div>
+<h2 id="modificacion-de-variables-globales-en-funciones-locales">Modificación de variables globales en funciones locales</h2>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">global_var</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="k">def</span> <span class="nf">modify_global</span><span class="p">():</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>    <span class="k">global</span> <span class="n">global_var</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>    <span class="n">global_var</span> <span class="o">+=</span> <span class="mi">5</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="k">def</span> <span class="nf">use_global_locally</span><span class="p">():</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>    <span class="n">local_var</span> <span class="o">=</span> <span class="n">global_var</span> <span class="o">*</span> <span class="mi">2</span>
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span> <span class="n">local_var</span><span class="p">)</span>
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a><span class="n">modify_global</span><span class="p">()</span>
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a><span class="n">use_global_locally</span><span class="p">()</span>
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">modifyGlobal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="nx">globalVar</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">5</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="p">}</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">useGlobalLocally</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">localVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">globalVar</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">localVar</span><span class="p">)</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="p">}</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">globalVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a><span class="w">   </span><span class="nx">modifyGlobal</span><span class="p">()</span>
+<a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a><span class="w">   </span><span class="nx">useGlobalLocally</span><span class="p">()</span>
+<a id="__codelineno-39-15" name="__codelineno-39-15" href="#__codelineno-39-15"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">globalVar</span><span class="p">)</span>
+<a id="__codelineno-39-16" name="__codelineno-39-16" href="#__codelineno-39-16"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">global_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">modifyGlobal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span><span class="n">global_var</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="p">}</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">useGlobalLocally</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">local_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">global_var</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Var local: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">local_Var</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="p">}</span>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="w">    </span><span class="n">modifyGlobal</span><span class="p">();</span>
+<a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="w">    </span><span class="n">useGlobalLocally</span><span class="p">();</span>
+<a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Var global: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_Var</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>En estos ejemplos, la función modify_global() o modifyGlobal() según el lenguaje, incrementa el valor de la variable global, mientras que la función use_global_locally() o useGlobalLocally() utiliza la variable global en una variable local y la imprime.<br />
+Al ejecutar el código, puedes ver cómo los cambios en la variable global se reflejan tanto dentro como fuera de la función.</p>
+</blockquote>
+<p>En todos los ejemplos, se obtendría el siguiente resultado:</p>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Var local: 30
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>Var global: 15
+</code></pre></div>
+<h2 id="conversion-de-variables-globales-en-locales">Conversión de variables globales en locales</h2>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">global_var</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="k">def</span> <span class="nf">convert_global_to_local</span><span class="p">():</span>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>    <span class="n">global_var</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="n">convert_global_to_local</span><span class="p">()</span>
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">convertGlobalToLocal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">globalVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">globalVar</span><span class="p">);</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="p">}</span>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a><span class="w">   </span><span class="kd">var</span><span class="w"> </span><span class="nx">globalVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a><span class="w">   </span><span class="nx">convertGlobalToLocal</span><span class="p">();</span>
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">globalVar</span><span class="p">);</span>
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">global_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">convertGlobalToLocal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">global_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Var local: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">_Var</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="p">}</span>
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="w">    </span><span class="n">convertGlobalToLocal</span><span class="p">();</span>
+<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>
+<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Var global: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">global_Var</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>
+<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>En estos ejemplos, la función convert_global_to_local() declara una nueva variable local llamada global_var con un valor de 20. Dentro del ámbito de la función, cuando se hace referencia a global_var, se hace referencia a la variable local en lugar de la variable global.<br />
+Fuera de la función, la variable global mantiene su valor original de 10.</p>
+</blockquote>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Var local: 20
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>Var global: 10
+</code></pre></div>
+<h2 id="puede-una-variable-local-reemplazar-a-una-global">¿Puede una variable local reemplazar a una global?</h2>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+</div>
+<p>Los conceptos vistos solo afectan a la variable dentro del ámbito de la función o del bloque en los que se declara la variable local.</p>
+<p>Fuera de esa función o bloque, la variable global seguirá existiendo y mantendrá su valor original.</p>
+<p>Asimismo, la variable local será destruida al finalizar la función o el bloque donde fuera creada. Así, su acceso o modificación será imposible a partir de dicha finalización.</p>
+<p>Veamos el siguiente ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">global_var</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="k">def</span> <span class="nf">modify_global</span><span class="p">():</span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>    <span class="k">global</span> <span class="n">global_var</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>    <span class="n">global_var</span> <span class="o">+=</span> <span class="mi">5</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="k">def</span> <span class="nf">use_global_locally</span><span class="p">():</span>
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>    <span class="n">local_var</span> <span class="o">=</span> <span class="n">global_var</span> <span class="o">*</span> <span class="mi">2</span>
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span> <span class="n">local_var</span><span class="p">)</span>
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>
+<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a><span class="n">modify_global</span><span class="p">()</span>
+<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a><span class="n">use_global_locally</span><span class="p">()</span>
+<a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>
+<a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var global:&quot;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+<a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Var local:&quot;</span><span class="p">,</span> <span class="n">local_var</span><span class="p">)</span>
+</code></pre></div>
+<p>!!! question ¿¿Qué ocurrirá cuando se ejecute la última línea del programa?</p>
+<p><div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>Var global: 10
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>Var local: 20
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>Var global: 10
+</code></pre></div>
+<div class="consecutive highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">Error</span><span class="p">:</span> <span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="err">‘</span><span class="n">local_var</span><span class="s1">&#39; is not defined</span>
+</code></pre></div></p>
+<h2 id="error-al-acceder-a-una-variable-local-fuera-de-su-alcance-scope">Error al acceder a una variable local fuera de su alcance (scope)</h2>
+<p>Cuando intentas acceder a una variable local fuera de su alcance, es posible que encuentres un error dependiendo del lenguaje de programación que estés utilizando. Por lo general, las variables locales tienen un alcance limitado dentro del bloque de código donde se definen. Una vez que el flujo de ejecución sale de ese bloque, las variables locales ya no son accesibles.</p>
+<p>En el siguiente ejemplo, local_var se define dentro del ámbito de la función local_function(). Cuando intentemos acceder a ella fuera de la función, recibiremos un error de ReferenceError o de NameError (el nombre del error dependerá del lenguaje empleado) porque la variable no está definida en el ámbito (scope) actual.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span>
+<span class="normal"><a href="#__codelineno-49-3">3</a></span>
+<span class="normal"><a href="#__codelineno-49-4">4</a></span>
+<span class="normal"><a href="#__codelineno-49-5">5</a></span>
+<span class="normal"><a href="#__codelineno-49-6">6</a></span>
+<span class="normal"><a href="#__codelineno-49-7">7</a></span>
+<span class="normal"><a href="#__codelineno-49-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="k">def</span> <span class="nf">local_function</span><span class="p">():</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a>    <span class="n">local_var</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3"></a>    <span class="k">return</span> <span class="n">local_var</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4"></a>
+<a id="__codelineno-49-5" name="__codelineno-49-5"></a><span class="n">result</span> <span class="o">=</span> <span class="n">local_function</span><span class="p">()</span>
+<a id="__codelineno-49-6" name="__codelineno-49-6"></a>
+<a id="__codelineno-49-7" name="__codelineno-49-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  
+<a id="__codelineno-49-8" name="__codelineno-49-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">local_var</span><span class="p">)</span>  
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>10 # Imprime la línea 7
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>Error: NameError: name &#39;local_var&#39; is not defined # Error devuelto por la línea 8
+</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-51-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-51-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-51-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-51-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-51-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-51-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-51-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-51-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-51-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">local_function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">local_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">local_var</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4"></a><span class="p">}</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5"></a><span class="c1">// Bloque principal (main)</span>
+<a id="__codelineno-51-6" name="__codelineno-51-6"></a><span class="p">{</span>
+<a id="__codelineno-51-7" name="__codelineno-51-7"></a><span class="w">   </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">();</span>
+<a id="__codelineno-51-8" name="__codelineno-51-8"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-51-9" name="__codelineno-51-9"></a><span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">local_var</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-51-10" name="__codelineno-51-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>10 # Imprime la línea 8
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>Error: ReferenceError: local_var is not defined # Error devuelto por la línea 9
+</code></pre></div>
+<p>Para resolver este problema, es necesario que el código devuelva el valor almacenado en la variable local desde la función y para ser almacenado en un variable en el ámbito de llamada. </p>
+<p>En el ejemplo, devolvemos el valor de <code>local_var</code> desde la función <code>local_function()</code> y lo asignamos a la variable result en el ámbito de la llamada. Así, podremos acceder y utilizar el valor fuera de la función sin encontrar un error.</p>
+<hr />
+<p>En Python, las variables que se declaran dentro de un bloque de código, como un bucle for o una declaración if, son visibles en el alcance en el que se encuentra ese bloque. No son locales al bloque en sí. Aquí tienes un ejemplo:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>    <span class="n">variable_en_bloque</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable en un bloque&quot;</span>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">variable_en_bloque</span><span class="p">)</span>  <span class="c1"># Esto es válido y imprimirá &quot;Soy una variable en un bloque&quot;</span>
+</code></pre></div>
+En este ejemplo, variable_en_bloque se declara dentro del bloque if, pero aún así es accesible fuera de ese bloque, en el mismo alcance en el que se encuentra el bloque if.</p>
+<p>Sin embargo, si la variable se declara dentro de una función, entonces sí es una variable local a esa función:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>    <span class="n">variable_local</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable local&quot;</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="n">mi_funcion</span><span class="p">()</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto dará un error porque variable_local no está definida en este alcance</span>
+</code></pre></div>
+<p>En este segundo ejemplo, variable_local solo es accesible dentro de mi_funcion, y cualquier intento de acceder a ella fuera de la función dará un error.</p>
+<hr />
+<p>En Python, el ámbito de una variable local se refiere al lugar en el código donde esa variable puede ser accedida. Aquí están los ámbitos en los que una variable local puede existir:</p>
+<p>Funciones: Una variable local declarada dentro de una función solo puede ser accedida dentro de esa función. No es visible fuera de la función. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>    <span class="n">variable_local</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable local&quot;</span>
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto es válido</span>
+<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>
+<a id="__codelineno-55-5" name="__codelineno-55-5" href="#__codelineno-55-5"></a><span class="n">mi_funcion</span><span class="p">()</span>
+<a id="__codelineno-55-6" name="__codelineno-55-6" href="#__codelineno-55-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto dará un error porque variable_local no está definida en este alcance</span>
+</code></pre></div>
+<p>Clases: Una variable local declarada dentro de un método de una clase solo puede ser accedida dentro de ese método. No es visible fuera del método. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">class</span> <span class="nc">MiClase</span><span class="p">:</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>    <span class="k">def</span> <span class="nf">mi_metodo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>        <span class="n">variable_local</span> <span class="o">=</span> <span class="s2">&quot;Soy una variable local&quot;</span>
+<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto es válido</span>
+<a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a>
+<a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">MiClase</span><span class="p">()</span>
+<a id="__codelineno-56-7" name="__codelineno-56-7" href="#__codelineno-56-7"></a><span class="n">obj</span><span class="o">.</span><span class="n">mi_metodo</span><span class="p">()</span>
+<a id="__codelineno-56-8" name="__codelineno-56-8" href="#__codelineno-56-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">variable_local</span><span class="p">)</span>  <span class="c1"># Esto dará un error porque variable_local no está definida en este alcance</span>
+</code></pre></div>
+<p>Comprensiones de listas: En Python 3, las variables definidas en una comprensión de lista son locales a la comprensión. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Esto dará un error porque x no está definida en este alcance</span>
+</code></pre></div>
+<p>En todos estos casos, la variable local solo es visible dentro del bloque de código donde se declara. Intentar acceder a la variable fuera de ese bloque de código dará un error.</p>
+<hr />
+<p>En Python, puedes acceder a variables globales desde un ámbito local (como una función), pero si intentas modificarlas directamente, Python las tratará como variables locales. Para modificar una variable global dentro de un ámbito local, debes usar la palabra clave global antes de la variable.</p>
+<p>Aquí tienes un ejemplo:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="c1"># Variable global</span>
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>
+<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+<a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a>    <span class="c1"># Intentando modificar la variable global</span>
+<a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a>    <span class="k">global</span> <span class="n">x</span>
+<a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+<a id="__codelineno-58-8" name="__codelineno-58-8" href="#__codelineno-58-8"></a>
+<a id="__codelineno-58-9" name="__codelineno-58-9" href="#__codelineno-58-9"></a><span class="n">test</span><span class="p">()</span>
+<a id="__codelineno-58-10" name="__codelineno-58-10" href="#__codelineno-58-10"></a>
+<a id="__codelineno-58-11" name="__codelineno-58-11" href="#__codelineno-58-11"></a><span class="c1"># Imprime: 20</span>
+<a id="__codelineno-58-12" name="__codelineno-58-12" href="#__codelineno-58-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+<p>En este ejemplo, x es una variable global. Dentro de la función test, usamos la palabra clave global para indicar que queremos usar la variable global x, no una nueva variable local con el mismo nombre. Luego, modificamos x a 20. Cuando imprimimos x después de llamar a test, obtenemos 20, lo que indica que la variable global x ha sido modificada dentro de la función.</p>
+<p>Sin embargo, el uso de variables globales debe minimizarse ya que pueden hacer que el código sea difícil de entender y propenso a errores. Es mejor pasar las variables como argumentos a las funciones y devolver los resultados.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
