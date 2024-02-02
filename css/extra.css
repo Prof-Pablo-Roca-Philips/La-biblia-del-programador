@@ -79,12 +79,33 @@ label.md-nav__title {
     margin-bottom: 0.5em;
     border-bottom: #aaa dotted 1px;
 }
+
+nav[aria-expanded="true"] ul li.md-nav__item--nested > label,
+nav[aria-expanded="true"] nav[aria-expanded="true"] ul li.md-nav__item--nested > label {
+    border-bottom: none !important;
+    color: rgb(72, 152, 159) !important;
+    font-size: 1em;
+    font-weight: bold !important;
+}
+
+nav[aria-expanded="true"] nav[aria-expanded="true"] {
+    border-top: dotted 1px #2094f3;
+    padding-top: 0.5em;
+    padding-bottom: 0 !important;
+}
+
+nav[aria-expanded="true"] nav[aria-expanded="true"] > ul {
+    border-left: solid 1px #2094f3;
+    margin-bottom: 0.5rem;
+}
+
+nav[aria-expanded="true"] nav[aria-expanded="true"] .md-nav__item--active .md-nav--secondary {
+    margin-bottom: 0 !important;
+}
+
 nav[aria-expanded="true"] ul li.md-nav__item--active > label,
 nav[aria-expanded="true"] nav[aria-expanded="true"] ul li.md-nav__item--active > label {
-    border-bottom: dotted 1px #2094f3;
-    color: rgb(72, 152, 159) !important;
-    font-size: 1.2em;
-    font-weight: bold !important;
+    font-size: 1.1em;
 }
 
 a:focus {
