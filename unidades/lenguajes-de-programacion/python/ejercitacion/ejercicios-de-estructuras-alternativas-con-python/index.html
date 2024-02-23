@@ -2934,22 +2934,37 @@ Luego, imprime en pantalla si el primer número es mayor, igual o menor que el s
 </li>
 <li>
 <p>Ingresa una cadena de caracteres por teclado.<br />
-Si es "Hola" mostrarla en pantalla.</p>
+Si es "hola" mostrarla en pantalla.</p>
 <details class="example">
 <summary>Ver solución propuesta</summary>
 <div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">cadena</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese una cadena: &quot;</span><span class="p">)</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="c1"># El método lower() aplicado a `cadena` convierte la cadena en minúsculas, temporalmente, antes de hacer la comparación</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">if</span> <span class="n">cadena</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;Hola&quot;</span><span class="p">:</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">if</span> <span class="n">cadena</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;hola&quot;</span><span class="p">:</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<p>!!! question title="¡Para pensar!"</p>
-<div class="highlight"><pre><span></span><code>¿Por qué crees que se debe aplicar el método `lower()`?
-
-¿Qué significaba convertir temporalmente un dato en otro durante el cálculo de una expresión?
-¿Por qué se utilizaba este procedimiento temporal? ¿Y cómo se lo llamaba?
-</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">¡Para pensar!</p>
+<p>¿Por qué crees que se debe aplicar el método <code>lower()</code> en este programa?</p>
+<details class="example">
+<summary>Ver respuesta</summary>
+<p>El método <code>lower()</code> se utiliza en este programa para convertir la cadena de entrada en minúsculas. Esto se hace para que <strong>la comparación no distinga entre mayúsculas y minúsculas</strong>.</p>
+<p>Por ejemplo, si el usuario ingresa "Hola", "HOLA" u "hOlA", al aplicar el método <code>lower()</code>, todas estas entradas se convierten en "hola", lo que permite que la comparación <code>cadena.lower() == "hola"</code> sea verdadera en todos estos casos.</p>
+<p>Por lo tanto, el uso de <code>lower()</code> aquí permite que el programa acepte la entrada independientemente de cómo el usuario elija usar las mayúsculas y minúsculas.</p>
+</details>
+<p>¿Qué significa convertir temporalmente un tipo de dato en otro durante el cálculo de una expresión?</p>
+<details class="example">
+<summary>Ver respuesta</summary>
+<p>Convertir temporalmente un tipo de dato en otro durante el cálculo de una expresión se refiere a cambiar el tipo de dato de una variable o valor para realizar una operación específica, que si no fuera convertido resultaría imposible de realizar por ser incompatible.</p>
+</details>
+<p>¿Por qué se utiliza este procedimiento temporal? ¿Y cómo se lo llamaba?</p>
+<details class="example">
+<summary>Ver respuesta</summary>
+<p>Es importante notar que esta conversión es temporal y no afecta el valor original. En el programa anterior, el valor almacenado en <code>cadena</code> después de la operación <code>cadena.lower()</code> sigue siendo el mismo que fuera ingresado por el usuario.</p>
+<p>Convertir temporalmente un tipo de dato en otro durante el cálculo de una expresión se refiere al concepto de "casting" o "conversión de tipos" en programación.   </p>
+</details>
+</div>
 <hr />
 </li>
 <li>
@@ -3087,8 +3102,8 @@ Para cualquier otro caso, se desestimará el resultado obtenido.</p>
 </li>
 <li>
 <p>Escribe un programa que pida al usuario dos palabras y determine si son un anagrama (una palabra es un anagrama de otra si usa las mismas letras en un orden diferente).</p>
-<div class="admonition info">
-<p class="admonition-title">¡Para recordar!</p>
+<div class="admonition tip">
+<p class="admonition-title">¡Una ayudita!</p>
 <p>En Python, una cadena de caracteres puede ser tratada como una lista de caracteres.<br />
 Esto significa que cada caracter es un elemento individual de un grupo de caracteres.<br />
 Y que cada grupo puede ser ordenado para una mayor conveniencia utilizando la palabra clave o función  </p>

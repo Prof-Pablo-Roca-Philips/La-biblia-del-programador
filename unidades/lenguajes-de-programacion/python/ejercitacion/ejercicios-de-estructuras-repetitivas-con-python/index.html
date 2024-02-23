@@ -2702,7 +2702,7 @@
 <p>Recuerda que la sintaxis de esta estructura indica que el parámetro que representa al valor final del ciclo no lo incluye en este.<br />
 Por lo tanto, como se ve en el ejercicio, el ciclo iterará entre el 1 y el 10.<br />
 El 11 sería el primer valor que hace falsa la condición, haciendo que el ciclo deje de repetirse (iterarse).</p>
-<p>recuerda también que por iteración entendemos que es el proceso de repetir una estructura de código determinada una cierto número de veces.</p>
+<p>Recuerda también que por iteración entendemos que es el proceso de repetir una estructura de código determinada una cierto número de veces.</p>
 </div>
 </details>
 <hr />
@@ -2795,53 +2795,49 @@ Súmalos y muestra la suma al finalizar el ciclo.</p>
 </li>
 <li>
 <p>Escribe en pantalla la serie de números enteros entre dos números enteros solicitados al usuario.</p>
-</li>
-</ol>
 <p>La salida por pantalla debe ser como el ejemplo:</p>
-<div class="highlight"><pre><span></span><code>``` title=&quot;Terminal (Entrada/Salida)&quot;
-Escriba el número inicial de la serie (Debe ser el menor): 1
-Escriba el número final de la serie (Debe ser el mayor): 9
-Escriba el número para indicar el incremento entre cada número de la serie (el paso del ciclo): 5
-
-Imprimiendo una serie de 2 valores, entre el 1 y el 9 de 5 en 5
-
-El valor número 1 en un ciclo de 5 en 5 es 1
-El valor número 2 en un ciclo de 5 en 5 es 6
-```
-
-!!! warning &quot;¡Atención! Alcance y Limitación&quot;
-    El problema debe resolverse implementando un ciclo cerrado.
-    Asumimos que el primer valor ingresado será menor o igual al segundo valor ingresado.
-    Para cualquier otro caso, se desestimará el resultado obtenido.
-
-!!! tip &quot;¡Una ayudita!&quot;
-    Para calcular la cantidad de valores que serán impresos de acuerdo con el valor inicial, el valor final y el valor de paso ingresados, utiliza la siguiente expresión:
-
-    ``` py title=&quot;Python&quot;
-    ((valor_final - valor_inicial) // paso) + 1
-    ```
-
-    &gt; recuerda que `//` en Python es el operador de división entera. Devuelve el cociente entero, sin decimales.  
-    &gt; Si programas en otro lenguaje, deberás utilizar el operador o comando correspondiente para conseguir el mismo resultado.
-
-??? example &quot;Ver solución propuesta&quot;
-    ``` py title=&quot;Python&quot;
-    valor_inicial = int(input(&quot;Escriba el número inicial de la serie (Debe ser el menor): &quot;))
-    valor_final = int(input(&quot;Escriba el número final de la serie (Debe ser el mayor): &quot;))
-    paso = int(input(&quot;Escriba el número para indicar el incremento entre cada número de la serie (el paso del ciclo): &quot;))
-
-    nro_valor = 1
-
-    print(&quot;Imprimiendo una serie de&quot;, ((valor_final - valor_inicial) // paso) + 1,&quot;valores, entre el&quot;, valor_inicial,&quot;y el&quot;,valor_final, &quot;de&quot;, paso,&quot;en&quot;, paso)
-
-    for valor in range(valor_inicial, valor_final + 1, paso):
-        print(&quot;El valor número&quot;, nro_valor, &quot;en un ciclo de&quot;, paso,&quot;en&quot;, paso, &quot;es&quot;, valor)
-        nro_valor +=1
-    ```
-
----
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Escriba el número inicial de la serie (Debe ser el menor): 1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Escriba el número final de la serie (Debe ser el mayor): 9
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Escriba el número para indicar el incremento entre cada número de la serie (el paso del ciclo): 5
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Imprimiendo una serie de 2 valores, entre el 1 y el 9 de 5 en 5
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>El valor número 1 en un ciclo de 5 en 5 es 1
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>El valor número 2 en un ciclo de 5 en 5 es 6
 </code></pre></div>
-<ol>
+<div class="admonition warning">
+<p class="admonition-title">¡Atención! Alcance y Limitación</p>
+<p>El problema debe resolverse implementando un ciclo cerrado.
+Asumimos que el primer valor ingresado será menor o igual al segundo valor ingresado.
+Para cualquier otro caso, se desestimará el resultado obtenido.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">¡Una ayudita!</p>
+<p>Para calcular la cantidad de valores que serán impresos de acuerdo con el valor inicial, el valor final y el valor de paso ingresados, utiliza la siguiente expresión:</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">((</span><span class="n">valor_final</span> <span class="o">-</span> <span class="n">valor_inicial</span><span class="p">)</span> <span class="o">//</span> <span class="n">paso</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<blockquote>
+<p>recuerda que <code>//</code> en Python es el operador de división entera. Devuelve el cociente entero, sin decimales.<br />
+Si programas en otro lenguaje, deberás utilizar el operador o comando correspondiente para conseguir el mismo resultado.</p>
+</blockquote>
+</div>
+<details class="example">
+<summary>Ver solución propuesta</summary>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">valor_inicial</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriba el número inicial de la serie (Debe ser el menor): &quot;</span><span class="p">))</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">valor_final</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriba el número final de la serie (Debe ser el mayor): &quot;</span><span class="p">))</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">paso</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escriba el número para indicar el incremento entre cada número de la serie (el paso del ciclo): &quot;</span><span class="p">))</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">nro_valor</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Imprimiendo una serie de&quot;</span><span class="p">,</span> <span class="p">((</span><span class="n">valor_final</span> <span class="o">-</span> <span class="n">valor_inicial</span><span class="p">)</span> <span class="o">//</span> <span class="n">paso</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="s2">&quot;valores, entre el&quot;</span><span class="p">,</span> <span class="n">valor_inicial</span><span class="p">,</span><span class="s2">&quot;y el&quot;</span><span class="p">,</span><span class="n">valor_final</span><span class="p">,</span> <span class="s2">&quot;de&quot;</span><span class="p">,</span> <span class="n">paso</span><span class="p">,</span><span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="n">paso</span><span class="p">)</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">valor_inicial</span><span class="p">,</span> <span class="n">valor_final</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">paso</span><span class="p">):</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor número&quot;</span><span class="p">,</span> <span class="n">nro_valor</span><span class="p">,</span> <span class="s2">&quot;en un ciclo de&quot;</span><span class="p">,</span> <span class="n">paso</span><span class="p">,</span><span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="n">paso</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">nro_valor</span> <span class="o">+=</span><span class="mi">1</span>
+</code></pre></div>
+</details>
+<hr />
+</li>
 <li>
 <p>Ingresa una cadena de caracterespor teclado.<br />
 Simula una línea de texto que se desplaza de izquierda a derecha, a lo largo de 40 caracteres.<br />

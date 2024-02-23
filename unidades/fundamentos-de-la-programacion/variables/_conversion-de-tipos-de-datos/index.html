@@ -2610,19 +2610,48 @@
 <p>Las variables tienen un tipo de dato asociado que define el tipo de valor que pueden almacenar: números enteros, números de punto flotante, cadenas de caracteres y booleanos, entre otros. A veces es necesario interpretar el tipo de dato de dicho valor como si fuera otro, para realizar ciertas operaciones o para satisfacer requisitos específicos del programa. Esta conversión es necesaria cuando se desean realizar operaciones o comparaciones específicas que requieren tipos de dato compatibles.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definición</p>
-<p>Para cambiar el tipo de dato de una variable en la mayoría de los lenguajes de programación, puedes utilizar un proceso llamado casting o conversión de tipo. Esto implica interpretar el tipo de dato del valor de una variable como si fuera otro tipo de dato.</p>
+<p>Para cambiar el tipo de dato de una variable en la mayoría de los lenguajes de programación, puedes utilizar un proceso llamado "<em>casting</em>" o "conversión de tipo". Esto implica interpretar el tipo de dato del valor de un operando como si fuera otro tipo de dato.</p>
 </div>
 <p>Hay dos tipos principales de conversiones de tipo de dato: implícita y explícita.</p>
+<h2 id="ventajas-de-utilizar-casting">Ventajas de utilizar <em>casting</em></h2>
+<p>El casting o la conversión de tipos se utiliza por varias razones en programación:</p>
+<ul>
+<li>
+<p><strong>Compatibilidad de tipos</strong>: Algunas operaciones requieren que los operandos sean del mismo tipo. Si tienes datos de diferentes tipos que necesitas operar juntos, puedes usar casting para convertir uno o ambos datos al tipo requerido.</p>
+</li>
+<li>
+<p><strong>Evitar errores</strong>: Algunos lenguajes de programación son estrictos con los tipos de datos y lanzarán errores si intentas realizar operaciones entre tipos incompatibles. El casting puede ser utilizado para evitar estos errores.</p>
+</li>
+<li>
+<p><strong>Aprovechar características específicas de los tipos de datos</strong>: Algunos tipos de datos tienen características o comportamientos específicos que puedes querer aprovechar. Por ejemplo, la división de dos enteros en muchos lenguajes de programación descarta cualquier fracción y devuelve un entero. Si quieres un resultado fraccionario, puedes convertir uno o ambos operandos a un tipo de dato de punto flotante.</p>
+</li>
+<li>
+<p><strong>Formateo de datos</strong>: A veces, necesitas convertir datos a un tipo específico para su presentación o salida. Por ejemplo, puedes necesitar convertir un número a una cadena para concatenarlo con otras cadenas y mostrarlo al usuario.</p>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">¡Para recordar!</p>
+<p>El "<em>casting</em>" es una operación temporal que no cambia el valor original del operando afectado.</p>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;ESTOY EN MAYUSCULAS&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">cadena</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="c1"># Imprime la cadena en minúsculas</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span> <span class="c1"># Imprime la cadena original</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>estoy en mayusculas
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ESTOY EN MAYUSCULAS
+</code></pre></div>
+</div>
 <h2 id="conversion-implicita">Conversión implícita</h2>
 <p>Ocurre automáticamente cuando el lenguaje de programación realiza la conversión de tipo de dato de forma implícita para mantener la coherencia entre diferentes tipos de dato. </p>
 <p>Por ejemplo, en muchos lenguajes, se puede sumar un entero y un número de punto flotante, y el resultado será un número de punto flotante debido a la conversión implícita:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">entero</span> <span class="o">=</span> <span class="mi">5</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">flotante</span> <span class="o">=</span> <span class="mf">2.5</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># La conversión implícita convierte &#39;entero&#39; a un número de &#39;punto flotante&#39;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">resultado</span> <span class="o">=</span> <span class="n">entero</span> <span class="o">+</span> <span class="n">flotante</span>  
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>  <span class="c1"># imprime 7.5</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">entero</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">flotante</span> <span class="o">=</span> <span class="mf">2.5</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># La conversión implícita convierte &#39;entero&#39; a un número de &#39;punto flotante&#39;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">resultado</span> <span class="o">=</span> <span class="n">entero</span> <span class="o">+</span> <span class="n">flotante</span>  
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>  <span class="c1"># imprime 7.5</span>
 </code></pre></div>
 <h2 id="conversion-explicita">Conversión explícita</h2>
 <p>También conocida como <strong>"casting explícito"</strong>, ocurre cuando el programador especifica manualmente el tipo de conversión deseado. </p>
@@ -2630,49 +2659,49 @@
 <h3 id="sintaxis">Sintaxis</h3>
 <p>La sintaxis para realizar un cambio de tipo de dato puede variar dependiendo del lenguaje de programación utilizado. </p>
 <p>En Python, por ejemplo, puedes utilizar las funciones <strong>str()</strong>, <strong>int()</strong>, <strong>float()</strong>, <strong>bool()</strong> para convertir entre tipos de dato:</p>
-<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Conversión de entero a cadena</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">numero</span> <span class="o">=</span> <span class="mi">42</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">cadena</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cadena</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;str&#39;&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Conversión de cadena a entero</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;42”</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">numero</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;int&#39;&gt;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># Conversión de cadena a flotante</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;3.14”</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">flotante</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">flotante</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;float&#39;&gt;</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Conversión de entero a booleano</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">numero</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">booleano</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">booleano</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;bool&#39;&gt;</span>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Conversión de entero a cadena</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">numero</span> <span class="o">=</span> <span class="mi">42</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">cadena</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cadena</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;str&#39;&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Conversión de cadena a entero</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;42”</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">numero</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;int&#39;&gt;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Conversión de cadena a flotante</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">cadena</span> <span class="o">=</span> <span class="s2">&quot;3.14”</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">flotante</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">flotante</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;float&#39;&gt;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="c1"># Conversión de entero a booleano</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="n">numero</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="n">booleano</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">booleano</span><span class="p">))</span>  <span class="c1"># imprime &lt;class &#39;bool&#39;&gt;</span>
 </code></pre></div>
 <p>En JavaScript, hay funciones como <strong>toString()</strong>, <strong>parseInt()</strong>, <strong>parseFloat()</strong>, <strong>Boolean()</strong> para realizar conversiones de tipo. La variable resultante adquiere el nuevo tipo de dato asignado:</p>
-<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Conversión de número a cadena</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">cadena</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime string</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// Conversión de cadena a número entero</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;42&quot;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kd">var</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">cadena</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">numero</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime number</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span><span class="w">  </span><span class="c1">// imprime true</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1">// Conversión de cadena a número de punto flotante</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;3.14&quot;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="kd">var</span><span class="w"> </span><span class="nx">flotante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">cadena</span><span class="p">)</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">flotante</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime number</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span><span class="w">  </span><span class="c1">// imprime false</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1">// Conversión de valor a booleano</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="kd">var</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="kd">var</span><span class="w"> </span><span class="nx">booleano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">(</span><span class="nx">valor</span><span class="p">)</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">booleano</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime boolean</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Conversión de número a cadena</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">cadena</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime string</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// Conversión de cadena a número entero</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;42&quot;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kd">var</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">cadena</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">numero</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime number</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span><span class="w">  </span><span class="c1">// imprime true</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1">// Conversión de cadena a número de punto flotante</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;3.14&quot;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="kd">var</span><span class="w"> </span><span class="nx">flotante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">cadena</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">flotante</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime number</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span><span class="w">  </span><span class="c1">// imprime false</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1">// Conversión de valor a booleano</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="kd">var</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="kd">var</span><span class="w"> </span><span class="nx">booleano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">(</span><span class="nx">valor</span><span class="p">)</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">booleano</span><span class="p">);</span><span class="w">  </span><span class="c1">// imprime boolean</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">¡Para recordar!</p>
@@ -2693,25 +2722,25 @@ Asegúrate de consultar la documentación del lenguaje específico para obtener 
 </div>
 <h3 id="ejemplos-de-aplicacion">Ejemplos de aplicación</h3>
 <p>Evaluemos las siguientes conversiones:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">valor1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">valor2</span> <span class="o">=</span> <span class="s2">&quot;Hola&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">valor3</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;14.34&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Valor 1: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">valor1</span><span class="p">),</span> <span class="s2">&quot;   valor:&quot;</span><span class="p">,</span> <span class="n">valor1</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Valor 2: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">valor2</span><span class="p">),</span> <span class="s2">&quot;   valor:&quot;</span><span class="p">,</span> <span class="n">valor2</span><span class="p">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Valor 3: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">valor3</span><span class="p">),</span> <span class="s2">&quot;   valor:&quot;</span><span class="p">,</span> <span class="n">valor3</span><span class="p">)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">valor4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;14.34&quot;</span><span class="p">)</span> 
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">valor5</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">valor2</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">valor1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">valor2</span> <span class="o">=</span> <span class="s2">&quot;Hola&quot;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">valor3</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;14.34&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Valor 1: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">valor1</span><span class="p">),</span> <span class="s2">&quot;   valor:&quot;</span><span class="p">,</span> <span class="n">valor1</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Valor 2: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">valor2</span><span class="p">),</span> <span class="s2">&quot;   valor:&quot;</span><span class="p">,</span> <span class="n">valor2</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Valor 3: &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">valor3</span><span class="p">),</span> <span class="s2">&quot;   valor:&quot;</span><span class="p">,</span> <span class="n">valor3</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">valor4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;14.34&quot;</span><span class="p">)</span> 
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="n">valor5</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">valor2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition question">
 <p class="admonition-title">¿Qué crees que ocurrirá en cada caso?</p>
@@ -2720,21 +2749,21 @@ Asegúrate de consultar la documentación del lenguaje específico para obtener 
 <ol>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.59 3.41 2 8l4.59 4.6L8 11.18 4.82 8 8 4.82 6.59 3.41m5.82 0L11 4.82 14.18 8 11 11.18l1.41 1.42L17 8l-4.59-4.59m9.18 8.18-8.09 8.09L9.83 16l-1.41 1.41 5.08 5.09L23 13l-1.41-1.41Z"/></svg></span>  </p>
-<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Valor 1:  &lt;class &#39;str&#39;&gt;    valor: 12
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Valor 2:  &lt;class &#39;str&#39;&gt;    valor: Hola
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Valor 3:  &lt;class &#39;float&#39;&gt;    valor: 14.34
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Traceback (most recent call last):
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  File &quot; … &quot;, line 9, in &lt;module&gt;
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    valor4 = int(&quot;14.34&quot;)
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>             ^^^^^^^^^^^^
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>ValueError: invalid literal for int() with base 10: &#39;14.34&#39;
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>Traceback (most recent call last):
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  File &quot; … &quot;, line 10, in &lt;module&gt;
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    valor5 = int(valor2)
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>             ^^^^^^^^^^^
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>ValueError: invalid literal for int() with base 10: &#39;Hola&#39;
+<div class="highlight"><span class="filename">Terminal (Entrada/Salida)</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Valor 1:  &lt;class &#39;str&#39;&gt;    valor: 12
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Valor 2:  &lt;class &#39;str&#39;&gt;    valor: Hola
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Valor 3:  &lt;class &#39;float&#39;&gt;    valor: 14.34
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Traceback (most recent call last):
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  File &quot; … &quot;, line 9, in &lt;module&gt;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    valor4 = int(&quot;14.34&quot;)
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>             ^^^^^^^^^^^^
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>ValueError: invalid literal for int() with base 10: &#39;14.34&#39;
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>Traceback (most recent call last):
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  File &quot; … &quot;, line 10, in &lt;module&gt;
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    valor5 = int(valor2)
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>             ^^^^^^^^^^^
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>ValueError: invalid literal for int() with base 10: &#39;Hola&#39;
 </code></pre></div>
 <blockquote>
 <p>La línea 9 devolverá un error de conversión ya que no es posible convertir un valor de punto flotante en entero, forzando la finalización del programa.</p>
