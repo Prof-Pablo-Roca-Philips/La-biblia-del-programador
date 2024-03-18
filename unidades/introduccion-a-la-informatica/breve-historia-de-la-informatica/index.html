@@ -1,0 +1,3636 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../introduccion-a-la-informatica/">
+      
+      
+        <link rel="next" href="../importancia-y-aplicaciones-de-la-informatica-en-la-sociedad-actual/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Breve historia de la informática - La biblia del programador</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#breve-historia-de-la-informatica" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="La biblia del programador" class="md-header__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            La biblia del programador
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Breve historia de la informática
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light theme" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="La biblia del programador" class="md-nav__button md-logo" aria-label="La biblia del programador" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    La biblia del programador
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la informática
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la informática
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion-a-la-informatica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a la informática
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Breve historia de la informática
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Breve historia de la informática
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#un-viaje-a-traves-del-tiempo-la-evolucion-de-la-informatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un viaje a través del Tiempo: La evolución de la informática
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Un viaje a través del Tiempo: La evolución de la informática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#precursores-antiguos-y-los-origenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precursores antiguos y los Orígenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-era-de-los-calculos-mecanicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Era de los Cálculos Mecánicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tarjetas-perforadas-y-telares-automatizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarjetas Perforadas y Telares Automatizados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-era-de-von-neumann-computadoras-programables" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Era de von Neumann: Computadoras Programables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-auge-de-la-electronica" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Auge de la Electrónica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-nacimiento-de-los-sistemas-operativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Nacimiento de los Sistemas Operativos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-revolucion-de-la-microcomputacion-y-la-era-de-los-ordenadores-personales" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Revolución de la Microcomputación y la Era de los Ordenadores Personales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-era-de-internet-y-la-world-wide-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Era de Internet y la World Wide Web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-era-moderna-de-la-informatica-redes-sociales-nube-e-inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Era Moderna de la Informática: Redes Sociales, Nube e Inteligencia Artificial
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronologia-de-evolucion-de-la-informatica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cronología de evolución de la informática
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generaciones-de-computadoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generaciones de computadoras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generaciones de computadoras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generacion-0-precursoras-antes-de-1940" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generación 0: Precursoras (Antes de 1940):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primera-generacion-1940-1956" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera Generación (1940-1956):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-generacion-1956-1963" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segunda Generación (1956-1963):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tercera-generacion-1964-1971" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tercera Generación (1964-1971):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuarta-generacion-1971-1980" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuarta Generación (1971-1980):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quinta-generacion-1980-presente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quinta Generación (1980-presente):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sexta-generacion-anos-2000-en-adelante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sexta Generación (Años 2000 en adelante):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perspectivas-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perspectivas adicionales:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paralelos-en-el-desarrollo-internacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paralelos en el Desarrollo Internacional:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impacto-social-y-cultural" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impacto Social y Cultural:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../importancia-y-aplicaciones-de-la-informatica-en-la-sociedad-actual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importancia y aplicaciones de la informática en la sociedad actual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Conceptos fundamentales de la informática
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Conceptos fundamentales de la informática
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-fundamentales-de-la-informatica/objetivos-de-la-unidad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objetivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-fundamentales-de-la-informatica/diferencia-entre-datos-e-informacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diferencia entre datos e información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-fundamentales-de-la-informatica/representacion-de-datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Representación de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-fundamentales-de-la-informatica/sistemas-de-numeracion-y-codificacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas de numeración y codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-fundamentales-de-la-informatica/almacenamiento-de-informacion.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Almacenamiento de información
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conceptos-fundamentales-de-la-informatica/procesamiento-de-datos.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Procesamiento de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción al pensamiento computacional
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción al pensamiento computacional
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pensamiento computacional
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Pensamiento computacional
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-al-pensamiento-computacional/pensamiento-computacional/introduccion-al-pensamiento-computacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Por qué pensamiento computacional?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introducción a la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Introducción a la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/que-es-la-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es la programación?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/el-arte-de-programar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    El arte de programar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/teoria-de-los-lenguajes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teoría de los lenguajes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/paradigmas-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paradigmas de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccion-a-la-programacion/vision-general-de-los-lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visión general de los lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Fundamentos de la programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamentos de la programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/conceptos-basicos-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conceptos básicos de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/que-son-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las variables?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las variables
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las variables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/caracteristicas-de-las-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/tipo-de-dato-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/identificador-de-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/alcance-de-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/dato-asignado-a-una-variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una variable?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/utilizacion-de-variables-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de variables en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pon en práctica lo aprendido
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pon en práctica lo aprendido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-declaracion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre declaración de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-uso-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre uso de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-modificacion-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre modificación de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-operaciones-con-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre operaciones con variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-alcance-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre alcance de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/variables/ejercitacion/ejercitacion-tipos-de-datos-de-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios sobre tipos de datos de variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/que-son-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son las constantes?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Características de las constantes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Características de las constantes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/caracteristicas-de-las-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Cuáles son las características de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/tipo-de-dato-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el tipo de dato de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/identificador-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el identificador de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/alcance-de-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el alcance de una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/dato-asignado-a-una-constante/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es el dato asignado a una constante?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/tipos-de-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/constantes/utilizacion-de-constantes-en-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilización de constantes en un programa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Operandos y operadores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Operandos y operadores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/operandos-y-operadores/introduccion-a-operandos-y-operadores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué son los operandos y operadores?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/operandos-y-operadores/operandos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Operadores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Operadores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/operandos-y-operadores/operadores/que-es-un-operador/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Qué es un operador?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/operandos-y-operadores/operadores/tipos-de-operadores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Expresiones, sentencias y bloques de sentencias
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Expresiones, sentencias y bloques de sentencias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/expresiones-sentencias-bloques/introduccion-expresiones-sentencias-bloques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción al tema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/expresiones-sentencias-bloques/expresiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expresiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/expresiones-sentencias-bloques/sentencias-de-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sentencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/expresiones-sentencias-bloques/bloques-de-sentencias-de-un-programa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bloques de sentencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/expresiones-sentencias-bloques/resumen-de-expresiones-sentencias-bloques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resumen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercitación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercitación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/expresiones-sentencias-bloques/ejercitacion/ejercitacion-basica-expresiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercitación básica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Estructuras de control de flujo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de control de flujo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/control-de-flujo/introduccion-control-de-flujo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a las estructuras de control de flujo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/control-de-flujo/estructuras-alternativas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras alternativas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/control-de-flujo/estructuras-repetitivas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras repetitivas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Funciones y procedimientos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Funciones y procedimientos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/ejercitacion/ejercitacion-final/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercitación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Estructuras de datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Temario
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Temario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/estructuras-de-datos/introduccion-a-las-estructuras-de-datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a las estructuras de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1_2" id="__nav_11_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tipos de estructuras de datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tipos de estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/estructuras-de-datos/cadenas-de-caracteres.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cadenas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/estructuras-de-datos/tipos-de-estructuras-de-datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otras estructuras de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentos-de-la-programacion/estructuras-de-datos/resumen-sobre-estructuras-de-datos.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resumen sobre estructuras de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lenguajes de programación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Lenguajes de programación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/lenguajes-de-programacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lenguajes de programación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/instrucciones-de-entrada-y-salida-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/modulos-en-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uso de módulos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Estructuras de datos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/fundamentos-de-la-programacion/estructuras-de-datos-en-python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras de datos en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/cadenas-de-caracteres/uso-de-cadenas-de-caracteres-en-python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cadenas de caracteres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/listas/uso-de-listas-en-python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/diccionarios/uso-de-diccionarios-en-python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diccionarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/tuplas/uso-de-tuplas-en-python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tuplas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/fundamentos-de-la-programacion/estructuras-de-datos/conjuntos/uso-de-conjuntos-en-python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conjuntos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/funciones-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/funciones-lambda-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones Lambda (anónimas)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2_6" id="__nav_12_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ejercitación
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Ejercitación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-entrada-salida-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-estructuras-alternativas-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de estructuras alternativas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-estructuras-repetitivas-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de estructuras repetitivas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-funciones-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-estructuras-de-datos-con-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de estructuras de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-cadenas-de-caracteres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de cadenas de caracteres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lenguajes-de-programacion/python/ejercitacion/ejercicios-de-listas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios de listas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="breve-historia-de-la-informatica">Breve historia de la informática</h1>
+<p><label class="revision">Rev. 16/03/2024</label></p>
+<h2 id="un-viaje-a-traves-del-tiempo-la-evolucion-de-la-informatica">Un viaje a través del Tiempo: La evolución de la informática</h2>
+<p>La historia de la informática es un fascinante viaje a través del tiempo, marcado por innovaciones, desafíos y la interacción entre la tecnología y la sociedad.</p>
+<p>Es un relato fascinante que nos lleva desde los rudimentarios métodos de cálculo de la antigüedad hasta las complejas redes de computadoras interconectadas que definen nuestra era digital. </p>
+<p>La informática, como disciplina técnica, ha sido testigo de un crecimiento exponencial desde sus humildes comienzos hasta la compleja red de sistemas interconectados que definen nuestra era digital.</p>
+<p>Desde los primeros dispositivos mecánicos hasta la era actual de la computación en la nube, exploraremos los hitos más significativos, los personajes clave que han dado forma a esta disciplina  y las transformaciones que han dado forma al mundo de la informática tal como lo conocemos hoy.</p>
+<h3 id="precursores-antiguos-y-los-origenes">Precursores antiguos y los Orígenes</h3>
+<p>La historia de la informática comienza y se remonta a los albores de la civilización, donde los antiguos egipcios, griegos y babilonios utilizaban métodos de cálculo simples, que evolucionaron gradualmente a medida que la humanidad avanzaba en su comprensión de los principios matemáticos y mecánicos.</p>
+<p>Contaron con inventos que incluían el astrolabio, un antiguo instrumento astronómico creado por los griegos que permite determinar la posición y altura de las estrellas sobre el cielo; y el ábaco, un instrumento de cálculo de hace 5.000 años que les servía para efectuar operaciones aritméticas sencillas​, así como otros dispositivos mecánicos simples que les permitían realizar cálculos matemáticos. </p>
+<p>Sin embargo, el verdadero punto de inflexión llegó en el siglo XIX con el diseño conceptual de Charles Babbage de la "Máquina Analítica", que sentó las bases teóricas para las computadoras modernas al introducir conceptos como la programación y el almacenamiento de datos.</p>
+<h3 id="la-era-de-los-calculos-mecanicos">La Era de los Cálculos Mecánicos</h3>
+<p>En el siglo XVII, Blaise Pascal inventó la Pascalina, una de las primeras calculadoras mecánicas. </p>
+<p>Sin embargo, el verdadero punto de inflexión llegó en el siglo XIX con la visión pionera de Charles Babbage y su diseño conceptual de la "Máquina Analítica", una máquina mecánica capaz de realizar cálculos complejos. Aunque nunca llegó a construirse durante su vida, fue considerada como el antepasado de las computadoras modernas y sentó las bases teóricas para el desarrollo de las computadoras modernas al introducir conceptos como la programación y el almacenamiento de datos.</p>
+<h3 id="tarjetas-perforadas-y-telares-automatizados">Tarjetas Perforadas y Telares Automatizados</h3>
+<p>En 1802, el empresario textil Joseph Marie Jacquard revolucionó la industria al inventar tarjetas perforadas que automatizaban los telares. </p>
+<p>Estas tarjetas controlaban los patrones de tejido, aumentando la producción y reduciendo los costos. Aunque no se considera una computadora en sí misma, este sistema de control basado en tarjetas sentó las bases para futuros desarrollos.</p>
+<h3 id="la-era-de-von-neumann-computadoras-programables">La Era de von Neumann: Computadoras Programables</h3>
+<p>El siglo XX presenció avances revolucionarios sin precedentes en la electrónica. La innovación en el desarrollo de componentes como los tubos de vacío y los transistores, permitieron la creación y el desarrollo de las primeras computadoras electrónicas.</p>
+<p>En la década de 1940, el matemático John von Neumann propuso un diseño para una computadora programable. Su arquitectura, conocida como modelo de von Neumann, separaba la memoria de datos y las instrucciones, permitiendo la ejecución de programas almacenados. </p>
+<p>La EDVAC (Electronic Discrete Variable Automatic Computer) fue uno de los primeros ejemplos basados en este modelo.</p>
+<h3 id="el-auge-de-la-electronica">El Auge de la Electrónica</h3>
+<p>En 1946, la ENIAC (Electronic Numerical Integrator and Computer) fue un hito crucial en esta evolución, marcando el comienzo de una nueva era, siendo la primera computadora completamente electrónica y programable. </p>
+<p>Desde entonces, la informática avanzó a pasos agigantados, con la miniaturización de componentes electrónicos, el desarrollo de los primeros lenguajes de programación, que han permitido avances significativos en la capacidad de procesamiento y almacenamiento de datos, y el surgimiento de sistemas operativos que facilitaron la interacción con las máquinas.</p>
+<h3 id="el-nacimiento-de-los-sistemas-operativos">El Nacimiento de los Sistemas Operativos</h3>
+<p>En la década de 1950, surgieron los primeros sistemas operativos. El UNIVAC I, diseñado por Grace Hopper, fue uno de los primeros en utilizar un sistema operativo completo. Los sistemas operativos permitieron una gestión más eficiente de los recursos de la computadora y facilitaron la interacción con los usuarios.</p>
+<h3 id="la-revolucion-de-la-microcomputacion-y-la-era-de-los-ordenadores-personales">La Revolución de la Microcomputación y la Era de los Ordenadores Personales</h3>
+<p>La década de 1970 fue crucial para democratizar el acceso a la tecnología y sentar las bases de lo que sería una revolución informática aún mayor marcando el comienzo de la informática accesible para el público en general con el surgimiento de las microcomputadoras o computadoras personales, que comenzaron a popularizarse con la introducción de máquinas como el Altair 8800 que, lanzado en 1975, fue uno de los primeros kits de construcción de computadoras, y la Apple I que llevaron la informática desde los laboratorios de investigación hasta los hogares y las pequeñas empresas.</p>
+<p>Esto se debió en gran parte a la introducción de microprocesadores y sistemas operativos que facilitaron la interacción con las máquinas y abarataron su costo. </p>
+<p>Sin embargo, fue la Apple II, lanzada en 1977, la que popularizó las microcomputadoras y abrió el camino para la revolución digital.</p>
+<p>Esta democratización del acceso a la tecnología sentó las bases para una revolución informática aún mayor en las décadas siguientes.</p>
+<h3 id="la-era-de-internet-y-la-world-wide-web">La Era de Internet y la World Wide Web</h3>
+<p>En la década de 1980, Tim Berners-Lee inventó la World Wide Web (WWW) y desarrolló el primer sistema de enlaces, transformando radicalmente la forma en que compartimos y accedemos a la información. </p>
+<p>El ARPANET, precursor de Internet, conectó inicialmente cuatro computadoras en laboratorios universitarios de investigación. </p>
+<p>La infraestructura de Internet, basada en protocolos de comunicación estándar como TCP/IP, permitió la interconexión global de sistemas informáticos, dando lugar a un ecosistema digital sin precedentes. </p>
+<p>Esto permitió la navegación entre páginas web y sentó las bases para el crecimiento exponencial de Internet generando una revolución en la forma en que la información se comparte y se accede en línea y conduciendo a la creación de una amplia gama de servicios y aplicaciones en línea como el correo electrónico o el comercio electrónico, que han redefinido la forma en que interactuamos con la tecnología.</p>
+<p>Así, la web se convirtió en un espacio globalizado donde la comunicación, el comercio y el entretenimiento se fusionaron en un ecosistema digital sin fronteras. Este período también vio el surgimiento de gigantes tecnológicos como Microsoft, Google y Amazon, que dominaron el panorama informático con sus innovaciones y servicios en línea.</p>
+<h3 id="la-era-moderna-de-la-informatica-redes-sociales-nube-e-inteligencia-artificial">La Era Moderna de la Informática: Redes Sociales, Nube e Inteligencia Artificial</h3>
+<p>En el siglo XXI, la informática ha seguido evolucionando a un ritmo acelerado. En la actualidad, vivimos en un mundo interconectado. Las redes sociales, han transformado la comunicación y la interacción humana. </p>
+<p>En los últimos años, la informática ha seguido avanzando y evolucionando a un ritmo vertiginoso, con desarrollos en áreas como la inteligencia artificial y el aprendizaje automático que están revolucionando la forma en que procesamos datos y tomamos decisiones, la computación en la nube informática que permite el acceso a servicios y almacenamiento remoto y la computación cuántica. </p>
+<p>Estos avances han abierto nuevas posibilidades en la automatización de procesos, el análisis de datos y la optimización de sistemas y están transformando radicalmente la forma en que interactuamos con la tecnología y cómo se aplica en diferentes campos como la medicina, la industria y la ciencia, la robótica y la exploración espacial, pero también plantean desafíos en términos de privacidad, seguridad y ética.</p>
+<hr />
+<p>En resumen, la historia de la informática es un relato de innovación constante, impulsada por la creatividad y el ingenio humano, la colaboración y los avances en electrónica y otros campos tecnológicos y la demanda de soluciones informáticas más potentes y eficientes para los desafíos del mundo moderno.  </p>
+<p>Desde sus humildes comienzos con los primeros métodos de cálculo de la antigüedad hasta la era digital actual, desde las tarjetas perforadas hasta los dispositivos móviles y la inteligencia artificial, la informática ha cambiado radicalmente la forma en que vivimos, trabajamos y nos relacionamos comunicándonos con el mundo que nos rodea. Cada paso ha contribuido a nuestra comprensión y dominio de la información. </p>
+<p>Si bien estos avances han transformado radicalmente nuestra sociedad y nuestra forma de vida, también plantean importantes cuestiones éticas y prácticas que deben abordarse a medida que avanzamos hacia un futuro digital cada vez más complejo y interconectado.</p>
+<p>Y aunque el viaje aún continúa, es importante reflexionar sobre el pasado para comprender mejor hacia dónde nos dirigimos.</p>
+<h2 id="cronologia-de-evolucion-de-la-informatica">Cronología de evolución de la informática</h2>
+<p><strong>Prehistoria:</strong></p>
+<ul>
+<li>Fecha desconocida: Los seres humanos desarrollan métodos primitivos de cálculo, como contar usando los dedos y marcar con palos o piedras.</li>
+</ul>
+<p><strong>Antigüedad:</strong></p>
+<ul>
+<li>3000 a.C.: Se desarrollan dispositivos tempranos de cálculo, como el ábaco, utilizado por varias civilizaciones antiguas para realizar operaciones matemáticas simples.</li>
+<li>2000 a.C.: Los egipcios utilizan el sistema de numeración decimal y desarrollan métodos para calcular áreas y volúmenes.</li>
+<li>Siglo V a.C.: Los griegos desarrollan el astrolabio y otros dispositivos mecánicos para realizar cálculos astronómicos y matemáticos.</li>
+</ul>
+<p><strong>Edad Media:</strong></p>
+<ul>
+<li>Siglos VIII-X: Los matemáticos árabes introducen el álgebra y los algoritmos de cálculo, preservando y expandiendo el conocimiento matemático griego e hindú.</li>
+<li>Siglos XI-XIII: Los comerciantes europeos utilizan el ábaco y otros dispositivos mecánicos para realizar cálculos comerciales.</li>
+</ul>
+<p><strong>Renacimiento:</strong></p>
+<ul>
+<li>Siglo XVI: John Napier inventa los huesos de Napier, un dispositivo mecánico para realizar cálculos de multiplicación y división.</li>
+<li>Siglo XVII: Blaise Pascal inventa la Pascalina, una de las primeras calculadoras mecánicas, capaz de sumar y restar números.</li>
+<li>1623: Wilhelm Schickard crea una calculadora mecánica que puede realizar las cuatro operaciones básicas, pero nunca se construye por completo.</li>
+</ul>
+<p><strong>Siglo XVIII:</strong></p>
+<p>1786: J. H. Müller inventa una máquina calculadora mecánica capaz de multiplicar y dividir.</p>
+<p><strong>Siglo XIX:</strong></p>
+<ul>
+<li>1822: Charles Babbage concibe la idea de la "Máquina Diferencial", un dispositivo mecánico para calcular tablas matemáticas y funciones polinómicas, precursor de las computadoras modernas.</li>
+<li>1837: Babbage desarrolla los diseños de la "Máquina Analítica", un dispositivo programable que puede realizar cualquier cálculo matemático, introduciendo conceptos como la programación y el almacenamiento de datos. </li>
+<li>1843: Ada Lovelace escribe el primer algoritmo destinado a ser procesado por la Máquina Analítica, convirtiéndose así en la primera programadora de la historia.</li>
+</ul>
+<p><strong>Siglo XX:</strong></p>
+<ul>
+<li>1936: Alan Turing publica su trabajo sobre las "Máquinas de Turing", sentando las bases teóricas para la computación moderna y la inteligencia artificial.</li>
+<li>1941: Konrad Zuse construye la Z3, la primera computadora electromecánica programable.</li>
+<li>1943: Se construye el Colossus, la primera computadora digital electrónica, utilizada para descifrar códigos alemanes durante la Segunda Guerra Mundial.</li>
+<li>1945: John von Neumann formula el concepto de la arquitectura de computadoras de von Neumann, que separa la memoria de la CPU, sentando las bases para los diseños de computadoras modernas.</li>
+<li>1946: La ENIAC (Electronic Numerical Integrator and Computer) es completada, siendo la primera computadora electrónica y programable.</li>
+<li>1950: Alan Turing propone el "Test de Turing" para evaluar la inteligencia artificial de una máquina.</li>
+<li>1951: Se construye la UNIVAC I, la primera computadora comercialmente disponible.</li>
+<li>1954: IBM lanza el IBM 650, la primera computadora empresarial ampliamente utilizada.</li>
+<li>1958: Jack Kilby inventa el primer circuito integrado en Texas Instruments, allanando el camino para la miniaturización de los componentes electrónicos.</li>
+<li>1964: Se lanza el IBM System/360, el primer sistema de computadoras compatible con software y hardware, estableciendo un estándar para la industria informática.</li>
+<li>1969: ARPANET, la precursora de Internet, se establece por primera vez como una red experimental de comunicaciones financiada por el Departamento de Defensa de los Estados Unidos.</li>
+<li>1971: Intel lanza el primer microprocesador, el Intel 4004, marcando el inicio de la era de los microcomputadoras.</li>
+<li>1976: Steve Wozniak y Steve Jobs fundan Apple Computer y lanzan el Apple I, el primer ordenador personal preensamblado y uno de los primeros ordenadores personales diseñados para uso doméstico.</li>
+<li>1977: Se lanza la serie de microordenadores Commodore PET, TRS-80 y Apple II, marcando el inicio de la era de los ordenadores personales.</li>
+<li>1981: IBM lanza la IBM PC, popularizando el formato de PC compatible con IBM.</li>
+<li>1983: Se lanza ARPANET, precursora de Internet, utilizando el protocolo TCP/IP.</li>
+<li>1985: Microsoft lanza Windows 1.0, el primer sistema operativo gráfico para PCs.</li>
+<li>1989: Tim Berners-Lee inventa la World Wide Web en el CERN, sentando las bases para la era de la información en línea.</li>
+<li>1991: Linus Torvalds crea el kernel de Linux, un sistema operativo de código abierto.</li>
+<li>1994: Se funda Amazon.com como una librería en línea, inaugurando la era del comercio electrónico masivo.</li>
+<li>1998: Google es fundado por Larry Page y Sergey Brin, revolucionando la búsqueda en línea.</li>
+</ul>
+<p><strong>Siglo XXI:</strong></p>
+<ul>
+<li>2001: Se lanza Wikipedia, una enciclopedia en línea colaborativa y de acceso gratuito.</li>
+<li>2007: Apple lanza el iPhone, popularizando los smartphones y cambiando la forma en que interactuamos con la tecnología.</li>
+<li>2010: Se lanza el iPad, impulsando la popularidad de las tabletas y cambiando la computación móvil.</li>
+<li>2016: AlphaGo, un programa de inteligencia artificial desarrollado por DeepMind, derrota al campeón mundial de Go, demostrando avances significativos en la IA.</li>
+<li>2017: Se lanza TensorFlow, un marco de código abierto para aprendizaje automático desarrollado por Google.</li>
+<li>2019: IBM presenta el primer ordenador cuántico comercial, marcando un hito en la computación cuántica.</li>
+</ul>
+<p><strong>Década Actual (2020-2024):</strong></p>
+<ul>
+<li>2020: La pandemia de COVID-19 impulsa la adopción masiva de tecnologías de trabajo remoto y educación en línea.</li>
+<li>2021: Se producen avances significativos en la investigación de la computación cuántica, acercándonos a la era de la computación cuántica práctica.</li>
+<li>2022: Se intensifican los debates sobre la ética y la regulación de la inteligencia artificial y la privacidad de datos.</li>
+<li>2023: Grandes avances en la inteligencia artificial impulsan aplicaciones en campos como la medicina, la agricultura y la movilidad urbana.</li>
+<li>2024: Se prevé un mayor desarrollo en tecnologías emergentes como la realidad aumentada, la computación cuántica y la computación en la nube.</li>
+</ul>
+<p>Esta cronología ofrece una visión general de los hitos más significativos en la evolución de la informática, desde los primeros conceptos teóricos hasta las tecnologías emergentes que están dando forma al futuro digital, destacando los avances tecnológicos y las innovaciones que han dado forma a la era digital en la que vivimos.</p>
+<h2 id="generaciones-de-computadoras">Generaciones de computadoras</h2>
+<p>En la historia de la informática, se suelen reconocer cinco generaciones de computadoras (desde la primera hasta la quinta), cada una marcada por avances significativos en la tecnología de hardware y software. Pero nosotros vamos a mencionar algunas más:</p>
+<h3 id="generacion-0-precursoras-antes-de-1940">Generación 0: Precursoras (Antes de 1940):</h3>
+<p>Antes de la aparición de las computadoras electrónicas, existían dispositivos mecánicos y electromecánicos que realizaban funciones de cálculo, como el ábaco y la pascalina.</p>
+<h3 id="primera-generacion-1940-1956">Primera Generación (1940-1956):</h3>
+<p>Características principales: Utilizaban válvulas de vacío para procesamiento y almacenamiento de datos.</p>
+<p>Ejemplos: ENIAC, UNIVAC I, IBM 701.</p>
+<p>Programación: Codificadas en lenguaje máquina y en lenguajes ensambladores primitivos.</p>
+<h3 id="segunda-generacion-1956-1963">Segunda Generación (1956-1963):</h3>
+<p>Características principales: Utilizaban transistores en lugar de válvulas de vacío, lo que resultaba en computadoras más pequeñas, más rápidas y más confiables.</p>
+<p>Ejemplos: IBM 1401, UNIVAC 1107, DEC PDP-1.</p>
+<p>Programación: Se introducen lenguajes de programación de alto nivel como FORTRAN y COBOL.</p>
+<h3 id="tercera-generacion-1964-1971">Tercera Generación (1964-1971):</h3>
+<p>Características principales: Se introducen los circuitos integrados (chips), lo que permite la miniaturización y la creación de computadoras más potentes y económicas.</p>
+<p>Ejemplos: IBM System/360, DEC PDP-11, IBM System/370.</p>
+<p>Programación: Se desarrollan nuevos lenguajes de programación como PL/I, ALGOL y BASIC.</p>
+<h3 id="cuarta-generacion-1971-1980">Cuarta Generación (1971-1980):</h3>
+<p>Características principales: Se introducen los microprocesadores, lo que lleva a la creación de los primeros ordenadores personales y la popularización de la informática.</p>
+<p>Ejemplos: Altair 8800, Apple II, IBM System/38.</p>
+<p>Programación: Se desarrollan lenguajes de programación de alto nivel más avanzados como C y Pascal. También se desarrollan sistemas operativos más complejos, como UNIX.</p>
+<h3 id="quinta-generacion-1980-presente">Quinta Generación (1980-presente):</h3>
+<p>Características principales: Se caracteriza por el desarrollo de la tecnología de circuitos integrados a gran escala (VLSI), la proliferación de las redes de computadoras y la aparición de la inteligencia artificial y el procesamiento paralelo.</p>
+<p>Ejemplos: IBM PC, Macintosh, IBM AS/400.</p>
+<p>Programación: Se introducen lenguajes de programación orientados a objetos como C++, Java y Python. Se desarrollan tecnologías de inteligencia artificial como redes neuronales y algoritmos de aprendizaje automático.
+Estas generaciones representan hitos importantes en la evolución de la informática, desde las primitivas computadoras de la primera generación hasta los sistemas avanzados de la quinta generación que caracterizan nuestra era digital actual.</p>
+<h3 id="sexta-generacion-anos-2000-en-adelante">Sexta Generación (Años 2000 en adelante):</h3>
+<p>Características principales: Se caracteriza por el avance de la tecnología en áreas como la computación móvil, la inteligencia artificial, el Internet de las cosas y la computación en la nube. Se ha visto un énfasis en la computación distribuida y el procesamiento de grandes volúmenes de datos en tiempo real.</p>
+<p>Ejemplos: El surgimiento de dispositivos portátiles, así como la integración de la inteligencia artificial en la vida cotidiana, son indicativos de esta generación.</p>
+<h3 id="perspectivas-adicionales">Perspectivas adicionales:</h3>
+<p>Algunos expertos también consideran una "Generación 7" que se centra en avances futuros aún no realizados, como la computación cuántica a gran escala, la fusión de la inteligencia artificial con interfaces cerebro-máquina y la creación de sistemas de computación aún más avanzados y adaptables.</p>
+<h3 id="paralelos-en-el-desarrollo-internacional">Paralelos en el Desarrollo Internacional:</h3>
+<p>Aunque la cronología presentada se basa principalmente en los avances tecnológicos occidentales, es importante reconocer que otros países, como Japón, China y la Unión Soviética, también han contribuido significativamente al desarrollo de la informática con sus propios hitos y avances tecnológicos.</p>
+<h3 id="impacto-social-y-cultural">Impacto Social y Cultural:</h3>
+<p>Además de los avances tecnológicos, cada generación de computadoras ha tenido un impacto significativo en la sociedad y la cultura, desde la automatización de tareas industriales en la segunda generación hasta la transformación de la vida cotidiana y las interacciones sociales en la quinta y sexta generación.</p>
+<p>En resumen, las generaciones en la historia de la informática proporcionan un marco útil para comprender la evolución de la tecnología informática a lo largo del tiempo. Sin embargo, es importante reconocer que este esquema es una simplificación y que la historia de la informática es un campo complejo y multifacético que sigue evolucionando constantemente con nuevos avances y descubrimientos.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../introduccion-a-la-informatica/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducción a la informática">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Introducción a la informática
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../importancia-y-aplicaciones-de-la-informatica-en-la-sociedad-actual/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Importancia y aplicaciones de la informática en la sociedad actual">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Importancia y aplicaciones de la informática en la sociedad actual
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Prof-Pablo-Roca-Philips/python-bible" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/pablomartinezroca/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tracking", "search.highlight", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
