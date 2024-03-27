@@ -367,8 +367,6 @@
       
         
       
-        
-      
     
     
     
@@ -480,6 +478,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -538,11 +540,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../conceptos-fundamentales-de-la-informatica/representacion-de-datos/sistemas-de-representacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas de representación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../conceptos-fundamentales-de-la-informatica/representacion-de-datos/sistemas-de-numeracion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Sistemas de numeración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../conceptos-fundamentales-de-la-informatica/representacion-de-datos/bits-y-bytes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bits y Bytes
   </span>
   
 
@@ -576,27 +620,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../conceptos-fundamentales-de-la-informatica/sistemas-de-numeracion-y-codificacion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sistemas de numeración y codificación
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3303,7 +3326,7 @@ Estos <strong>ocho bits</strong> se denominan <strong>byte</strong>, conocido co
 <p>Para representar letras, todo lo que tenemos que hacer es decidir cómo se asignan los números a las letras. </p>
 <p>Dado que existe una superposición entre los unos y los ceros que representan números y letras, algunas personas, hace muchos años, decidieron colectivamente un mapeo estándar de números a letras. La letra <strong>A</strong>, por ejemplo, es el número <strong>65</strong>, la <strong>B</strong> es el <strong>66</strong>, y así sucesivamente. En binario, la letra <strong>A</strong> es el código o patrón <strong>01000001</strong>. Al usar este código en un contexto, como el formato de archivo, diferentes programas pueden interpretar y mostrar los mismos bits como números o texto.</p>
 <p>Este mapeo estándar, llamado <strong>código ASCII</strong> o estándar ASCII, se creó para asignar caracteres específicos (letras mayúsculas y minúsculas, números, puntuación y símbolos) a números específicos.</p>
-<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/codigo-ascii.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/codigo-ascii.png" /></p>
 <p>¡Gracias a Dios por estándares como ASCII que nos permiten estar de acuerdo con estos valores!</p>
 <p>Cuando recibimos un mensaje de texto, mapeándolo en ASCII, obtenemos 3 patrones de bits que tienen los valores decimales 72, 73 y 33. Esos patrones se asignarían a los caracteres HI! y las secuencias de bits se verían como 01001000, 01001001 y 00100001, 8 bits (1 byte) para cada carácter:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a> H         I         !
@@ -3327,8 +3350,8 @@ Estos <strong>ocho bits</strong> se denominan <strong>byte</strong>, conocido co
 <p>Por ejemplo, el emoji de “cara con mascarilla médica” tiene solo cuatro bytes:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>11110000 10011111 10011000 10110111
 </code></pre></div>
-<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/emoji-mascarilla.png" /></p>
-<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/emoji-set-imagenes.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/emoji-mascarilla.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/emoji-set-imagenes.png" /></p>
 <p>Hay emojis que probablemente uses todos los días, como los que están aquí representados.</p>
 <p>Los informáticos se enfrentaron a un desafío al querer asignar varios tonos de piel a cada emoji para permitir que la comunicación se personalizara aún más. En este caso, los creadores y colaboradores de los emojis decidieron que las partes iniciales serían la estructura del emoji en sí, seguida del tono de la piel.</p>
 <p>Cada vez se agregan más funciones al estándar Unicode para representar más caracteres y emojis.</p>
@@ -3338,13 +3361,13 @@ Estos <strong>ocho bits</strong> se denominan <strong>byte</strong>, conocido co
 </blockquote>
 <h2 id="representando-imagenes-videos-y-sonidos">Representando imágenes, videos y sonidos</h2>
 <p>Con bits, también podemos asignar números a colores. Hay muchos sistemas diferentes para representar los colores, pero el sistema más conocido es RGB, que representa la cantidad de rojo, verde y azul que componen a un color específico:</p>
-<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/rgb-representacion-de-un-pixel.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/rgb-representacion-de-un-pixel.png" /></p>
 <p>Por ejemplo, nuestro patrón de bits anterior, 72, 73 y 33, que decía HI! a través de texto, indicaría la cantidad de rojo (72), verde (73) y azul (33) en un color. Y nuestros programas sabrían que esos bits se asignan a un color (lo interpretarían como un tono claro de amarillo) si abriéramos un archivo de imagen, en lugar de recibirlos en un mensaje de texto:</p>
-<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/rgb-pixel-amarillo.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/rgb-pixel-amarillo.png" /></p>
 <p>Los puntos en nuestras pantallas se denominan píxeles, y las imágenes también se componen de muchos miles o millones de esos píxeles. </p>
 <p>Entonces, al usar tres bytes para representar el color de cada píxel, podemos crear imágenes. </p>
 <p>Podemos ver píxeles en un emoji si hacemos zoom, por ejemplo:</p>
-<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/rgb-zoom-pixeles.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="imagenes/rgb-zoom-pixeles.png" /></p>
 <ul>
 <li>
 <p>Las imágenes son simplemente colecciones de valores RGB.</p>
@@ -3356,6 +3379,23 @@ Estos <strong>ocho bits</strong> se denominan <strong>byte</strong>, conocido co
 <p>La música también se puede representar con bits. MIDI es uno de esos formatos que representa la música con números para cada una de las notas y su duración y volumen. Puedes saber más sobre el estándar MIDI <a href="https://es.wikipedia.org/wiki/MIDI">hacindo clic aquí</a></p>
 </li>
 </ul>
+<h2 id="resumen">Resumen</h2>
+<p>El sistema unario es un sistema de numeración que emplea un único símbolo, como una barra o un punto, para representar el valor “uno”. Los demás números se expresan mediante la repetición de este símbolo.</p>
+<p>El sistema decimal es un sistema de numeración que utiliza diez símbolos distintos, conocidos como dígitos, para representar cualquier valor. Estos dígitos son el 0, 1, 2, 3, 4, 5, 6, 7, 8 y 9. </p>
+<p>Las computadoras utilizan el sistema binario, con solo dos dígitos, 0 (apagado) y 1 (encendido). Cada dígito binario se llama bit (binary digit) y es la mínima unidad de información.</p>
+<p>Además, generalmente usan ocho bits para representar un número. Por ejemplo, el código binario 00000101 es el número 5 en decimal. Estos ocho bits se denominan byte, conocido como la mínima unidad de palabra.</p>
+<p>Así como los números son patrones binarios de unos y ceros, ¡las letras también se representan usando unos y ceros!</p>
+<p>El mapeo estándar, llamado código ASCII o estándar ASCII, se creó para asignar caracteres específicos (letras mayúsculas y minúsculas, números, puntuación y símbolos) a números específicos.
+Con 8 bits, o 1 byte, podemos tener 28 = 256 valores diferentes (desde 0 hasta 255, el valor más alto que se puede formar con 8 bits).</p>
+<p>Sin embargo, dado que no había suficientes dígitos en binario para representar todos los diversos caracteres que podían representar los humanos, el estándar Unicode amplió la cantidad de bits que las computadoras pueden transmitir y comprender.</p>
+<p>Cuando recibimos un emoji , nuestra computadora en realidad solo recibe un número en binario que luego asigna a la imagen del emoji según el estándar Unicode.</p>
+<p>Con bits, también podemos asignar números a colores. Hay muchos sistemas diferentes para representar los colores, pero el sistema más conocido es RGB, que representa la cantidad de rojo, verde y azul que componen a un color específico.</p>
+<p>Las imágenes son simplemente colecciones de valores RGB.</p>
+<p>Los videos son secuencias de muchas imágenes, que cambian varias veces por segundo para darnos la apariencia de movimiento.</p>
+<p>La música también se puede representar con bits. MIDI es uno de esos formatos que representa la música con números para cada una de las notas y su duración y volumen.</p>
+<p>Todas estas ideas son solo ceros y unos, interpretadas y utilizadas por el software que hemos escrito para interpretarlas de la manera que queremos.</p>
+<p>Hay otros formatos, algunos de los cuales usan compresión (formas matemáticas de representar algunos datos con menos bits), o algunos que pueden ser contenedores que almacenan varios tipos de dato juntos.</p>
+<p>Y dado que hay muchas empresas y grupos que desarrollan software, existen muchos formatos de archivo diferentes, cada uno con sus propias formas de representar los datos. Pero también hay organizaciones que trabajan sobre cierto consenso, como la encargada de mantener el estándar Unicode.</p>
 
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../sistemas-de-numeracion/">
+        <link rel="prev" href="../bits-y-bytes/">
       
       
-        <link rel="next" href="../../sistemas-de-numeracion-y-codificacion/">
+        <link rel="next" href="../../almacenamiento-de-datos-e-informacion/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -373,8 +373,6 @@
       
         
       
-        
-      
     
     
     
@@ -488,6 +486,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -546,11 +548,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../sistemas-de-representacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas de representación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sistemas-de-numeracion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Sistemas de numeración
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bits-y-bytes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bits y Bytes
   </span>
   
 
@@ -629,6 +673,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Código ASCII">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#byte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Byte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-ascii-extendido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código ASCII extendido
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -644,6 +721,48 @@
   <a href="#codigo-unicode" class="md-nav__link">
     <span class="md-ellipsis">
       Código Unicode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codificacion-de-emojis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codificación de emojis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codificacion-de-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codificación de Imágenes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codificacion-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codificación de video
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Codificación de video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codificacion-de-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codificación de Sonido
     </span>
   </a>
   
@@ -684,27 +803,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sistemas-de-numeracion-y-codificacion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sistemas de numeración y codificación
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3328,16 +3426,38 @@
 <p><label class="revision">Rev. 24/03/2024</label></p>
 <p>Los datos se transforman en un formato legible para las computadoras a través de diversos esquemas de codificación, tales como ASCII, Unicode, y formatos de archivos de imagen y audio como JPEG, PNG, MP3, WAV, entre otros. </p>
 <p>Cada tipo de dato se asocia con una codificación específica que determina su representación en formato binario y su almacenamiento en archivos o en la memoria del sistema informático. </p>
+<p>Por ejemplo, así como los números son patrones binarios de unos y ceros, <strong>¡las letras también se representan usando unos y ceros!</strong></p>
+<p>Para representar letras, todo lo que tenemos que hacer es decidir cómo se asocia una letra específica a un número específico.</p>
 <h2 id="codificacion-de-caracteres">Codificación de caracteres</h2>
 <p>Para representar letras, números y símbolos se utilizan diferentes esquemas de codificación de caracteres, como ASCII, Unicode, UTF-8 o UTF-16, que asignan valores numéricos a cada carácter para su representación en binario.</p>
 <h3 id="codigo-ascii">Código ASCII</h3>
-<p>ASCII (American Standard Code for Information Interchange) es una codificación de caracteres de texto que asigna un número único a cada letra, dígito y símbolo comúnmente utilizado en inglés y otros idiomas. </p>
-<p>El código ASCII (se pronuncia "asqui") fue creado en 1963 por el Comité Estadounidense de Estándares o "ASA". Este organismo cambio su nombre en 1969 por "Instituto Estadounidense de Estándares Nacionales" o "ANSI" como se lo conoce desde entonces.</p>
+<p>ASCII (se pronuncia "asqui") o <em>American Standard Code for Information Interchange</em> es una codificación de caracteres de texto que asigna un número único a cada letra, dígito y símbolo comúnmente utilizado en inglés y otros idiomas. Esta asignación se denomina <strong>mapeo de caracteres</strong>.</p>
+<details>
+<summary>Conoce la historia de ASCII</summary>
+<p>El código ASCII fue creado en 1963 por el Comité Estadounidense de Estándares o "ASA". Este organismo cambio su nombre en 1969 por "Instituto Estadounidense de Estándares Nacionales" o "ANSI" como se lo conoce desde entonces.</p>
 <p>Este código nació a partir de reordenar y expandir el conjunto de símbolos y caracteres ya utilizados en aquel momento en telegrafía por la compañía Bell. En un primer momento solo incluía letras mayúsculas y números, pero en 1967 se agregaron las letras minúsculas y algunos caracteres de control, formando así lo que se conoce como US-ASCII, es decir los caracteres del 0 al 127.</p>
 <p>Así con este conjunto de solo 128 caracteres fue publicado en 1967 como estándar, conteniendo todos lo necesario para escribir en idioma ingles.</p>
+</details>
 <p><img alt="Código ASCII" class="center back-white" src="../imagenes/codificacion-de-datos/tabla-codigo-ascii.png" /></p>
-<p>En 1981, la empresa IBM desarrolló una extensión de 8 bits del código ASCII, llamada "pagina de código 437", en esta versión se reemplazaron algunos caracteres de control obsoletos, por caracteres gráficos. Además se incorporaron 128 caracteres nuevos, con símbolos, signos, gráficos adicionales y letras latinas, necesarias para la escrituras de textos en otros idiomas, como por ejemplo el español. Así fue como se sumaron los caracteres que van del ASCII 128 al 255.</p>
+<p>En el código ASCII, la letra <strong>A</strong> es el código <strong>1000001</strong> cuyo valor es <strong>65</strong>, la <strong>B</strong> es el código <strong>1000010</strong> cuyo valor es <strong>66</strong>, y así sucesivamente. </p>
+<p>Si tomamos de ejemplo la <strong>A</strong>, al usar su código en diferentes contextos, diferentes programas pueden interpretar y mostrar esta combinación de ceros y unos como si representasen al valor numérico <strong>65</strong> como así también al caracter <strong>A</strong>.</p>
+<p>Veamos otro ejemplo. Cuando recibimos un mensaje de texto, mapeando en ASCII, obtenemos 3 patrones de bits que tienen los valores decimales 72, 73 y 33. </p>
+<p>Esos patrones se asignarían a los caracteres HI! y las secuencias de bits se verían como 01001000, 01001001 y 00100001, 8 bits (1 byte) para cada carácter:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CARACTER     H         I         !
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>DECIMAL      72        73        33
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>BINARIO      01001000  01001001  00100001
+</code></pre></div>
+<blockquote>
+<p>Si te fijas bien, las cadenas binarias del ejemplo anterior poseen 8 bits cada una, aunque los los bits más significativos (más a la izquierda) son ceros, es decir, son sin valor. ¿Sabes por qué se agregan esos bits si no modifican el valor representado por cada cadena de bits?</p>
+</blockquote>
+<h4 id="bit">Bit</h4>
+<h4 id="byte">Byte</h4>
+<h3 id="codigo-ascii-extendido">Código ASCII extendido</h3>
+<details>
+<summary>Conoce la historia de ASCII extendido</summary>
+<p>En 1981, la empresa IBM desarrolló una extensión de 8 bits del código ASCII, llamada "pagina de código 437". En esta versión se reemplazaron algunos caracteres de control obsoletos, por caracteres gráficos. Además se incorporaron 128 caracteres nuevos, con símbolos, signos, gráficos adicionales y letras latinas, necesarias para la escrituras de textos en otros idiomas, como por ejemplo el español. Así fue como se sumaron los caracteres que van del ASCII 128 al 255.</p>
 <p>IBM incluyó soporte a esta página de código en el hardware de su modelo 5150, conocido como "IBM-PC", considerada la primera computadora personal. El sistema operativo de este modelo, el "MS-DOS" también utilizaba el código ASCII extendido.</p>
+</details>
 <p><img alt="Código ASCII extendido" class="center back-white" src="../imagenes/codificacion-de-datos/tabla-codigo-ascii-extendido.png" /></p>
 <p>Casi todos los sistemas informáticos de la actualidad utilizan el código ASCII para representar caracteres, símbolos, signos y textos</p>
 <div class="admonition important">
@@ -3352,20 +3472,74 @@
 <p>Para conocer el código ALT correspondiente al símbolo que estás buscando te invito a que visites la página web de referencia haciendo clic <a href="https://symbl.cc/es/alt-codes/" target="_blank">aquí</a>. </p>
 <h3 id="codigo-unicode">Código Unicode</h3>
 <p>Unicode es una codificación de caracteres más amplia que puede representar caracteres de muchos idiomas y símbolos especiales de manera consistente en todas las plataformas informáticas.</p>
+<p>Unicode utiliza 16 bits para representar cada carácter, lo que permite un rango mucho más amplio de caracteres que ASCII.</p>
 <p>El 12 de septiembre de 2023 fue lanzada la versión 15.1.0. Casi medio millón de símbolos de todo tipo, incluyendo flechas, signos matemáticos, emojis, jeroglíficos y antiguos escritos, están disponibles. </p>
 <p>Como esta es muchísima información para poder ser visualizada aquí, te invito a que visites la página web de referencia haciendo clic <a href="https://symbl.cc/es/unicode-table/" target="_blank">aquí</a>.</p>
+<h2 id="codificacion-de-emojis">Codificación de emojis</h2>
+<p>A medida que pasa el tiempo, hay más y más formas de comunicarse a través de mensajes de texto.</p>
+<p>Dado que no había suficientes dígitos en binario para representar todos los diversos caracteres que podían representar los humanos, el estándar Unicode amplió la cantidad de bits que las computadoras pueden transmitir y comprender.</p>
+<p>Cuando recibimos un emoji , nuestra computadora en realidad solo recibe un número en binario que luego asigna a la imagen del emoji según el estándar Unicode.</p>
+<p>Por ejemplo, el emoji de “cara con mascarilla médica” tiene solo cuatro bytes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>11110000 10011111 10011000 10110111
+</code></pre></div>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/codificacion-de-datos/emoji-mascarilla.png" /></p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/codificacion-de-datos/emoji-set-imagenes.png" /></p>
+<p>Hay emojis que probablemente uses todos los días, como los que están aquí representados.</p>
+<p>Los informáticos se enfrentaron a un desafío al querer asignar varios tonos de piel a cada emoji para permitir que la comunicación se personalizara aún más. En este caso, los creadores y colaboradores de los emojis decidieron que las partes iniciales serían la estructura del emoji en sí, seguida del tono de la piel.</p>
+<p>Cada vez se agregan más funciones al estándar Unicode para representar más caracteres y emojis.</p>
+<p>Y resulta que las diferentes empresas que crean software para sus dispositivos tendrán imágenes ligeramente diferentes que representan cada emoji, ya que solo se han estandarizado las descripciones.</p>
+<p>Como esta es muchísima información para poder ser visualizada aquí, te invito a que visites la página web de referencia haciendo clic <a href="https://symbl.cc/es/emoji/" target="_blank">aquí</a>.</p>
+<p>También puedes conocer más de los Emoji haciendo clic <a href="https://es.wikipedia.org/wiki/Emoji" target="_blank">aquí</a></p>
+<h2 id="codificacion-de-imagenes">Codificación de Imágenes</h2>
+<p>Las imágenes se pueden codificar utilizando diferentes formatos de archivo, como JPEG, PNG, GIF, BMP, entre otros.</p>
+<p>Cada formato utiliza algoritmos de compresión específicos para almacenar la información de la imagen de manera eficiente, reduciendo el tamaño del archivo sin perder demasiada calidad perceptible.</p>
+<p>Pero, ¿cómo es posible?</p>
+<p>Con las cadenas de bits, también podemos asignar números a colores. Hay muchos sistemas diferentes para representar los colores, pero el sistema más conocido es RGB, que representa la cantidad de rojo, verde y azul que componen a un color específico:</p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/codificacion-de-datos/rgb-representacion-de-un-pixel.png" /></p>
+<p>Por ejemplo, nuestro patrón de bits anterior, 72, 73 y 33, que decía HI! a través de texto, indicaría la cantidad de rojo (72), verde (73) y azul (33) en un color. Y nuestros programas sabrían que esos bits se asignan a un color (lo interpretarían como un tono claro de amarillo) si abriéramos un archivo de imagen, en lugar de recibirlos en un mensaje de texto:</p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/codificacion-de-datos/rgb-pixel-amarillo.png" /></p>
+<p>Los puntos en nuestras pantallas se denominan píxeles, y las imágenes también se componen de muchos miles o millones de esos píxeles. </p>
+<p>Entonces, al usar tres bytes para representar el color de cada píxel, podemos crear imágenes. </p>
+<p>Podemos ver píxeles en un emoji si hacemos zoom, por ejemplo:</p>
+<p><img alt="Alt text" class="center back-white border-round" src="../imagenes/codificacion-de-datos/rgb-zoom-pixeles.png" /></p>
+<p>Las imágenes son simplemente colecciones de valores RGB.</p>
+<h2 id="codificacion-de-video">Codificación de video</h2>
+<p>Los videos son secuencias de muchas imágenes, que cambian varias veces por segundo para darnos la apariencia de movimiento, como lo haría un flipbook. </p>
+<iframe width="1074" height="604" src="https://www.youtube.com/embed/sz78_07Xg-U" title="Grumpy Cloud FLIPBOOK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="codificacion-de-sonido">Codificación de Sonido</h3>
+<p>La música también se puede representar con bits. MIDI es uno de esos formatos que representa la música con números para cada una de las notas, su duración y volumen. </p>
+<p>Puedes saber más sobre el estándar MIDI <a href="https://es.wikipedia.org/wiki/MIDI">hacindo clic aquí</a></p>
+<p>Además, el sonido se puede codificar utilizando diferentes formatos de archivo de audio, como MP3, WAV, AAC, etc.</p>
+<p>Cada formato utiliza algoritmos de compresión específicos para representar el sonido de manera eficiente, eliminando redundancias y manteniendo la calidad auditiva dentro de límites aceptables.</p>
 <h2 id="conclusiones-depurar">Conclusiones (depurar)</h2>
 <p>En resumen, los sistemas de numeración y codificación son conceptos esenciales en la informática que permiten representar y manipular datos de manera efectiva en formato digital, lo que facilita su almacenamiento, procesamiento y transmisión.</p>
 <p>En los sistemas informáticos existen varios tipos de datos y cada uno tiene su propia forma de representación. Así, los datos se representan y almacenan de varias maneras, dependiendo del tipo de dato y de la arquitectura del sistema.</p>
 <p>Esta codificación es esencial para garantizar que los datos sean interpretados y procesados de manera precisa por las aplicaciones de software y los dispositivos periféricos.</p>
+<p>El sistema unario es un sistema de numeración que emplea un único símbolo, como una barra o un punto, para representar el valor “uno”. Los demás números se expresan mediante la repetición de este símbolo.</p>
+<p>El sistema decimal es un sistema de numeración que utiliza diez símbolos distintos, conocidos como dígitos, para representar cualquier valor. Estos dígitos son el 0, 1, 2, 3, 4, 5, 6, 7, 8 y 9. </p>
+<p>Las computadoras utilizan el sistema binario, con solo dos dígitos, 0 (apagado) y 1 (encendido). Cada dígito binario se llama bit (binary digit) y es la mínima unidad de información.</p>
+<p>Además, generalmente usan ocho bits para representar un número. Por ejemplo, el código binario 00000101 es el número 5 en decimal. Estos ocho bits se denominan byte, conocido como la mínima unidad de palabra.</p>
+<p>Así como los números son patrones binarios de unos y ceros, ¡las letras también se representan usando unos y ceros!</p>
+<p>El mapeo estándar, llamado código ASCII o estándar ASCII, se creó para asignar caracteres específicos (letras mayúsculas y minúsculas, números, puntuación y símbolos) a números específicos.
+Con 8 bits, o 1 byte, podemos tener 28 = 256 valores diferentes (desde 0 hasta 255, el valor más alto que se puede formar con 8 bits).</p>
+<p>Sin embargo, dado que no había suficientes dígitos en binario para representar todos los diversos caracteres que podían representar los humanos, el estándar Unicode amplió la cantidad de bits que las computadoras pueden transmitir y comprender.</p>
+<p>Cuando recibimos un emoji , nuestra computadora en realidad solo recibe un número en binario que luego asigna a la imagen del emoji según el estándar Unicode.</p>
+<p>Con bits, también podemos asignar números a colores. Hay muchos sistemas diferentes para representar los colores, pero el sistema más conocido es RGB, que representa la cantidad de rojo, verde y azul que componen a un color específico.</p>
+<p>Las imágenes son simplemente colecciones de valores RGB.</p>
+<p>Los videos son secuencias de muchas imágenes, que cambian varias veces por segundo para darnos la apariencia de movimiento.</p>
+<p>La música también se puede representar con bits. MIDI es uno de esos formatos que representa la música con números para cada una de las notas y su duración y volumen.</p>
+<p>Todas estas ideas son solo ceros y unos, interpretadas y utilizadas por el software que hemos escrito para interpretarlas de la manera que queremos.</p>
+<p>Hay otros formatos, algunos de los cuales usan compresión (formas matemáticas de representar algunos datos con menos bits), o algunos que pueden ser contenedores que almacenan varios tipos de dato juntos.</p>
+<p>Y dado que hay muchas empresas y grupos que desarrollan software, existen muchos formatos de archivo diferentes, cada uno con sus propias formas de representar los datos. Pero también hay organizaciones que trabajan sobre cierto consenso, como la encargada de mantener el estándar Unicode.</p>
 <h2 id="ejercicios">Ejercicios</h2>
 <ol>
 <li>
 <p>¿Podrías decir que dice la siguiente codificación según el código ASCII?</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>01000101 01010011 01010100 01001111 00100000  
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>01000101 01010011 00100000 01001101 01010101 
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>01011001 00100000 01000110 01000001 01000011 
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>01001001 01001100 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>01000101 01010011 01010100 01001111 00100000  
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>01000101 01010011 00100000 01001101 01010101 
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>01011001 00100000 01000110 01000001 01000011 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>01001001 01001100 
 </code></pre></div>
 <details class="example">
 <summary>Ver solución</summary>
@@ -3426,7 +3600,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../sistemas-de-numeracion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Sistemas de numeración">
+          <a href="../bits-y-bytes/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Bits y Bytes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3436,20 +3610,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Sistemas de numeración
+                Bits y Bytes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../sistemas-de-numeracion-y-codificacion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Sistemas de numeración y codificación">
+          <a href="../../almacenamiento-de-datos-e-informacion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Almacenamiento de datos e información">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Sistemas de numeración y codificación
+                Almacenamiento de datos e información
               </div>
             </div>
             <div class="md-footer__button md-icon">
